@@ -170,11 +170,16 @@ namespace VirtualMessManager
 
         private void bt_Calculate_Click(object sender, EventArgs e)
         {
+
+
+
             float deposit = float.Parse(tb_Deposit.Text);
             float mealNumber = float.Parse(tb_MealAmount.Text);
             float others = float.Parse(tb_Others.Text);
 
             float result = deposit-(mealrate * mealNumber + others);
+
+
 
             tb_Remarks.Text = result.ToString();
         }
