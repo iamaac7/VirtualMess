@@ -71,12 +71,8 @@ namespace VirtualMessManager
                 userNameChangeAdmin = Login.logInUserName1;
                 passwordChangeAdmin = Login.logInPassword1;
 
-                MessageBox.Show(tempOldUserName + userNameChangeAdmin);
-                MessageBox.Show(tempOldPassword + passwordChangeAdmin);
-
                 if (tempOldUserName.Equals(userNameChangeAdmin) && tempOldPassword.Equals(passwordChangeAdmin))
                 {
-                    MessageBox.Show("Valid Old Admin...");
                     info.newAdminName = tb_NewAdminName.Text;
                     info.newAdminUsername = tb_NewAdminName.Text;
                     info.newAdminId = Convert.ToInt32(tb_NewAdminId.Text);
@@ -99,31 +95,31 @@ namespace VirtualMessManager
 
                             if (confirmRefManagerChange > 0)
                             {
-                                MessageBox.Show("Admin Changed Successfully.");
+                                MessageBox.Show("Admin Changed Successfully.","Successful",MessageBoxButtons.OK,MessageBoxIcon.Information);
                             }
 
                         }
                         else
                         {
-                            MessageBox.Show("Problem in Old Manager.");
+                            MessageBox.Show("Problem in Old Manager.","Wrong Old Admin Info",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("New Admin Name or Id Doesn't Match with Database.\n Please Check it......!");
+                        MessageBox.Show("New Admin Name or Id Doesn't Match with Database.\n Please Check it......!","Wrong Info",MessageBoxButtons.OK,MessageBoxIcon.Error);
                         tb_NewAdminName.Focus();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("InValid Old Admin...\nAdmin Change Operaton doesn't Applicable.");
+                    MessageBox.Show("InValid Old Admin...\nAdmin Change Operaton doesn't Applicable.","Wrong Info",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     flag = true;
                 }
             }
             else
             {
-                MessageBox.Show("OOoopsss....\nComplete Each text Box.");
+                MessageBox.Show("OOoopsss....\nComplete Each text Box.","Incomplete",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
                 tb_NewAdminName.Focus();
                 flag = true;
             }

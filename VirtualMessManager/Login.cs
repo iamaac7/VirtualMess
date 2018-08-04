@@ -31,23 +31,11 @@ namespace VirtualMessManager
         public Login()
         {
             InitializeComponent();
-
-            signUsername.GotFocus += new EventHandler(TextGotFocus);
-            signUsername.LostFocus += new EventHandler(TextLostFocus);
-
-            loginPassword.GotFocus += new EventHandler(TextGotFocus1);
-            loginPassword.LostFocus += new EventHandler(TextLostFocus1);
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+            loginPassword.PasswordChar = '*';
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,53 +44,6 @@ namespace VirtualMessManager
             rm.Show();
         }
 
-        private void TextGotFocus(Object sender, EventArgs e)
-        {
-            if (signUsername.Text.Trim().Equals("USERNAME"))
-            signUsername.Text = "";
-            signUsername.ForeColor = System.Drawing.Color.Brown;
-
-
-        }
-
-        private void TextGotFocus1(Object sender, EventArgs e)
-        {
-            if (loginPassword.Text.Trim().Equals("PASSWORD"))
-            loginPassword.Text = "";
-            loginPassword.ForeColor = System.Drawing.Color.Brown;
-            loginPassword.PasswordChar = '*';
-
-
-        }
-        private void TextLostFocus(Object sender, EventArgs e)
-        {
-            if (signUsername.Text.Trim().Equals(""))
-                signUsername.Text = "USERNAME";
-
-        }
-
-        private void TextLostFocus1(Object sender, EventArgs e)
-        {
-            if (loginPassword.Text.Trim().Equals(""))
-                loginPassword.Text = "PASSWORD";
-        }
-
-        private void signUsername_Validating(object sender, CancelEventArgs e)
-        {
-            if (signUsername.Text.Trim().Equals("USERNAME"))
-            {
-                e.Cancel = true;
-                signUsername.Focus();
-                errorUsername.SetError(signUsername, "Please Enter your Username ");
-
-            }
-            else
-            {
-                e.Cancel = false;
-                errorUsername.SetError(signUsername, null);
-
-            }
-        }
 
         private void loginPassword_Validating(object sender, CancelEventArgs e)
         {
@@ -123,51 +64,56 @@ namespace VirtualMessManager
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            this.ActiveControl = signUsername;
+            signUsername.Focus();
             //this.ActiveControl = us;
             //textBox1.Focus();
         }
 
         private void tb_login_Click(object sender, EventArgs e)
         {
-            info.userName = signUsername.Text;
-            info.password = loginPassword.Text;
-
-            dt = opr.Login(info);
-
-            if (dt.Rows.Count > 0)
+            if (loginPassword.Text != "")
             {
-                logInUserName1=dt.Rows[0][7].ToString();
-                logInPassword1=dt.Rows[0][8].ToString();
-                uType = dt.Rows[0][2].ToString();
-                loginName = dt.Rows[0][1].ToString();
-                refManagerName=dt.Rows[0][3].ToString();
-                string tempid = dt.Rows[0][0].ToString();
-                userId = Convert.ToInt32(tempid);
-                //bazar.userID = userId;
+                info.userName = signUsername.Text;
+                info.password = loginPassword.Text;
 
-                //MessageBox.Show(bazar.userID+"");
-                //bazar.userName = loginName;
-                //MessageBox.Show(bazar.userName);
-                if (uType.Trim() == "Manager")
+                dt = opr.Login(info);
+
+                if (dt.Rows.Count ==1)
                 {
-                    Manager m = new Manager();
-                    this.Hide();
-                    m.Show();
+                    logInUserName1 = dt.Rows[0][7].ToString();
+                    logInPassword1 = dt.Rows[0][8].ToString();
+                    uType = dt.Rows[0][2].ToString();
+                    loginName = dt.Rows[0][1].ToString();
+                    refManagerName = dt.Rows[0][3].ToString();
+                    string tempid = dt.Rows[0][0].ToString();
+                    userId = Convert.ToInt32(tempid);
+                    //bazar.userID = userId;
+
+                    //MessageBox.Show(bazar.userID+"");
+                    //bazar.userName = loginName;
+                    //MessageBox.Show(bazar.userName);
+                    if (uType.Trim() == "Manager")
+                    {
+                        Manager m = new Manager();
+                        this.Hide();
+                        m.Show();
+
+                    }
+                    else
+                    {
+                        Member mb = new Member();
+                        this.Hide();
+                        mb.Show();
+                    }
 
                 }
                 else
                 {
-                    Member mb = new Member();
-                    this.Hide();
-                    mb.Show();
+                    MessageBox.Show("Invalid User.");
+                    //signUsername.Text = "";
+                    //loginPassword.Text = "";
                 }
-
-            }
-            else {
-                MessageBox.Show("Invalid User.");
-                //signUsername.Text = "";
-                //loginPassword.Text = "";
             }
         }
 
@@ -197,6 +143,51 @@ namespace VirtualMessManager
             RegistrationForm rm = new RegistrationForm();
             this.Hide();
             rm.Show();
+        }
+
+        private void signUsername_Leave(object sender, EventArgs e)
+        {
+            if (signUsername.Text == "")
+            {
+                signUsername.Focus();
+                label5.Text = "*User Name can't Empty..";
+
+            }
+            else 
+                label5.Text = "";
+           
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void loginPassword_Leave(object sender, EventArgs e)
+        {
+            if (loginPassword.Text == "")
+            {
+                loginPassword.Focus();
+                label6.Text = "*Password can't Empty..";
+
+            }
+            else
+                label6.Text = "";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginPassword_TextChanged(object sender, EventArgs e)
+        {
+            label6.Text = "";
+        }
+
+        private void signUsername_TextChanged_1(object sender, EventArgs e)
+        {
+            label5.Text = "";
         }
     }
 }
