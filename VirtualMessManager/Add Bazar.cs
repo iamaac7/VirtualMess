@@ -81,10 +81,15 @@ namespace VirtualMessManager
 
         private void addBazarCancel_Click(object sender, EventArgs e)
         {
-           // Application.Exit();
-            this.Hide();
-            Login log = new Login();
-            log.Show();
+            DialogResult result = MessageBox.Show("Do You want to exit?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            //// Application.Exit();
+            // this.Hide();
+            // Login log = new Login();
+            // log.Show();
         }
 
         private void bt_back_Click(object sender, EventArgs e)
@@ -98,6 +103,11 @@ namespace VirtualMessManager
             {
                 memberBack.Show();
             }
+        }
+
+        private void cb_Items_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

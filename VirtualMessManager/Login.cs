@@ -119,11 +119,12 @@ namespace VirtualMessManager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do You want to exit?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (result==DialogResult.OK) {
+            DialogResult result = MessageBox.Show("Do You want to exit?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
                 Application.Exit();
             }
-            }
+        }
 
         private void signUsername_TextChanged(object sender, EventArgs e)
         {

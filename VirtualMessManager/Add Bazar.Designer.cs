@@ -45,7 +45,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(54, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(368, 20);
@@ -107,41 +109,47 @@
             "Kacha_morich(Green chili)",
             "Chal_Kumro(Ash Gourd)",
             "Karola(Bitter_melon)",
-            "Sheem(Broad_Beans)"});
+            "Sheem(Broad_Beans)",
+            "Murgi(Chicken)",
+            "Goru_Gosto(Beef)",
+            "Khashi_Gosto(Mutton)",
+            "Macch(Fish)",
+            "Dim(Egg)"});
             this.cb_Items.Location = new System.Drawing.Point(12, 117);
             this.cb_Items.Name = "cb_Items";
             this.cb_Items.Size = new System.Drawing.Size(160, 28);
             this.cb_Items.TabIndex = 2;
+            this.cb_Items.SelectedIndexChanged += new System.EventHandler(this.cb_Items_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 90);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(40, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 24);
+            this.label2.Size = new System.Drawing.Size(68, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Items";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(186, 90);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 24);
+            this.label3.Size = new System.Drawing.Size(118, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Quantity";
+            this.label3.Text = "Quantity (KG)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(310, 93);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(326, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 24);
+            this.label4.Size = new System.Drawing.Size(123, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Amount";
+            this.label4.Text = "Amount (BDT)";
             // 
             // tb_Amount
             // 
@@ -155,9 +163,10 @@
             // 
             // bt_addItems
             // 
-            this.bt_addItems.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.bt_addItems.BackColor = System.Drawing.Color.Green;
             this.bt_addItems.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_addItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_addItems.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bt_addItems.Location = new System.Drawing.Point(193, 169);
             this.bt_addItems.Name = "bt_addItems";
             this.bt_addItems.Size = new System.Drawing.Size(105, 31);
@@ -168,14 +177,16 @@
             // 
             // addBazarCancel
             // 
+            this.addBazarCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.addBazarCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addBazarCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBazarCancel.ForeColor = System.Drawing.Color.White;
             this.addBazarCancel.Location = new System.Drawing.Point(352, 234);
             this.addBazarCancel.Name = "addBazarCancel";
             this.addBazarCancel.Size = new System.Drawing.Size(105, 31);
             this.addBazarCancel.TabIndex = 4;
             this.addBazarCancel.Text = "E&xit";
-            this.addBazarCancel.UseVisualStyleBackColor = true;
+            this.addBazarCancel.UseVisualStyleBackColor = false;
             this.addBazarCancel.Click += new System.EventHandler(this.addBazarCancel_Click);
             // 
             // dt_Bazar
@@ -189,21 +200,23 @@
             // 
             // bt_back
             // 
+            this.bt_back.BackColor = System.Drawing.Color.Red;
             this.bt_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_back.ForeColor = System.Drawing.Color.White;
             this.bt_back.Location = new System.Drawing.Point(232, 235);
             this.bt_back.Name = "bt_back";
             this.bt_back.Size = new System.Drawing.Size(110, 30);
             this.bt_back.TabIndex = 6;
             this.bt_back.Text = "B&ack";
-            this.bt_back.UseVisualStyleBackColor = true;
+            this.bt_back.UseVisualStyleBackColor = false;
             this.bt_back.Click += new System.EventHandler(this.bt_back_Click);
             // 
             // Add_Bazar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(478, 287);
             this.Controls.Add(this.bt_back);
             this.Controls.Add(this.dt_Bazar);

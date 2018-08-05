@@ -33,6 +33,7 @@ namespace VirtualMessManager
         private void Manager_Load(object sender, EventArgs e)
         {
             tb_loginStatusMan.Text = Login.loginName;
+            textBox1.Text = Login.uType;
         }
 
         private void manAddBazar_Click(object sender, EventArgs e)
@@ -78,6 +79,11 @@ namespace VirtualMessManager
             this.Hide();
             Login log = new Login();
             log.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

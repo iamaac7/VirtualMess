@@ -35,7 +35,9 @@ namespace VirtualMessManager
 
         private void AdminChange_Load(object sender, EventArgs e)
         {
-            tb_NewAdminName.Focus();
+            this.ActiveControl = tb_OldAdminUserName;
+            tb_OldAdminUserName.Focus();
+            //tb_OldAdminUserName.Focus();
         }
 
         private void bt_confirm_Click(object sender, EventArgs e)
@@ -142,10 +144,15 @@ namespace VirtualMessManager
 
         private void bt_Exit_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
-            this.Hide();
-            Login log = new Login();
-            log.Show();
+            DialogResult result = MessageBox.Show("Do You want to exit?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            ////Application.Exit();
+            //this.Hide();
+            //Login log = new Login();
+            //log.Show();
 
         }
 

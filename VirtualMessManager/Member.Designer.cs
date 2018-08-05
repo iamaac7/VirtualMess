@@ -39,6 +39,7 @@
             this.memBookMeal = new System.Windows.Forms.Button();
             this.memMemberInfo = new System.Windows.Forms.Button();
             this.memAddBazar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMem)).BeginInit();
@@ -55,8 +56,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.tb_loginStatusMem);
             this.panel1.Controls.Add(this.pictureBoxMem);
             this.panel1.Controls.Add(this.button2);
@@ -73,13 +75,14 @@
             // 
             // tb_loginStatusMem
             // 
-            this.tb_loginStatusMem.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tb_loginStatusMem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_loginStatusMem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_loginStatusMem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_loginStatusMem.Location = new System.Drawing.Point(141, 8);
+            this.tb_loginStatusMem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_loginStatusMem.Location = new System.Drawing.Point(165, 5);
             this.tb_loginStatusMem.Name = "tb_loginStatusMem";
-            this.tb_loginStatusMem.Size = new System.Drawing.Size(116, 14);
+            this.tb_loginStatusMem.Size = new System.Drawing.Size(116, 22);
             this.tb_loginStatusMem.TabIndex = 10;
+            this.tb_loginStatusMem.TextChanged += new System.EventHandler(this.tb_loginStatusMem_TextChanged);
             // 
             // pictureBoxMem
             // 
@@ -92,9 +95,10 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(349, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 29);
@@ -105,8 +109,9 @@
             // 
             // memBazarHistory
             // 
-            this.memBazarHistory.BackColor = System.Drawing.Color.SpringGreen;
+            this.memBazarHistory.BackColor = System.Drawing.Color.Green;
             this.memBazarHistory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.memBazarHistory.ForeColor = System.Drawing.Color.White;
             this.memBazarHistory.Location = new System.Drawing.Point(216, 203);
             this.memBazarHistory.Name = "memBazarHistory";
             this.memBazarHistory.Size = new System.Drawing.Size(208, 68);
@@ -117,8 +122,9 @@
             // 
             // memMealHistory
             // 
-            this.memMealHistory.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.memMealHistory.BackColor = System.Drawing.Color.Navy;
             this.memMealHistory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.memMealHistory.ForeColor = System.Drawing.Color.White;
             this.memMealHistory.Location = new System.Drawing.Point(25, 203);
             this.memMealHistory.Name = "memMealHistory";
             this.memMealHistory.Size = new System.Drawing.Size(191, 68);
@@ -131,6 +137,7 @@
             // 
             this.memBookMeal.BackColor = System.Drawing.Color.Teal;
             this.memBookMeal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.memBookMeal.ForeColor = System.Drawing.Color.White;
             this.memBookMeal.Location = new System.Drawing.Point(180, 134);
             this.memBookMeal.Name = "memBookMeal";
             this.memBookMeal.Size = new System.Drawing.Size(117, 69);
@@ -143,6 +150,7 @@
             // 
             this.memMemberInfo.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.memMemberInfo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.memMemberInfo.ForeColor = System.Drawing.Color.White;
             this.memMemberInfo.Location = new System.Drawing.Point(297, 134);
             this.memMemberInfo.Name = "memMemberInfo";
             this.memMemberInfo.Size = new System.Drawing.Size(127, 69);
@@ -155,6 +163,7 @@
             // 
             this.memAddBazar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.memAddBazar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.memAddBazar.ForeColor = System.Drawing.Color.White;
             this.memAddBazar.Location = new System.Drawing.Point(25, 134);
             this.memAddBazar.Name = "memAddBazar";
             this.memAddBazar.Size = new System.Drawing.Size(155, 69);
@@ -163,11 +172,22 @@
             this.memAddBazar.UseVisualStyleBackColor = false;
             this.memAddBazar.Click += new System.EventHandler(this.memAddBazar_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(165, 43);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(116, 19);
+            this.textBox1.TabIndex = 11;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(547, 467);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -199,5 +219,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBoxMem;
         private System.Windows.Forms.TextBox tb_loginStatusMem;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

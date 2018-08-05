@@ -58,6 +58,8 @@
             this.errorName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorMessName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorUsername = new System.Windows.Forms.ErrorProvider(this.components);
+            this.rb_Admin = new System.Windows.Forms.RadioButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorName)).BeginInit();
@@ -67,7 +69,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.rb_Admin);
             this.panel1.Controls.Add(this.tb_imagePath);
             this.panel1.Controls.Add(this.rb_Manager);
             this.panel1.Controls.Add(this.rb_Member);
@@ -101,7 +105,7 @@
             // 
             // tb_imagePath
             // 
-            this.tb_imagePath.Location = new System.Drawing.Point(363, 147);
+            this.tb_imagePath.Location = new System.Drawing.Point(363, 151);
             this.tb_imagePath.Name = "tb_imagePath";
             this.tb_imagePath.Size = new System.Drawing.Size(99, 22);
             this.tb_imagePath.TabIndex = 13;
@@ -111,7 +115,7 @@
             // 
             this.rb_Manager.AutoSize = true;
             this.rb_Manager.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Manager.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.rb_Manager.ForeColor = System.Drawing.Color.Black;
             this.rb_Manager.Location = new System.Drawing.Point(150, 117);
             this.rb_Manager.Name = "rb_Manager";
             this.rb_Manager.Size = new System.Drawing.Size(80, 21);
@@ -125,7 +129,7 @@
             // 
             this.rb_Member.AutoSize = true;
             this.rb_Member.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Member.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.rb_Member.ForeColor = System.Drawing.Color.Black;
             this.rb_Member.Location = new System.Drawing.Point(25, 117);
             this.rb_Member.Name = "rb_Member";
             this.rb_Member.Size = new System.Drawing.Size(77, 21);
@@ -173,11 +177,11 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Cancel.Location = new System.Drawing.Point(220, 439);
+            this.btn_Cancel.Location = new System.Drawing.Point(224, 439);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(117, 32);
             this.btn_Cancel.TabIndex = 10;
@@ -187,7 +191,7 @@
             // 
             // btn_Confirm
             // 
-            this.btn_Confirm.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Confirm.BackColor = System.Drawing.Color.Green;
             this.btn_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Confirm.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Confirm.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -215,10 +219,10 @@
             // 
             // tb_Phone
             // 
-            this.tb_Phone.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tb_Phone.BackColor = System.Drawing.Color.White;
             this.tb_Phone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_Phone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Phone.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.tb_Phone.ForeColor = System.Drawing.Color.Black;
             this.tb_Phone.Location = new System.Drawing.Point(150, 394);
             this.tb_Phone.Multiline = true;
             this.tb_Phone.Name = "tb_Phone";
@@ -229,10 +233,10 @@
             // 
             // tb_Password
             // 
-            this.tb_Password.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tb_Password.BackColor = System.Drawing.Color.White;
             this.tb_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_Password.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Password.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.tb_Password.ForeColor = System.Drawing.Color.Black;
             this.tb_Password.Location = new System.Drawing.Point(150, 360);
             this.tb_Password.Multiline = true;
             this.tb_Password.Name = "tb_Password";
@@ -242,10 +246,10 @@
             // 
             // tb_userName
             // 
-            this.tb_userName.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tb_userName.BackColor = System.Drawing.Color.White;
             this.tb_userName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_userName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_userName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.tb_userName.ForeColor = System.Drawing.Color.Black;
             this.tb_userName.Location = new System.Drawing.Point(150, 326);
             this.tb_userName.Multiline = true;
             this.tb_userName.Name = "tb_userName";
@@ -255,10 +259,10 @@
             // 
             // tb_Name
             // 
-            this.tb_Name.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tb_Name.BackColor = System.Drawing.Color.White;
             this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_Name.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Name.ForeColor = System.Drawing.Color.AliceBlue;
+            this.tb_Name.ForeColor = System.Drawing.Color.Black;
             this.tb_Name.Location = new System.Drawing.Point(150, 71);
             this.tb_Name.Multiline = true;
             this.tb_Name.Name = "tb_Name";
@@ -270,7 +274,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(22, 241);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 18);
@@ -281,8 +285,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label6.Location = new System.Drawing.Point(16, 393);
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(22, 394);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 18);
             this.label6.TabIndex = 3;
@@ -292,8 +296,8 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label9.Location = new System.Drawing.Point(16, 360);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(22, 360);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(83, 18);
             this.label9.TabIndex = 3;
@@ -304,19 +308,20 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label8.Location = new System.Drawing.Point(16, 326);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(22, 336);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 18);
             this.label8.TabIndex = 3;
             this.label8.Text = "Username";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(16, 292);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(22, 292);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 18);
             this.label7.TabIndex = 3;
@@ -326,7 +331,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(22, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 18);
@@ -337,8 +342,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(22, 151);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(22, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 18);
             this.label3.TabIndex = 3;
@@ -348,8 +353,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(22, 71);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(22, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 18);
             this.label2.TabIndex = 3;
@@ -357,7 +362,7 @@
             // 
             // btn_Browse
             // 
-            this.btn_Browse.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_Browse.BackColor = System.Drawing.Color.Blue;
             this.btn_Browse.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Browse.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Browse.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -384,7 +389,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(125, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 31);
@@ -403,11 +408,39 @@
             // 
             this.errorUsername.ContainerControl = this;
             // 
+            // rb_Admin
+            // 
+            this.rb_Admin.AutoSize = true;
+            this.rb_Admin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Admin.ForeColor = System.Drawing.Color.Black;
+            this.rb_Admin.Location = new System.Drawing.Point(251, 117);
+            this.rb_Admin.Name = "rb_Admin";
+            this.rb_Admin.Size = new System.Drawing.Size(67, 21);
+            this.rb_Admin.TabIndex = 14;
+            this.rb_Admin.TabStop = true;
+            this.rb_Admin.Text = "Admin";
+            this.rb_Admin.UseVisualStyleBackColor = true;
+            this.rb_Admin.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(25, 439);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 32);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(533, 507);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -455,6 +488,8 @@
         private System.Windows.Forms.ErrorProvider errorUsername;
         private System.Windows.Forms.TextBox tb_imagePath;
         private System.Windows.Forms.ComboBox cb_ManagerName;
+        private System.Windows.Forms.RadioButton rb_Admin;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -25,6 +25,7 @@ namespace VirtualMessManager
         private void Member_Load(object sender, EventArgs e)
         {
             tb_loginStatusMem.Text = Login.loginName;
+            textBox1.Text = Login.uType;
         }
 
         private void memAddBazar_Click(object sender, EventArgs e)
@@ -70,6 +71,14 @@ namespace VirtualMessManager
             this.Hide();
         }
 
-        
+        private void tb_loginStatusMem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

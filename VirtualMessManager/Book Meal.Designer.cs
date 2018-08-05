@@ -58,8 +58,11 @@
             this.cb_Breakfast.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Breakfast.FormattingEnabled = true;
             this.cb_Breakfast.Items.AddRange(new object[] {
+            "0",
             "0.5",
-            "0"});
+            "1",
+            "1.5",
+            "2"});
             this.cb_Breakfast.Location = new System.Drawing.Point(157, 114);
             this.cb_Breakfast.Name = "cb_Breakfast";
             this.cb_Breakfast.Size = new System.Drawing.Size(80, 28);
@@ -93,8 +96,11 @@
             this.cb_Lunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Lunch.FormattingEnabled = true;
             this.cb_Lunch.Items.AddRange(new object[] {
+            "0",
             "1",
-            "0"});
+            "2",
+            "3",
+            "4"});
             this.cb_Lunch.Location = new System.Drawing.Point(277, 117);
             this.cb_Lunch.Name = "cb_Lunch";
             this.cb_Lunch.Size = new System.Drawing.Size(80, 28);
@@ -107,8 +113,11 @@
             this.cb_Dinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Dinner.FormattingEnabled = true;
             this.cb_Dinner.Items.AddRange(new object[] {
+            "0",
             "1",
-            "0"});
+            "2",
+            "3",
+            "4"});
             this.cb_Dinner.Location = new System.Drawing.Point(396, 117);
             this.cb_Dinner.Name = "cb_Dinner";
             this.cb_Dinner.Size = new System.Drawing.Size(80, 28);
@@ -147,42 +156,48 @@
             // 
             // bt_book
             // 
+            this.bt_book.BackColor = System.Drawing.Color.Green;
             this.bt_book.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_book.ForeColor = System.Drawing.Color.White;
             this.bt_book.Location = new System.Drawing.Point(322, 178);
             this.bt_book.Name = "bt_book";
             this.bt_book.Size = new System.Drawing.Size(93, 36);
             this.bt_book.TabIndex = 4;
             this.bt_book.Text = "B&ook";
-            this.bt_book.UseVisualStyleBackColor = true;
+            this.bt_book.UseVisualStyleBackColor = false;
             this.bt_book.Click += new System.EventHandler(this.bt_book_Click);
             // 
             // bt_Back
             // 
+            this.bt_Back.BackColor = System.Drawing.Color.Red;
             this.bt_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Back.ForeColor = System.Drawing.Color.White;
             this.bt_Back.Location = new System.Drawing.Point(303, 246);
             this.bt_Back.Name = "bt_Back";
             this.bt_Back.Size = new System.Drawing.Size(93, 36);
             this.bt_Back.TabIndex = 4;
             this.bt_Back.Text = "B&ack";
-            this.bt_Back.UseVisualStyleBackColor = true;
+            this.bt_Back.UseVisualStyleBackColor = false;
             this.bt_Back.Click += new System.EventHandler(this.bt_Back_Click);
             // 
             // bt_Exit
             // 
+            this.bt_Exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.bt_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Exit.ForeColor = System.Drawing.Color.White;
             this.bt_Exit.Location = new System.Drawing.Point(405, 246);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(93, 36);
             this.bt_Exit.TabIndex = 4;
             this.bt_Exit.Text = "E&xit";
-            this.bt_Exit.UseVisualStyleBackColor = true;
+            this.bt_Exit.UseVisualStyleBackColor = false;
             this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
             // 
             // Book_Meal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(533, 312);
             this.Controls.Add(this.bt_Exit);
             this.Controls.Add(this.bt_Back);

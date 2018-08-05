@@ -32,11 +32,16 @@ namespace VirtualMessManager
 
         private void button2_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Do You want to exit?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
             //this.Close();
             //Application.Exit();
-            this.Hide();
-            Login log = new Login();
-            log.Show();
+            //this.Hide();
+            //Login log = new Login();
+            //log.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,7 +80,8 @@ namespace VirtualMessManager
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-
+            tb_loginStatusMan.Text = Login.loginName;
+            textBox1.Text = Login.uType;
         }
 
         private void AdminSession_Load(object sender, EventArgs e)

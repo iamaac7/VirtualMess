@@ -48,10 +48,14 @@ namespace VirtualMessManager
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
-            this.Hide();
-            Login log = new Login();
-            log.Show();
+            DialogResult result = MessageBox.Show("Do You want to exit?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            //this.Hide();
+            //Login log = new Login();
+            //log.Show();
         }
 
         private void RegistrationForm_Load(object sender, EventArgs e)
@@ -251,6 +255,22 @@ namespace VirtualMessManager
 
         }
 
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login log = new Login();
+            log.Show();
+        }
     }
 
 

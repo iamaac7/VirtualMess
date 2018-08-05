@@ -50,7 +50,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Green;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(137, 182);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 24);
@@ -81,7 +81,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Green;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label4.Location = new System.Drawing.Point(156, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(218, 24);
@@ -172,9 +172,9 @@
             this.bt_Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Back.ForeColor = System.Drawing.Color.White;
-            this.bt_Back.Location = new System.Drawing.Point(375, 441);
+            this.bt_Back.Location = new System.Drawing.Point(385, 441);
             this.bt_Back.Name = "bt_Back";
-            this.bt_Back.Size = new System.Drawing.Size(96, 39);
+            this.bt_Back.Size = new System.Drawing.Size(86, 40);
             this.bt_Back.TabIndex = 3;
             this.bt_Back.Text = "B&ack";
             this.bt_Back.UseVisualStyleBackColor = false;
@@ -186,9 +186,9 @@
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Exit.ForeColor = System.Drawing.Color.White;
-            this.bt_Exit.Location = new System.Drawing.Point(477, 441);
+            this.bt_Exit.Location = new System.Drawing.Point(477, 442);
             this.bt_Exit.Name = "bt_Exit";
-            this.bt_Exit.Size = new System.Drawing.Size(96, 39);
+            this.bt_Exit.Size = new System.Drawing.Size(92, 38);
             this.bt_Exit.TabIndex = 3;
             this.bt_Exit.Text = "E&xit";
             this.bt_Exit.UseVisualStyleBackColor = false;
@@ -196,12 +196,13 @@
             // 
             // bt_confirm
             // 
-            this.bt_confirm.BackColor = System.Drawing.Color.Gold;
+            this.bt_confirm.BackColor = System.Drawing.Color.Green;
             this.bt_confirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_confirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_confirm.ForeColor = System.Drawing.Color.White;
             this.bt_confirm.Location = new System.Drawing.Point(193, 384);
             this.bt_confirm.Name = "bt_confirm";
-            this.bt_confirm.Size = new System.Drawing.Size(138, 45);
+            this.bt_confirm.Size = new System.Drawing.Size(120, 40);
             this.bt_confirm.TabIndex = 3;
             this.bt_confirm.Text = "Con&firm";
             this.bt_confirm.UseVisualStyleBackColor = false;
@@ -211,6 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(607, 499);
             this.Controls.Add(this.bt_Exit);
             this.Controls.Add(this.bt_confirm);
