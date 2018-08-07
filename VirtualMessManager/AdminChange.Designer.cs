@@ -51,7 +51,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(137, 182);
+            this.label1.Location = new System.Drawing.Point(156, 185);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 24);
             this.label1.TabIndex = 1;
@@ -84,9 +84,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.label4.Location = new System.Drawing.Point(156, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 24);
+            this.label4.Size = new System.Drawing.Size(254, 24);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Old Admin Information";
+            this.label4.Text = "Current Admin Information";
             // 
             // label5
             // 

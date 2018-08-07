@@ -45,22 +45,7 @@ namespace VirtualMessManager
         }
 
 
-        private void loginPassword_Validating(object sender, CancelEventArgs e)
-        {
-            if (loginPassword.Text.Trim().Equals("PASSWORD"))
-            {
-                e.Cancel = true;
-                loginPassword.Focus();
-                errorPassword.SetError(loginPassword, "Please Enter your Password ");
-
-            }
-            else
-            {
-                e.Cancel = false;
-                errorPassword.SetError(loginPassword, null);
-
-            }
-        }
+        
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -189,6 +174,16 @@ namespace VirtualMessManager
         private void signUsername_TextChanged_1(object sender, EventArgs e)
         {
             label5.Text = "";
+        }
+
+        private void tb_login_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

@@ -23,7 +23,8 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO vmmUser1 VALUES ('" + info.name + "','" + info.userType + "','" +info.refManagrtName + "','" + info.messName + "','" + info.dob + "','" + info.bloodGroup + "','" + info.userName + "','" + info.password + "','" + info.phone + "',null)";
+            cmd.CommandText = "INSERT INTO vmmUser1 VALUES ('" + info.name + "','" + info.userType + "','" + info.refManagrtName + "','" + info.messName + "','" + info.dob + "','" + info.bloodGroup + "','" + info.userName + "','" + info.password + "','" + info.phone + "',@pic)";
+            cmd.Parameters.Add(new SqlParameter("@pic", info.pic));
             return db.ExeNonQuery(cmd);
         }
 
@@ -103,7 +104,9 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update vmmUser1 set userType='Manager',UserName='"+info.newAdminName+"' where Id="+info.newAdminId+"";
+            //cmd.CommandText = "update vmmUser1 set userType='Manager',UserName='" + info.newAdminName + "' where Id=" + info.newAdminId + "";
+          // cmd.CommandText = "update vmmUser1 set userType='Manager' where Id=" + info.newAdminId + "";
+            cmd.CommandText = "update vmmUser1 set userType='Manager' where UserName='" + info.newAdminUsername + "' and Id=" + info.newAdminId + "";
             return db.ExeNonQuery(cmd);
         }
 

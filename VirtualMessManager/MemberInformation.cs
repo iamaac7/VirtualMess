@@ -46,16 +46,24 @@ namespace VirtualMessManager
             MessageBox.Show("Your Manager is : "+info.refManagrtName);
             dt = opr.LoadMemberInformation(info);
             MemdataGridView.DataSource = dt;
-            
+           
+
 
         }
 
         private void bt_Exit_Click(object sender, EventArgs e)
         {
             //Application.Exit();
-            this.Hide();
-            Login log = new Login();
-            log.Show();
+
+            DialogResult result = MessageBox.Show("Do You want to exit?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+            //this.Hide();
+            //Login log = new Login();
+            //log.Show();
         }
 
         public void ChangeGridColor(DataGridView grid)
@@ -74,7 +82,10 @@ namespace VirtualMessManager
             }
             else
             {
-                memberBack.Show();
+               // memberBack.Show();
+                AdminSession AS = new AdminSession();
+                AS.Show();
+                this.Hide();
             }
         }
     }

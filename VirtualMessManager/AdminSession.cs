@@ -47,7 +47,11 @@ namespace VirtualMessManager
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            managerBack.Show();
+            Manager M = new Manager();
+            M.Show();
+
+            //this.Hide();
+            //managerBack.Show();
         }
 
         private void admMealSheetUpd_Click(object sender, EventArgs e)
@@ -87,6 +91,18 @@ namespace VirtualMessManager
         private void AdminSession_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MemberInformation MI = new MemberInformation();
+            MI.Show();
+            this.Hide();
         }
     }
 }
