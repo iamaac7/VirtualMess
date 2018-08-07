@@ -112,7 +112,7 @@ namespace VirtualMessManager
             this.signUsername.Name = "signUsername";
             this.signUsername.Size = new System.Drawing.Size(199, 27);
             this.signUsername.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.signUsername, "Enter your username.");
+            this.toolTip1.SetToolTip(this.signUsername, "Enter your username.\r\n*It should be unique.\r\n*Can not start with a letter");
             this.signUsername.TextChanged += new System.EventHandler(this.signUsername_TextChanged_1);
             this.signUsername.Leave += new System.EventHandler(this.signUsername_Leave);
             // 
@@ -145,7 +145,7 @@ namespace VirtualMessManager
             this.linkLabel2.TabIndex = 9;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Sign Up";
-            this.toolTip1.SetToolTip(this.linkLabel2, "Click here for create account.");
+            this.toolTip1.SetToolTip(this.linkLabel2, "Click here for Create  a new Account.");
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // label2
@@ -167,7 +167,7 @@ namespace VirtualMessManager
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forget Password";
-            this.toolTip1.SetToolTip(this.linkLabel1, "Click here for change your password.");
+            this.toolTip1.SetToolTip(this.linkLabel1, "Click here for Change your password.");
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // button2
@@ -179,7 +179,7 @@ namespace VirtualMessManager
             this.button2.Size = new System.Drawing.Size(267, 34);
             this.button2.TabIndex = 6;
             this.button2.Text = "E&xit";
-            this.toolTip1.SetToolTip(this.button2, "Click here for exit the system.");
+            this.toolTip1.SetToolTip(this.button2, "Click here for Exit the system.");
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -196,9 +196,10 @@ namespace VirtualMessManager
             this.tb_login.Size = new System.Drawing.Size(266, 37);
             this.tb_login.TabIndex = 5;
             this.tb_login.Text = "&LOGIN";
-            this.toolTip1.SetToolTip(this.tb_login, "Click here for login.");
+            this.toolTip1.SetToolTip(this.tb_login, "Click here for Login.");
             this.tb_login.UseVisualStyleBackColor = false;
             this.tb_login.Click += new System.EventHandler(this.tb_login_Click);
+            this.tb_login.MouseHover += new System.EventHandler(this.tb_login_MouseHover);
             // 
             // label1
             // 
@@ -221,6 +222,14 @@ namespace VirtualMessManager
             // 
             this.errorPassword.ContainerControl = this;
             this.errorPassword.Icon = ((System.Drawing.Icon)(resources.GetObject("errorPassword.Icon")));
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.BackColor = System.Drawing.Color.White;
+            this.toolTip1.ForeColor = System.Drawing.Color.Black;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Hint";
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // Login
             // 

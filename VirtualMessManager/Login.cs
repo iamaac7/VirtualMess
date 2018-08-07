@@ -190,5 +190,15 @@ namespace VirtualMessManager
         {
             label5.Text = "";
         }
+
+        private void tb_login_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }

@@ -103,7 +103,9 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update vmmUser1 set userType='Manager',UserName='"+info.newAdminName+"' where Id="+info.newAdminId+"";
+            //cmd.CommandText = "update vmmUser1 set userType='Manager',UserName='" + info.newAdminName + "' where Id=" + info.newAdminId + "";
+          // cmd.CommandText = "update vmmUser1 set userType='Manager' where Id=" + info.newAdminId + "";
+            cmd.CommandText = "update vmmUser1 set userType='Manager' where UserName='" + info.newAdminUsername + "' and Id=" + info.newAdminId + "";
             return db.ExeNonQuery(cmd);
         }
 
