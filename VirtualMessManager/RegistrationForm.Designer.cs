@@ -372,7 +372,7 @@
             // profilePic
             // 
             this.profilePic.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profilePic.BackgroundImage")));
-            this.profilePic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.profilePic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profilePic.Location = new System.Drawing.Point(361, 9);
             this.profilePic.Name = "profilePic";
             this.profilePic.Size = new System.Drawing.Size(101, 102);

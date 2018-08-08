@@ -11,7 +11,8 @@ namespace vmmDAL
 {
     public class DBConnection
     {
-        public SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-GHDL7O6\SQLEXPRESS;Initial Catalog=VMM;User ID=sa;Password=12345");
+
+        public SqlConnection connection = new SqlConnection(@"Data Source=WINDOWS-090SA4I\FAHADSQL;Initial Catalog=VMM;Integrated Security=True");
 
         public SqlConnection GetConnection() 
         {

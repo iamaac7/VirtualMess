@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,17 +17,18 @@ namespace VirtualMessManager
         {
             InitializeComponent();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void Member_Load(object sender, EventArgs e)
         {
             tb_loginStatusMem.Text = Login.loginName;
+            if (Login.picture == null) { pictureBoxMem.Image = null; }
+            else
+            {
+                MemoryStream ms = new MemoryStream(Login.picture);
+                pictureBoxMem.Image = Image.FromStream(ms);
+            }
         }
-
         private void memAddBazar_Click(object sender, EventArgs e)
         {
             this.Hide();

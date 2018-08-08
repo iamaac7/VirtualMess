@@ -20,6 +20,7 @@ namespace vmmBLL
         public string userName { get; set; }
         public string password { get; set; }
         public int phone { get; set; }
+        public byte[] pic = null;
         //public  image { get; set; }
 
         public DateTime dateFromMeal { get; set; }

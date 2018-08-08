@@ -23,7 +23,8 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "INSERT INTO vmmUser1 VALUES ('" + info.name + "','" + info.userType + "','" +info.refManagrtName + "','" + info.messName + "','" + info.dob + "','" + info.bloodGroup + "','" + info.userName + "','" + info.password + "','" + info.phone + "',null)";
+            cmd.CommandText = "INSERT INTO vmmUser1 VALUES ('" + info.name + "','" + info.userType + "','" +info.refManagrtName + "','" + info.messName + "','" + info.dob + "','" + info.bloodGroup + "','" + info.userName + "','" + info.password + "','" + info.phone + "',@pic)";
+            cmd.Parameters.Add(new SqlParameter("@pic", info.pic));
             return db.ExeNonQuery(cmd);
         }
 

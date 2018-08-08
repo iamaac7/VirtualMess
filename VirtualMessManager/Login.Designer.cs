@@ -45,12 +45,9 @@ namespace VirtualMessManager
             this.button2 = new System.Windows.Forms.Button();
             this.tb_login = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.errorUsername = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorPassword = new System.Windows.Forms.ErrorProvider(this.components);
+            
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorPassword)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -156,7 +153,7 @@ namespace VirtualMessManager
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 20);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Don\'t have an account?";
+            this.label2.Text = "Don't have an account?";
             // 
             // linkLabel1
             // 
@@ -212,16 +209,7 @@ namespace VirtualMessManager
             this.label1.Text = "Login";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // errorUsername
-            // 
-            this.errorUsername.ContainerControl = this;
-            this.errorUsername.Icon = ((System.Drawing.Icon)(resources.GetObject("errorUsername.Icon")));
-            // 
-            // errorPassword
-            // 
-            this.errorPassword.ContainerControl = this;
-            this.errorPassword.Icon = ((System.Drawing.Icon)(resources.GetObject("errorPassword.Icon")));
-            // 
+         
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,8 +225,7 @@ namespace VirtualMessManager
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorPassword)).EndInit();
+  
             this.ResumeLayout(false);
 
         }
@@ -248,8 +235,6 @@ namespace VirtualMessManager
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button tb_login;
-        private System.Windows.Forms.ErrorProvider errorUsername;
-        private System.Windows.Forms.ErrorProvider errorPassword;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label2;

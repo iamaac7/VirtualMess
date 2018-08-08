@@ -69,7 +69,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(458, 344);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // tb_loginStatusMem
             // 
@@ -83,10 +82,12 @@
             // 
             // pictureBoxMem
             // 
+            this.pictureBoxMem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBoxMem.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxMem.Image")));
             this.pictureBoxMem.Location = new System.Drawing.Point(25, 3);
             this.pictureBoxMem.Name = "pictureBoxMem";
             this.pictureBoxMem.Size = new System.Drawing.Size(113, 120);
+            this.pictureBoxMem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMem.TabIndex = 9;
             this.pictureBoxMem.TabStop = false;
             // 

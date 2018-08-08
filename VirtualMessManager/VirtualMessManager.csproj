@@ -224,9 +224,6 @@
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SeeBazarHistory.dje.resx">
-      <DependentUpon>SeeBazarHistory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SeeBazarHistory.resx">
       <DependentUpon>SeeBazarHistory.cs</DependentUpon>
     </EmbeddedResource>

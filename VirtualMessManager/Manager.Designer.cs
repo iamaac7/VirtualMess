@@ -32,6 +32,7 @@
             this.pictureBoxManager = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bt_signOut = new System.Windows.Forms.Button();
             this.tb_loginStatusMan = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.manSeeBazar = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.manBookMeal = new System.Windows.Forms.Button();
             this.manMemberInfo = new System.Windows.Forms.Button();
             this.manAddBazar = new System.Windows.Forms.Button();
-            this.bt_signOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManager)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -70,7 +70,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.bt_signOut);
             this.panel1.Controls.Add(this.tb_loginStatusMan);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -83,6 +83,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(453, 351);
             this.panel1.TabIndex = 2;
+            // 
+            // bt_signOut
+            // 
+            this.bt_signOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.bt_signOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bt_signOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_signOut.Location = new System.Drawing.Point(352, 4);
+            this.bt_signOut.Name = "bt_signOut";
+            this.bt_signOut.Size = new System.Drawing.Size(90, 30);
+            this.bt_signOut.TabIndex = 7;
+            this.bt_signOut.Text = "Si&gnOut";
+            this.bt_signOut.UseVisualStyleBackColor = false;
+            this.bt_signOut.Click += new System.EventHandler(this.bt_signOut_Click);
             // 
             // tb_loginStatusMan
             // 
@@ -97,10 +110,12 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(26, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(113, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
@@ -169,19 +184,6 @@
             this.manAddBazar.UseVisualStyleBackColor = false;
             this.manAddBazar.Click += new System.EventHandler(this.manAddBazar_Click);
             // 
-            // bt_signOut
-            // 
-            this.bt_signOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.bt_signOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bt_signOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_signOut.Location = new System.Drawing.Point(352, 4);
-            this.bt_signOut.Name = "bt_signOut";
-            this.bt_signOut.Size = new System.Drawing.Size(90, 30);
-            this.bt_signOut.TabIndex = 7;
-            this.bt_signOut.Text = "Si&gnOut";
-            this.bt_signOut.UseVisualStyleBackColor = false;
-            this.bt_signOut.Click += new System.EventHandler(this.bt_signOut_Click);
-            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -197,6 +199,8 @@
             this.Name = "Manager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Manager_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Manager_FormClosed);
             this.Load += new System.EventHandler(this.Manager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManager)).EndInit();
             this.panel1.ResumeLayout(false);

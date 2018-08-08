@@ -94,30 +94,33 @@ namespace VirtualMessManager
 
         private void btn_Browse_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                string picPath = dialog.FileName.ToString();
-                tb_imagePath.Text = picPath;
-                profilePic.ImageLocation = picPath;
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
+                dialog.Title = "Select Your Picture";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    string picPath = dialog.FileName.ToString();
+                    tb_imagePath.Text = picPath;
+                    profilePic.ImageLocation = picPath;
+                }
+            }
+            catch (Exception p) {
+                MessageBox.Show(p.Message);
             }
         }
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            //byte[] imageBt = null;
-            //try
-            //{
-            //    FileStream fstream = new FileStream(this.tb_imagePath.Text, FileMode.Open, FileAccess.Read);
-            //    BinaryReader br = new BinaryReader(fstream);
-            //    imageBt = br.ReadBytes((int)fstream.Length);
-            //}
-            //catch (Exception ex)
-            //{
-            //   // MessageBox.Show(e);
-            //}
+            byte[] img = null;
+            try {
+               
+                FileStream fs = new FileStream(tb_imagePath.Text, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+            }
+            catch (Exception p) { MessageBox.Show(p.Message); }
 
             if (tb_Name.Text.Trim() == "") { confirmFlag = false; }
             //else if (rb_Manager.Checked == false && rb_Member.Checked == false) { confirmFlag = false; }
@@ -131,23 +134,29 @@ namespace VirtualMessManager
             else if (tb_Phone.Text.Trim() == "") { confirmFlag = false; }
 
 
-            info.name = tb_Name.Text;
+            try
+            {
+                info.name = tb_Name.Text;
 
-            if (rb_Member.Checked == true)
-            {
-                _userType = "Member";
-            } if (rb_Manager.Checked == true)
-            {
-                _userType = "Manager";
+                if (rb_Member.Checked == true)
+                {
+                    _userType = "Member";
+                }
+                if (rb_Manager.Checked == true)
+                {
+                    _userType = "Manager";
+                }
+                info.userType = _userType;
+                info.refManagrtName = cb_ManagerName.Text;
+                info.messName = cb_MessName.Text;
+                info.dob = Convert.ToDateTime(date_dob.Value.ToShortDateString());
+                info.bloodGroup = cb_bloodGroup.Text;
+                info.userName = tb_userName.Text;
+                info.password = tb_Password.Text;
+                info.phone = Convert.ToInt32(tb_Phone.Text);
+                info.pic = img;
             }
-            info.userType = _userType;
-            info.refManagrtName = cb_ManagerName.Text;
-            info.messName = cb_MessName.Text;
-            info.dob = Convert.ToDateTime(date_dob.Value.ToShortDateString());
-            info.bloodGroup = cb_bloodGroup.Text;
-            info.userName = tb_userName.Text;
-            info.password = tb_Password.Text;
-            info.phone = Convert.ToInt32(tb_Phone.Text);
+            catch (Exception p) { MessageBox.Show(p.Message); }
 
             if (confirmFlag == true)
             {
@@ -160,17 +169,10 @@ namespace VirtualMessManager
                     Login log = new Login();
                     log.Show();
                     this.Hide();
-
-                    //tb_Name.Text = "";
-                    //rb_Member.Checked = false;
-                    //rb_Manager.Checked = false;
-                    //tb_userName.Text = "";
-                    //tb_Password.Text = "";
-                    //tb_Phone.Text = "";
-
                 }
+                
             }
-            else
+            else if(confirmFlag==false)
             {
                 MessageBox.Show("Please Fill Every Field Properly");
                 tb_Name.Focus();

@@ -25,6 +25,7 @@ namespace VirtualMessManager
         public static int userId;
         public static string logInUserName1;
         public static string logInPassword1;
+        public static byte[] picture = null;
 
         DataTable dt = new DataTable();
 
@@ -44,23 +45,6 @@ namespace VirtualMessManager
             rm.Show();
         }
 
-
-        private void loginPassword_Validating(object sender, CancelEventArgs e)
-        {
-            if (loginPassword.Text.Trim().Equals("PASSWORD"))
-            {
-                e.Cancel = true;
-                loginPassword.Focus();
-                errorPassword.SetError(loginPassword, "Please Enter your Password ");
-
-            }
-            else
-            {
-                e.Cancel = false;
-                errorPassword.SetError(loginPassword, null);
-
-            }
-        }
 
         private void Login_Load(object sender, EventArgs e)
         {
@@ -88,7 +72,10 @@ namespace VirtualMessManager
                     refManagerName = dt.Rows[0][3].ToString();
                     string tempid = dt.Rows[0][0].ToString();
                     userId = Convert.ToInt32(tempid);
-                    //bazar.userID = userId;
+                    if (dt.Rows[0][10] != null)
+                    {
+                        picture = (byte[])(dt.Rows[0][10]);
+                    }//bazar.userID = userId;
 
                     //MessageBox.Show(bazar.userID+"");
                     //bazar.userName = loginName;
