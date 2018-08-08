@@ -217,6 +217,14 @@ namespace VirtualMessManager
             this.toolTip1.ToolTipTitle = "Hint";
             this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.BackColor = System.Drawing.Color.White;
+            this.toolTip1.ForeColor = System.Drawing.Color.Black;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Hint";
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
