@@ -98,30 +98,35 @@ namespace VirtualMessManager
 
         private void btn_Browse_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
-
-            if (dialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                string picPath = dialog.FileName.ToString();
-                tb_imagePath.Text = picPath;
-                profilePic.ImageLocation = picPath;
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
+                dialog.Title = "Select Your Picture";
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    string picPath = dialog.FileName.ToString();
+                    tb_imagePath.Text = picPath;
+                    profilePic.ImageLocation = picPath;
+                }
             }
+            catch (Exception p) { MessageBox.Show(p.Message); }
         }
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            //byte[] imageBt = null;
-            //try
-            //{
-            //    FileStream fstream = new FileStream(this.tb_imagePath.Text, FileMode.Open, FileAccess.Read);
-            //    BinaryReader br = new BinaryReader(fstream);
-            //    imageBt = br.ReadBytes((int)fstream.Length);
-            //}
-            //catch (Exception ex)
-            //{
-            //   // MessageBox.Show(e);
-            //}
+            byte[] img = null;
+            try
+            {
+                FileStream fs = new FileStream(tb_imagePath.Text, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs);
+                img = br.ReadBytes((int)fs.Length);
+            }
+            catch (Exception ex)
+            {
+                 MessageBox.Show(ex.Message);
+            }
 
             if (tb_Name.Text.Trim() == "") { confirmFlag = false; }
             //else if (rb_Manager.Checked == false && rb_Member.Checked == false) { confirmFlag = false; }
@@ -152,7 +157,7 @@ namespace VirtualMessManager
             info.userName = tb_userName.Text;
             info.password = tb_Password.Text;
             info.phone = Convert.ToInt32(tb_Phone.Text);
-
+            info.pic = img;
             if (confirmFlag == true)
             {
 

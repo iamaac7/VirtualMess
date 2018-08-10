@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,12 @@ namespace VirtualMessManager
         {
             tb_loginStatusMan.Text = Login.loginName;
             textBox1.Text = Login.uType;
+            if (Login.picture == null) { pictureBox1.Image = null; }
+            else {
+
+                MemoryStream ms = new MemoryStream(Login.picture);
+                pictureBox1.Image = Image.FromStream(ms);
+            }
         }
 
         private void manAddBazar_Click(object sender, EventArgs e)
@@ -84,6 +91,12 @@ namespace VirtualMessManager
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            new ChangePassword().Show();
         }
     }
 }

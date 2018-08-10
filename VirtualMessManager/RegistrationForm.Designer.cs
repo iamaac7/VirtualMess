@@ -31,8 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.rb_Admin = new System.Windows.Forms.RadioButton();
             this.tb_imagePath = new System.Windows.Forms.TextBox();
-            this.rb_Manager = new System.Windows.Forms.RadioButton();
             this.rb_Member = new System.Windows.Forms.RadioButton();
             this.cb_bloodGroup = new System.Windows.Forms.ComboBox();
             this.cb_ManagerName = new System.Windows.Forms.ComboBox();
@@ -55,11 +56,10 @@
             this.btn_Browse = new System.Windows.Forms.Button();
             this.profilePic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rb_Manager = new System.Windows.Forms.RadioButton();
             this.errorName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorMessName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorUsername = new System.Windows.Forms.ErrorProvider(this.components);
-            this.rb_Admin = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorName)).BeginInit();
@@ -103,6 +103,34 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(25, 439);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 32);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // rb_Admin
+            // 
+            this.rb_Admin.AutoSize = true;
+            this.rb_Admin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Admin.ForeColor = System.Drawing.Color.Black;
+            this.rb_Admin.Location = new System.Drawing.Point(251, 117);
+            this.rb_Admin.Name = "rb_Admin";
+            this.rb_Admin.Size = new System.Drawing.Size(67, 21);
+            this.rb_Admin.TabIndex = 14;
+            this.rb_Admin.TabStop = true;
+            this.rb_Admin.Text = "Admin";
+            this.rb_Admin.UseVisualStyleBackColor = true;
+            this.rb_Admin.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // tb_imagePath
             // 
             this.tb_imagePath.Location = new System.Drawing.Point(363, 151);
@@ -110,20 +138,6 @@
             this.tb_imagePath.Size = new System.Drawing.Size(99, 22);
             this.tb_imagePath.TabIndex = 13;
             this.tb_imagePath.Visible = false;
-            // 
-            // rb_Manager
-            // 
-            this.rb_Manager.AutoSize = true;
-            this.rb_Manager.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Manager.ForeColor = System.Drawing.Color.Black;
-            this.rb_Manager.Location = new System.Drawing.Point(150, 117);
-            this.rb_Manager.Name = "rb_Manager";
-            this.rb_Manager.Size = new System.Drawing.Size(80, 21);
-            this.rb_Manager.TabIndex = 12;
-            this.rb_Manager.TabStop = true;
-            this.rb_Manager.Text = "Manager";
-            this.rb_Manager.UseVisualStyleBackColor = true;
-            this.rb_Manager.CheckedChanged += new System.EventHandler(this.rb_Manager_CheckedChanged_1);
             // 
             // rb_Member
             // 
@@ -185,7 +199,7 @@
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(117, 32);
             this.btn_Cancel.TabIndex = 10;
-            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.Text = "Exit";
             this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
@@ -221,7 +235,7 @@
             // 
             this.tb_Phone.BackColor = System.Drawing.Color.White;
             this.tb_Phone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_Phone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Phone.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.tb_Phone.ForeColor = System.Drawing.Color.Black;
             this.tb_Phone.Location = new System.Drawing.Point(150, 394);
             this.tb_Phone.Multiline = true;
@@ -235,7 +249,7 @@
             // 
             this.tb_Password.BackColor = System.Drawing.Color.White;
             this.tb_Password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_Password.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Password.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.tb_Password.ForeColor = System.Drawing.Color.Black;
             this.tb_Password.Location = new System.Drawing.Point(150, 360);
             this.tb_Password.Multiline = true;
@@ -248,7 +262,7 @@
             // 
             this.tb_userName.BackColor = System.Drawing.Color.White;
             this.tb_userName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_userName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_userName.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.tb_userName.ForeColor = System.Drawing.Color.Black;
             this.tb_userName.Location = new System.Drawing.Point(150, 326);
             this.tb_userName.Multiline = true;
@@ -261,7 +275,7 @@
             // 
             this.tb_Name.BackColor = System.Drawing.Color.White;
             this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_Name.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Name.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.tb_Name.ForeColor = System.Drawing.Color.Black;
             this.tb_Name.Location = new System.Drawing.Point(150, 71);
             this.tb_Name.Multiline = true;
@@ -396,6 +410,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Registration Form";
             // 
+            // rb_Manager
+            // 
+            this.rb_Manager.AutoSize = true;
+            this.rb_Manager.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Manager.ForeColor = System.Drawing.Color.Black;
+            this.rb_Manager.Location = new System.Drawing.Point(150, 117);
+            this.rb_Manager.Name = "rb_Manager";
+            this.rb_Manager.Size = new System.Drawing.Size(80, 21);
+            this.rb_Manager.TabIndex = 12;
+            this.rb_Manager.TabStop = true;
+            this.rb_Manager.Text = "Manager";
+            this.rb_Manager.UseVisualStyleBackColor = true;
+            this.rb_Manager.CheckedChanged += new System.EventHandler(this.rb_Manager_CheckedChanged_1);
+            // 
             // errorName
             // 
             this.errorName.ContainerControl = this;
@@ -407,34 +435,6 @@
             // errorUsername
             // 
             this.errorUsername.ContainerControl = this;
-            // 
-            // rb_Admin
-            // 
-            this.rb_Admin.AutoSize = true;
-            this.rb_Admin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Admin.ForeColor = System.Drawing.Color.Black;
-            this.rb_Admin.Location = new System.Drawing.Point(251, 117);
-            this.rb_Admin.Name = "rb_Admin";
-            this.rb_Admin.Size = new System.Drawing.Size(67, 21);
-            this.rb_Admin.TabIndex = 14;
-            this.rb_Admin.TabStop = true;
-            this.rb_Admin.Text = "Admin";
-            this.rb_Admin.UseVisualStyleBackColor = true;
-            this.rb_Admin.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(25, 439);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 32);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // RegistrationForm
             // 
@@ -476,20 +476,20 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Confirm;
-        private System.Windows.Forms.RadioButton rb_Manager;
         private System.Windows.Forms.RadioButton rb_Member;
         private System.Windows.Forms.ComboBox cb_MessName;
         private System.Windows.Forms.TextBox tb_Password;
         private System.Windows.Forms.TextBox tb_userName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cb_bloodGroup;
-        private System.Windows.Forms.ErrorProvider errorName;
-        private System.Windows.Forms.ErrorProvider errorMessName;
-        private System.Windows.Forms.ErrorProvider errorUsername;
         private System.Windows.Forms.TextBox tb_imagePath;
         private System.Windows.Forms.ComboBox cb_ManagerName;
         private System.Windows.Forms.RadioButton rb_Admin;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton rb_Manager;
+        private System.Windows.Forms.ErrorProvider errorName;
+        private System.Windows.Forms.ErrorProvider errorMessName;
+        private System.Windows.Forms.ErrorProvider errorUsername;
     }
 }
 

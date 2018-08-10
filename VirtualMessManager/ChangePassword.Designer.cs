@@ -31,15 +31,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxConfirmPass = new System.Windows.Forms.TextBox();
+            this.textBoxNewPass = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneNum = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxUserName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -69,37 +70,39 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(48, 121);
+            this.label1.Location = new System.Drawing.Point(30, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 24);
+            this.label1.Size = new System.Drawing.Size(150, 24);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Old Password:";
+            this.label1.Text = "Phone Number: ";
             // 
-            // textBox3
+            // textBoxConfirmPass
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox3.Location = new System.Drawing.Point(189, 224);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(255, 29);
-            this.textBox3.TabIndex = 14;
+            this.textBoxConfirmPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxConfirmPass.Location = new System.Drawing.Point(189, 224);
+            this.textBoxConfirmPass.Name = "textBoxConfirmPass";
+            this.textBoxConfirmPass.Size = new System.Drawing.Size(255, 29);
+            this.textBoxConfirmPass.TabIndex = 14;
+            this.textBoxConfirmPass.TextChanged += new System.EventHandler(this.textBoxConfirmPass_TextChanged);
+            this.textBoxConfirmPass.Leave += new System.EventHandler(this.textBoxConfirmPass_Leave);
             // 
-            // textBox2
+            // textBoxNewPass
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox2.Location = new System.Drawing.Point(189, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(255, 29);
-            this.textBox2.TabIndex = 15;
-            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown_1);
+            this.textBoxNewPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxNewPass.Location = new System.Drawing.Point(189, 176);
+            this.textBoxNewPass.Name = "textBoxNewPass";
+            this.textBoxNewPass.Size = new System.Drawing.Size(255, 29);
+            this.textBoxNewPass.TabIndex = 15;
+            this.textBoxNewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown_1);
             // 
-            // textBox1
+            // textBoxPhoneNum
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox1.Location = new System.Drawing.Point(189, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 29);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBoxPhoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxPhoneNum.Location = new System.Drawing.Point(189, 121);
+            this.textBoxPhoneNum.Name = "textBoxPhoneNum";
+            this.textBoxPhoneNum.Size = new System.Drawing.Size(255, 29);
+            this.textBoxPhoneNum.TabIndex = 16;
+            this.textBoxPhoneNum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // button3
             // 
@@ -112,6 +115,7 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "Confirm";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.TextChanged += new System.EventHandler(this.textBoxConfirmPass_Leave);
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
@@ -156,34 +160,44 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label5.Location = new System.Drawing.Point(104, 78);
+            this.label5.Location = new System.Drawing.Point(70, 76);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 24);
+            this.label5.Size = new System.Drawing.Size(110, 24);
             this.label5.TabIndex = 21;
-            this.label5.Text = "User ID:";
+            this.label5.Text = "User Name:";
             // 
-            // textBox4
+            // textBoxUserName
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBox4.Location = new System.Drawing.Point(192, 73);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(255, 29);
-            this.textBox4.TabIndex = 20;
-            this.textBox4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox4_KeyDown);
+            this.textBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxUserName.Location = new System.Drawing.Point(192, 73);
+            this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.Size = new System.Drawing.Size(255, 29);
+            this.textBoxUserName.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label6.Location = new System.Drawing.Point(274, 256);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 24);
+            this.label6.TabIndex = 22;
             // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(496, 465);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxConfirmPass);
+            this.Controls.Add(this.textBoxNewPass);
+            this.Controls.Add(this.textBoxPhoneNum);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -202,14 +216,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxConfirmPass;
+        private System.Windows.Forms.TextBox textBoxNewPass;
+        private System.Windows.Forms.TextBox textBoxPhoneNum;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxUserName;
+        private System.Windows.Forms.Label label6;
     }
 }

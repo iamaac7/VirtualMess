@@ -28,9 +28,6 @@ namespace vmmBAL
             return db.ExeNonQuery(cmd);
         }
 
-        public void changePassword(int uid) {
-        }
-
         public DataTable Login(Informations info)
         {
             SqlCommand cmd = new SqlCommand();
@@ -107,6 +104,14 @@ namespace vmmBAL
             //cmd.CommandText = "update vmmUser1 set userType='Manager',UserName='" + info.newAdminName + "' where Id=" + info.newAdminId + "";
           // cmd.CommandText = "update vmmUser1 set userType='Manager' where Id=" + info.newAdminId + "";
             cmd.CommandText = "update vmmUser1 set userType='Manager' where UserName='" + info.newAdminUsername + "' and Id=" + info.newAdminId + "";
+            return db.ExeNonQuery(cmd);
+        }
+
+        public int changePassword(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "update vmmUser1 set Password='"+info.password+"' where UserName='" + info.userName + "' and Phone=" + info.phone + "";
             return db.ExeNonQuery(cmd);
         }
 

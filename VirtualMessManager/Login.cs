@@ -25,6 +25,7 @@ namespace VirtualMessManager
         public static int userId;
         public static string logInUserName1;
         public static string logInPassword1;
+        public static byte[] picture = null;
 
         DataTable dt = new DataTable();
 
@@ -73,7 +74,11 @@ namespace VirtualMessManager
                     refManagerName = dt.Rows[0][3].ToString();
                     string tempid = dt.Rows[0][0].ToString();
                     userId = Convert.ToInt32(tempid);
-                    //bazar.userID = userId;
+                    if (dt.Rows[0][10] != null)
+                    {
+                        picture = (byte[])(dt.Rows[0][10]);
+                    }
+                    bazar.userID = userId;
 
                     //MessageBox.Show(bazar.userID+"");
                     //bazar.userName = loginName;

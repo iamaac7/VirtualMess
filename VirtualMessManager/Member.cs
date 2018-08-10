@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,13 @@ namespace VirtualMessManager
         {
             tb_loginStatusMem.Text = Login.loginName;
             textBox1.Text = Login.uType;
+            if (Login.picture == null) { pictureBoxMem.Image = null; }
+            else
+            {
+
+                MemoryStream ms = new MemoryStream(Login.picture);
+                pictureBoxMem.Image = Image.FromStream(ms);
+            }
         }
 
         private void memAddBazar_Click(object sender, EventArgs e)
