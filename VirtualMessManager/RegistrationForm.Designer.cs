@@ -31,9 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelPhoneNmbr = new System.Windows.Forms.Label();
+            this.labelPassword = new System.Windows.Forms.Label();
+            this.labelUserName = new System.Windows.Forms.Label();
+            this.labelBloodGrp = new System.Windows.Forms.Label();
+            this.labelDOB = new System.Windows.Forms.Label();
+            this.labelMessName = new System.Windows.Forms.Label();
+            this.labelManagerName = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.rb_Admin = new System.Windows.Forms.RadioButton();
             this.tb_imagePath = new System.Windows.Forms.TextBox();
+            this.rb_Manager = new System.Windows.Forms.RadioButton();
             this.rb_Member = new System.Windows.Forms.RadioButton();
             this.cb_bloodGroup = new System.Windows.Forms.ComboBox();
             this.cb_ManagerName = new System.Windows.Forms.ComboBox();
@@ -56,20 +65,22 @@
             this.btn_Browse = new System.Windows.Forms.Button();
             this.profilePic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rb_Manager = new System.Windows.Forms.RadioButton();
-            this.errorName = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorMessName = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorUsername = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorMessName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.labelPhoneNmbr);
+            this.panel1.Controls.Add(this.labelPassword);
+            this.panel1.Controls.Add(this.labelUserName);
+            this.panel1.Controls.Add(this.labelBloodGrp);
+            this.panel1.Controls.Add(this.labelDOB);
+            this.panel1.Controls.Add(this.labelMessName);
+            this.panel1.Controls.Add(this.labelManagerName);
+            this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.rb_Admin);
             this.panel1.Controls.Add(this.tb_imagePath);
@@ -101,7 +112,78 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(468, 483);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // labelPhoneNmbr
+            // 
+            this.labelPhoneNmbr.AutoSize = true;
+            this.labelPhoneNmbr.ForeColor = System.Drawing.Color.Red;
+            this.labelPhoneNmbr.Location = new System.Drawing.Point(304, 401);
+            this.labelPhoneNmbr.Name = "labelPhoneNmbr";
+            this.labelPhoneNmbr.Size = new System.Drawing.Size(0, 13);
+            this.labelPhoneNmbr.TabIndex = 23;
+            // 
+            // labelPassword
+            // 
+            this.labelPassword.AutoSize = true;
+            this.labelPassword.ForeColor = System.Drawing.Color.Red;
+            this.labelPassword.Location = new System.Drawing.Point(304, 367);
+            this.labelPassword.Name = "labelPassword";
+            this.labelPassword.Size = new System.Drawing.Size(0, 13);
+            this.labelPassword.TabIndex = 22;
+            // 
+            // labelUserName
+            // 
+            this.labelUserName.AutoSize = true;
+            this.labelUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelUserName.Location = new System.Drawing.Point(304, 336);
+            this.labelUserName.Name = "labelUserName";
+            this.labelUserName.Size = new System.Drawing.Size(0, 13);
+            this.labelUserName.TabIndex = 21;
+            // 
+            // labelBloodGrp
+            // 
+            this.labelBloodGrp.AutoSize = true;
+            this.labelBloodGrp.ForeColor = System.Drawing.Color.Red;
+            this.labelBloodGrp.Location = new System.Drawing.Point(262, 313);
+            this.labelBloodGrp.Name = "labelBloodGrp";
+            this.labelBloodGrp.Size = new System.Drawing.Size(0, 13);
+            this.labelBloodGrp.TabIndex = 20;
+            // 
+            // labelDOB
+            // 
+            this.labelDOB.AutoSize = true;
+            this.labelDOB.ForeColor = System.Drawing.Color.Red;
+            this.labelDOB.Location = new System.Drawing.Point(250, 266);
+            this.labelDOB.Name = "labelDOB";
+            this.labelDOB.Size = new System.Drawing.Size(0, 13);
+            this.labelDOB.TabIndex = 19;
+            // 
+            // labelMessName
+            // 
+            this.labelMessName.AutoSize = true;
+            this.labelMessName.ForeColor = System.Drawing.Color.Red;
+            this.labelMessName.Location = new System.Drawing.Point(286, 217);
+            this.labelMessName.Name = "labelMessName";
+            this.labelMessName.Size = new System.Drawing.Size(0, 13);
+            this.labelMessName.TabIndex = 18;
+            // 
+            // labelManagerName
+            // 
+            this.labelManagerName.AutoSize = true;
+            this.labelManagerName.ForeColor = System.Drawing.Color.Red;
+            this.labelManagerName.Location = new System.Drawing.Point(278, 176);
+            this.labelManagerName.Name = "labelManagerName";
+            this.labelManagerName.Size = new System.Drawing.Size(0, 13);
+            this.labelManagerName.TabIndex = 17;
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.ForeColor = System.Drawing.Color.Red;
+            this.labelName.Location = new System.Drawing.Point(200, 101);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(0, 13);
+            this.labelName.TabIndex = 16;
             // 
             // button1
             // 
@@ -129,7 +211,6 @@
             this.rb_Admin.TabStop = true;
             this.rb_Admin.Text = "Admin";
             this.rb_Admin.UseVisualStyleBackColor = true;
-            this.rb_Admin.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // tb_imagePath
             // 
@@ -138,6 +219,20 @@
             this.tb_imagePath.Size = new System.Drawing.Size(99, 22);
             this.tb_imagePath.TabIndex = 13;
             this.tb_imagePath.Visible = false;
+            // 
+            // rb_Manager
+            // 
+            this.rb_Manager.AutoSize = true;
+            this.rb_Manager.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Manager.ForeColor = System.Drawing.Color.Black;
+            this.rb_Manager.Location = new System.Drawing.Point(150, 117);
+            this.rb_Manager.Name = "rb_Manager";
+            this.rb_Manager.Size = new System.Drawing.Size(80, 21);
+            this.rb_Manager.TabIndex = 12;
+            this.rb_Manager.TabStop = true;
+            this.rb_Manager.Text = "Manager";
+            this.rb_Manager.UseVisualStyleBackColor = true;
+            this.rb_Manager.CheckedChanged += new System.EventHandler(this.rb_Manager_CheckedChanged_1);
             // 
             // rb_Member
             // 
@@ -171,6 +266,9 @@
             this.cb_bloodGroup.Name = "cb_bloodGroup";
             this.cb_bloodGroup.Size = new System.Drawing.Size(148, 21);
             this.cb_bloodGroup.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.cb_bloodGroup, "Hint!\r\nSelect your Blood Group.");
+            this.cb_bloodGroup.TextChanged += new System.EventHandler(this.cb_bloodGroup_TextChanged);
+            this.cb_bloodGroup.Leave += new System.EventHandler(this.cb_bloodGroup_Leave);
             // 
             // cb_ManagerName
             // 
@@ -179,6 +277,9 @@
             this.cb_ManagerName.Name = "cb_ManagerName";
             this.cb_ManagerName.Size = new System.Drawing.Size(191, 21);
             this.cb_ManagerName.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.cb_ManagerName, "Hint!\r\nEnter/Select manager name.\r\n");
+            this.cb_ManagerName.TextChanged += new System.EventHandler(this.cb_ManagerName_TextChanged);
+            this.cb_ManagerName.Leave += new System.EventHandler(this.cb_ManagerName_Leave);
             // 
             // cb_MessName
             // 
@@ -187,7 +288,9 @@
             this.cb_MessName.Name = "cb_MessName";
             this.cb_MessName.Size = new System.Drawing.Size(191, 21);
             this.cb_MessName.TabIndex = 11;
-            this.cb_MessName.SelectedIndexChanged += new System.EventHandler(this.cb_MessName_SelectedIndexChanged);
+            this.toolTip1.SetToolTip(this.cb_MessName, "Hint!\r\nEnter/Select name.");
+            this.cb_MessName.TextChanged += new System.EventHandler(this.cb_MessName_TextChanged);
+            this.cb_MessName.Leave += new System.EventHandler(this.cb_MessName_Leave);
             // 
             // btn_Cancel
             // 
@@ -230,6 +333,8 @@
             this.date_dob.Name = "date_dob";
             this.date_dob.Size = new System.Drawing.Size(148, 23);
             this.date_dob.TabIndex = 9;
+            this.date_dob.ValueChanged += new System.EventHandler(this.date_dob_ValueChanged);
+            this.date_dob.Leave += new System.EventHandler(this.date_dob_Leave);
             // 
             // tb_Phone
             // 
@@ -242,8 +347,9 @@
             this.tb_Phone.Name = "tb_Phone";
             this.tb_Phone.Size = new System.Drawing.Size(148, 28);
             this.tb_Phone.TabIndex = 8;
-            this.tb_Phone.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            this.tb_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Phone_KeyPress);
+            this.toolTip1.SetToolTip(this.tb_Phone, "Hint!\r\nEnter your phone number.");
+            this.tb_Phone.TextChanged += new System.EventHandler(this.tb_Phone_TextChanged);
+            this.tb_Phone.Leave += new System.EventHandler(this.tb_Phone_Leave);
             // 
             // tb_Password
             // 
@@ -257,6 +363,9 @@
             this.tb_Password.PasswordChar = 'x';
             this.tb_Password.Size = new System.Drawing.Size(148, 28);
             this.tb_Password.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.tb_Password, "Hint!\r\nEnter your password.");
+            this.tb_Password.TextChanged += new System.EventHandler(this.tb_Password_TextChanged);
+            this.tb_Password.Leave += new System.EventHandler(this.tb_Password_Leave);
             // 
             // tb_userName
             // 
@@ -269,7 +378,9 @@
             this.tb_userName.Name = "tb_userName";
             this.tb_userName.Size = new System.Drawing.Size(148, 28);
             this.tb_userName.TabIndex = 8;
-            this.tb_userName.Validating += new System.ComponentModel.CancelEventHandler(this.tb_userName_Validating);
+            this.toolTip1.SetToolTip(this.tb_userName, "Hint!\r\nEnter your user name.");
+            this.tb_userName.TextChanged += new System.EventHandler(this.tb_userName_TextChanged);
+            this.tb_userName.Leave += new System.EventHandler(this.tb_userName_Leave);
             // 
             // tb_Name
             // 
@@ -282,7 +393,9 @@
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(194, 27);
             this.tb_Name.TabIndex = 4;
-            this.tb_Name.Validating += new System.ComponentModel.CancelEventHandler(this.tb_Name_Validating);
+            this.toolTip1.SetToolTip(this.tb_Name, "Hint!\r\nEnter your name.");
+            this.tb_Name.TextChanged += new System.EventHandler(this.tb_Name_TextChanged);
+            this.tb_Name.Leave += new System.EventHandler(this.tb_Name_Leave);
             // 
             // label5
             // 
@@ -328,7 +441,6 @@
             this.label8.Size = new System.Drawing.Size(85, 18);
             this.label8.TabIndex = 3;
             this.label8.Text = "Username";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -410,32 +522,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Registration Form";
             // 
-            // rb_Manager
-            // 
-            this.rb_Manager.AutoSize = true;
-            this.rb_Manager.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Manager.ForeColor = System.Drawing.Color.Black;
-            this.rb_Manager.Location = new System.Drawing.Point(150, 117);
-            this.rb_Manager.Name = "rb_Manager";
-            this.rb_Manager.Size = new System.Drawing.Size(80, 21);
-            this.rb_Manager.TabIndex = 12;
-            this.rb_Manager.TabStop = true;
-            this.rb_Manager.Text = "Manager";
-            this.rb_Manager.UseVisualStyleBackColor = true;
-            this.rb_Manager.CheckedChanged += new System.EventHandler(this.rb_Manager_CheckedChanged_1);
-            // 
-            // errorName
-            // 
-            this.errorName.ContainerControl = this;
-            // 
-            // errorMessName
-            // 
-            this.errorMessName.ContainerControl = this;
-            // 
-            // errorUsername
-            // 
-            this.errorUsername.ContainerControl = this;
-            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,9 +537,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profilePic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorMessName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorUsername)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -487,9 +570,15 @@
         private System.Windows.Forms.RadioButton rb_Admin;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton rb_Manager;
-        private System.Windows.Forms.ErrorProvider errorName;
-        private System.Windows.Forms.ErrorProvider errorMessName;
-        private System.Windows.Forms.ErrorProvider errorUsername;
+        private System.Windows.Forms.Label labelPhoneNmbr;
+        private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Label labelUserName;
+        private System.Windows.Forms.Label labelBloodGrp;
+        private System.Windows.Forms.Label labelDOB;
+        private System.Windows.Forms.Label labelMessName;
+        private System.Windows.Forms.Label labelManagerName;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
