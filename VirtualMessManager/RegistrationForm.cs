@@ -32,6 +32,7 @@ namespace VirtualMessManager
         {
             InitializeComponent();
             this.ActiveControl = tb_Name;
+            tb_Name.Focus();
         }
 
 
@@ -98,7 +99,8 @@ namespace VirtualMessManager
 
         private void btn_Browse_Click(object sender, EventArgs e)
         {
-            try
+       
+                try
             {
                 OpenFileDialog dialog = new OpenFileDialog();
                 dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|All Files(*.*)|*.*";
@@ -116,73 +118,76 @@ namespace VirtualMessManager
 
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
-            byte[] img = null;
-            try
+            if (tb_Name.Text != "" && tb_Password.Text != "" && tb_Phone.Text != "" && tb_userName.Text != "" && cb_bloodGroup.Text != "" && cb_ManagerName.Text != "" && cb_MessName.Text != "" && tb_imagePath.Text != "")
             {
-                FileStream fs = new FileStream(tb_imagePath.Text, FileMode.Open, FileAccess.Read);
-                BinaryReader br = new BinaryReader(fs);
-                img = br.ReadBytes((int)fs.Length);
-            }
-            catch (Exception ex)
-            {
-                 MessageBox.Show(ex.Message);
-            }
-
-            if (tb_Name.Text.Trim() == "") { confirmFlag = false; }
-            //else if (rb_Manager.Checked == false && rb_Member.Checked == false) { confirmFlag = false; }
-            //else if (rb_Member.Checked == false) { confirmFlag = false; }
-            else if (cb_ManagerName.Text.Trim() == "") { confirmFlag = false; }
-            else if (cb_MessName.Text.Trim() == "") { confirmFlag = false; }
-            else if (cb_ManagerName.Text.Trim() == "") { confirmFlag = false; }
-            else if (cb_bloodGroup.Text.Trim() == "") { confirmFlag = false; }
-            else if (tb_userName.Text.Trim() == "") { confirmFlag = false; }
-            else if (tb_Password.Text.Trim() == "") { confirmFlag = false; }
-            else if (tb_Phone.Text.Trim() == "") { confirmFlag = false; }
-
-
-            info.name = tb_Name.Text;
-
-            if (rb_Member.Checked == true)
-            {
-                _userType = "Member";
-            } if (rb_Manager.Checked == true)
-            {
-                _userType = "Manager";
-            }
-            info.userType = _userType;
-            info.refManagrtName = cb_ManagerName.Text;
-            info.messName = cb_MessName.Text;
-            info.dob = Convert.ToDateTime(date_dob.Value.ToShortDateString());
-            info.bloodGroup = cb_bloodGroup.Text;
-            info.userName = tb_userName.Text;
-            info.password = tb_Password.Text;
-            info.phone = Convert.ToInt32(tb_Phone.Text);
-            info.pic = img;
-            if (confirmFlag == true)
-            {
-
-                int rowAffected = opr.insertUser(info);
-                if (rowAffected > 0)
+                byte[] img = null;
+                try
                 {
-                    MessageBox.Show("Data Saved SuccessFull.");
+                    FileStream fs = new FileStream(tb_imagePath.Text, FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    img = br.ReadBytes((int)fs.Length);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
 
-                    Login log = new Login();
-                    log.Show();
-                    this.Hide();
+                if (tb_Name.Text.Trim() == "") { confirmFlag = false; }
+                //else if (rb_Manager.Checked == false && rb_Member.Checked == false) { confirmFlag = false; }
+                //else if (rb_Member.Checked == false) { confirmFlag = false; }
+                else if (cb_ManagerName.Text.Trim() == "") { confirmFlag = false; }
+                else if (cb_MessName.Text.Trim() == "") { confirmFlag = false; }
+                else if (cb_ManagerName.Text.Trim() == "") { confirmFlag = false; }
+                else if (cb_bloodGroup.Text.Trim() == "") { confirmFlag = false; }
+                else if (tb_userName.Text.Trim() == "") { confirmFlag = false; }
+                else if (tb_Password.Text.Trim() == "") { confirmFlag = false; }
+                else if (tb_Phone.Text.Trim() == "") { confirmFlag = false; }
 
-                    //tb_Name.Text = "";
-                    //rb_Member.Checked = false;
-                    //rb_Manager.Checked = false;
-                    //tb_userName.Text = "";
-                    //tb_Password.Text = "";
-                    //tb_Phone.Text = "";
 
+                info.name = tb_Name.Text;
+
+                if (rb_Member.Checked == true)
+                {
+                    _userType = "Member";
+                }
+                if (rb_Manager.Checked == true)
+                {
+                    _userType = "Manager";
+                }
+                info.userType = _userType;
+                info.refManagrtName = cb_ManagerName.Text;
+                info.messName = cb_MessName.Text;
+                info.dob = Convert.ToDateTime(date_dob.Value.ToShortDateString());
+                info.bloodGroup = cb_bloodGroup.Text;
+                info.userName = tb_userName.Text;
+                info.password = tb_Password.Text;
+                info.phone = Convert.ToInt32(tb_Phone.Text);
+                info.pic = img;
+                if (confirmFlag == true)
+                {
+
+                    int rowAffected = opr.insertUser(info);
+                    if (rowAffected > 0)
+                    {
+                        MessageBox.Show("Data Saved SuccessFull.");
+
+                        Login log = new Login();
+                        log.Show();
+                        this.Hide();
+
+                        //tb_Name.Text = "";
+                        //rb_Member.Checked = false;
+                        //rb_Manager.Checked = false;
+                        //tb_userName.Text = "";
+                        //tb_Password.Text = "";
+                        //tb_Phone.Text = "";
+
+                    }
                 }
             }
             else
             {
                 MessageBox.Show("Please Fill Every Field Properly");
-                tb_Name.Focus();
             }
 
 
@@ -191,84 +196,7 @@ namespace VirtualMessManager
 
         }
 
-        private void tb_Name_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(tb_Name.Text))
-            {
-                e.Cancel = true;
-                tb_Name.Focus();
-                errorName.SetError(tb_Name, "Please Enter your Name ");
 
-            }
-            else
-            {
-                e.Cancel = false;
-                errorName.SetError(tb_Name, null);
-
-            }
-        }
-
-        private void tb_messName_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(cb_MessName.Text))
-            {
-                e.Cancel = true;
-                cb_MessName.Focus();
-                errorMessName.SetError(cb_MessName, "Please Enter your Mess Name ");
-
-            }
-            else
-            {
-                e.Cancel = false;
-                errorMessName.SetError(cb_MessName, null);
-
-            }
-
-        }
-
-        private void tb_userName_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(tb_userName.Text))
-            {
-                e.Cancel = true;
-                tb_userName.Focus();
-                errorUsername.SetError(tb_userName, "Please Enter your User Name ");
-
-            }
-            else
-            {
-                e.Cancel = false;
-                errorUsername.SetError(tb_userName, null);
-
-            }
-
-        }
-
-        private void cb_MessName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_Phone_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
-                e.Handled = true;
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -277,8 +205,150 @@ namespace VirtualMessManager
             log.Show();
         }
 
-        
+        private void tb_Name_Leave(object sender, EventArgs e)
+        {
+            if (tb_Name.Text == "")
+            {
+
+                labelName.Text = "*Empty name is not posiible.";
+                tb_Name.Focus();
+            }
+        }
+
+        private void tb_Name_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_Name.Text.Trim() != "")
+            {
+
+                labelName.Text = "";
+            }
+        }
+
+        private void cb_ManagerName_Leave(object sender, EventArgs e)
+        {
+            if (cb_ManagerName.Text == "")
+            {
+                cb_ManagerName.Focus();
+                labelManagerName.Text = "*Please select/enter manager name.";
+            }
+        }
+
+        private void cb_ManagerName_TextChanged(object sender, EventArgs e)
+        {
+            if (cb_ManagerName.Text.Trim() != "")
+            {
+
+                labelManagerName.Text = "";
+            }
+        }
+
+        private void cb_MessName_Leave(object sender, EventArgs e)
+        {
+            if (cb_MessName.Text == "")
+            {
+                cb_MessName.Focus();
+                labelMessName.Text = "*Please select/enter mess name.";
+
+            }
+        }
+
+        private void cb_MessName_TextChanged(object sender, EventArgs e)
+        {
+            if (cb_MessName.Text.Trim() != "")
+            {
+
+                labelMessName.Text = "";
+            }
+
+        }
+
+        private void date_dob_ValueChanged(object sender, EventArgs e)
+        {
+            if (date_dob.Text.Trim() != "")
+            {
+
+                labelDOB.Text = "";
+            }
+        }
+
+        private void date_dob_Leave(object sender, EventArgs e)
+        {
+            if (date_dob.Text == "")
+            {
+
+                labelDOB.Text = "*Select your birthdate.";
+                date_dob.Focus();
+            }
+        }
+
+        private void cb_bloodGroup_Leave(object sender, EventArgs e)
+        {
+            if (cb_bloodGroup.Text == "")
+            {
+
+                cb_bloodGroup.Focus();
+                labelBloodGrp.Text = "Select your blood group";
+            }
+
+        }
+
+        private void cb_bloodGroup_TextChanged(object sender, EventArgs e)
+        {
+            if (cb_bloodGroup.Text.Trim()!="") { labelBloodGrp.Text = ""; }
+        }
+
+        private void tb_userName_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_userName.Text.Trim() != "") {
+
+                labelUserName.Text = "";
+            }
+
+        }
+
+        private void tb_userName_Leave(object sender, EventArgs e)
+        {
+            if (tb_userName.Text == "") {
+
+                tb_userName.Focus();
+                labelUserName.Text = "*Empty Username field";
+            }
+        }
+
+        private void tb_Password_Leave(object sender, EventArgs e)
+        {
+            if (tb_Password.Text == "")
+            {
+
+                tb_Password.Focus();
+                labelPassword.Text = "*Empty password field.";
+            }
+
+        }
+
+        private void tb_Password_TextChanged(object sender, EventArgs e)
+        {
+            if (tb_Password.Text.Trim() != "")
+            {
+                labelPassword.Text = "";
+
+            }
+
+        }
+
+        private void tb_Phone_Leave(object sender, EventArgs e)
+        {
+            if (tb_Phone.Text == "") {
+
+                tb_Phone.Focus();
+                labelPhoneNmbr.Text = "*Empty phone number field.";
+            }
+        }
+
+        private void tb_Phone_TextChanged(object sender, EventArgs e)
+        {
+            if(tb_Phone.Text.Trim()!="")
+            labelPhoneNmbr.Text = "";
+        }
     }
-
-
 }
