@@ -80,7 +80,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(165, 43);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 19);
+            this.textBox1.Size = new System.Drawing.Size(138, 19);
             this.textBox1.TabIndex = 11;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -91,7 +91,7 @@
             this.tb_loginStatusMem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_loginStatusMem.Location = new System.Drawing.Point(165, 5);
             this.tb_loginStatusMem.Name = "tb_loginStatusMem";
-            this.tb_loginStatusMem.Size = new System.Drawing.Size(116, 22);
+            this.tb_loginStatusMem.Size = new System.Drawing.Size(178, 22);
             this.tb_loginStatusMem.TabIndex = 10;
             this.tb_loginStatusMem.TextChanged += new System.EventHandler(this.tb_loginStatusMem_TextChanged);
             // 

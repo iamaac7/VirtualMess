@@ -31,9 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.rb_Admin = new System.Windows.Forms.RadioButton();
             this.tb_imagePath = new System.Windows.Forms.TextBox();
+            this.rb_Manager = new System.Windows.Forms.RadioButton();
             this.rb_Member = new System.Windows.Forms.RadioButton();
             this.cb_bloodGroup = new System.Windows.Forms.ComboBox();
             this.cb_ManagerName = new System.Windows.Forms.ComboBox();
@@ -56,7 +58,6 @@
             this.btn_Browse = new System.Windows.Forms.Button();
             this.profilePic = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rb_Manager = new System.Windows.Forms.RadioButton();
             this.errorName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorMessName = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorUsername = new System.Windows.Forms.ErrorProvider(this.components);
@@ -70,6 +71,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.rb_Admin);
             this.panel1.Controls.Add(this.tb_imagePath);
@@ -102,6 +104,17 @@
             this.panel1.Size = new System.Drawing.Size(468, 483);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label10.Location = new System.Drawing.Point(85, 398);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 20);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "(+880)";
             // 
             // button1
             // 
@@ -139,6 +152,20 @@
             this.tb_imagePath.TabIndex = 13;
             this.tb_imagePath.Visible = false;
             // 
+            // rb_Manager
+            // 
+            this.rb_Manager.AutoSize = true;
+            this.rb_Manager.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb_Manager.ForeColor = System.Drawing.Color.Black;
+            this.rb_Manager.Location = new System.Drawing.Point(150, 117);
+            this.rb_Manager.Name = "rb_Manager";
+            this.rb_Manager.Size = new System.Drawing.Size(80, 21);
+            this.rb_Manager.TabIndex = 12;
+            this.rb_Manager.TabStop = true;
+            this.rb_Manager.Text = "Manager";
+            this.rb_Manager.UseVisualStyleBackColor = true;
+            this.rb_Manager.CheckedChanged += new System.EventHandler(this.rb_Manager_CheckedChanged_1);
+            // 
             // rb_Member
             // 
             this.rb_Member.AutoSize = true;
@@ -156,7 +183,9 @@
             // cb_bloodGroup
             // 
             this.cb_bloodGroup.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cb_bloodGroup.BackColor = System.Drawing.Color.White;
             this.cb_bloodGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_bloodGroup.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cb_bloodGroup.FormattingEnabled = true;
             this.cb_bloodGroup.Items.AddRange(new object[] {
             "A+",
@@ -300,7 +329,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(22, 394);
+            this.label6.Location = new System.Drawing.Point(22, 398);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 18);
             this.label6.TabIndex = 3;
@@ -311,7 +340,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(22, 360);
+            this.label9.Location = new System.Drawing.Point(22, 363);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(83, 18);
             this.label9.TabIndex = 3;
@@ -323,7 +352,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(22, 336);
+            this.label8.Location = new System.Drawing.Point(22, 329);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 18);
             this.label8.TabIndex = 3;
@@ -410,20 +439,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Registration Form";
             // 
-            // rb_Manager
-            // 
-            this.rb_Manager.AutoSize = true;
-            this.rb_Manager.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Manager.ForeColor = System.Drawing.Color.Black;
-            this.rb_Manager.Location = new System.Drawing.Point(150, 117);
-            this.rb_Manager.Name = "rb_Manager";
-            this.rb_Manager.Size = new System.Drawing.Size(80, 21);
-            this.rb_Manager.TabIndex = 12;
-            this.rb_Manager.TabStop = true;
-            this.rb_Manager.Text = "Manager";
-            this.rb_Manager.UseVisualStyleBackColor = true;
-            this.rb_Manager.CheckedChanged += new System.EventHandler(this.rb_Manager_CheckedChanged_1);
-            // 
             // errorName
             // 
             this.errorName.ContainerControl = this;
@@ -490,6 +505,7 @@
         private System.Windows.Forms.ErrorProvider errorName;
         private System.Windows.Forms.ErrorProvider errorMessName;
         private System.Windows.Forms.ErrorProvider errorUsername;
+        private System.Windows.Forms.Label label10;
     }
 }
 

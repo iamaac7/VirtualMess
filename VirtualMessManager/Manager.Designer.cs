@@ -32,6 +32,7 @@
             this.pictureBoxManager = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.bt_signOut = new System.Windows.Forms.Button();
             this.tb_loginStatusMan = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.manBookMeal = new System.Windows.Forms.Button();
             this.manMemberInfo = new System.Windows.Forms.Button();
             this.manAddBazar = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManager)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,6 +89,18 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.Location = new System.Drawing.Point(156, 296);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(145, 18);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Change Password";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -96,7 +108,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.textBox1.Location = new System.Drawing.Point(159, 42);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 19);
+            this.textBox1.Size = new System.Drawing.Size(137, 19);
             this.textBox1.TabIndex = 8;
             // 
             // bt_signOut
@@ -119,7 +131,7 @@
             this.tb_loginStatusMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
             this.tb_loginStatusMan.Location = new System.Drawing.Point(158, 8);
             this.tb_loginStatusMan.Name = "tb_loginStatusMan";
-            this.tb_loginStatusMan.Size = new System.Drawing.Size(116, 22);
+            this.tb_loginStatusMan.Size = new System.Drawing.Size(174, 22);
             this.tb_loginStatusMan.TabIndex = 6;
             this.tb_loginStatusMan.TextChanged += new System.EventHandler(this.tb_loginStatusMan_TextChanged);
             // 
@@ -203,18 +215,6 @@
             this.manAddBazar.Text = "Add Bazar";
             this.manAddBazar.UseVisualStyleBackColor = false;
             this.manAddBazar.Click += new System.EventHandler(this.manAddBazar_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.linkLabel1.Location = new System.Drawing.Point(156, 296);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(145, 18);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Change Password";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Manager
             // 
