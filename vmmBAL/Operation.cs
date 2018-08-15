@@ -107,7 +107,7 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Date,Name,sum(Price) as Total_Price FROM vmmBazarChart where RefManager='" + info.refManagrtName + "' and Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0) AND Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())+1, 0) group by Name,Date";
+            cmd.CommandText = "SELECT Date,Name,Items,Quantity,sum(Price) as Total_Price FROM vmmBazarChart where RefManager='" + info.refManagrtName + "' and Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0) AND Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())+1, 0) group by Name,Date,Items,Quantity";
             return db.ExeReader1(cmd);
           
         }

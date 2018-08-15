@@ -73,10 +73,16 @@ namespace VirtualMessManager
 
         private void bt_Exit_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Do You want to exit?", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
             //Application.Exit();
-            this.Hide();
-            Login log = new Login();
-            log.Show();
+            //this.Hide();
+            //Login log = new Login();
+            //log.Show();
         }
 
         private void bt_Next_Click(object sender, EventArgs e)

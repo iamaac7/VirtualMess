@@ -73,9 +73,9 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gv_MealHistory.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gv_MealHistory.Location = new System.Drawing.Point(58, 92);
+            this.gv_MealHistory.Location = new System.Drawing.Point(42, 93);
             this.gv_MealHistory.Name = "gv_MealHistory";
-            this.gv_MealHistory.Size = new System.Drawing.Size(725, 281);
+            this.gv_MealHistory.Size = new System.Drawing.Size(763, 281);
             this.gv_MealHistory.TabIndex = 1;
             // 
             // dt_FromMealHistory

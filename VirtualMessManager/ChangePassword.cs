@@ -27,14 +27,14 @@ namespace VirtualMessManager
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBoxNewPass.Focus();
+                textBoxPhoneNum.Focus();
             }
         }
         private void textBox2_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBoxConfirmPass.Focus();
+                textBoxNewPass.Focus();
             }
         }
 
@@ -157,6 +157,14 @@ namespace VirtualMessManager
                 // textBoxConfirmPass.Focus();
             }
             else label6.Text = "";
+        }
+
+        private void textBox3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                textBoxConfirmPass.Focus();
+            }
         }
     }
 }

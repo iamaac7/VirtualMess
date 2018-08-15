@@ -208,7 +208,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 32);
             this.button1.TabIndex = 15;
-            this.button1.Text = "Back";
+            this.button1.Text = "&Back";
             this.toolTip1.SetToolTip(this.button1, "Takes you back to the Login Page");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -321,7 +321,7 @@
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(117, 32);
             this.btn_Cancel.TabIndex = 10;
-            this.btn_Cancel.Text = "Exit";
+            this.btn_Cancel.Text = "&Exit";
             this.toolTip1.SetToolTip(this.btn_Cancel, "Exit the Application");
             this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -336,7 +336,7 @@
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(117, 32);
             this.btn_Confirm.TabIndex = 10;
-            this.btn_Confirm.Text = "Confirm";
+            this.btn_Confirm.Text = "&Confirm";
             this.toolTip1.SetToolTip(this.btn_Confirm, "Confirm & submit all your Data to the Database\r\n*Only press this if every field i" +
         "s completed.\r\n*If any of the field is incompleted it will generate an error mess" +
         "age.\r\n");

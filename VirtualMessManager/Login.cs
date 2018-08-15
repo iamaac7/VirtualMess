@@ -190,5 +190,26 @@ namespace VirtualMessManager
         {
 
         }
+
+        private void UserName_Keydown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                loginPassword.Focus();
+            }
+        }
+
+        //private void loginPassword_KeyPress(object sender, KeyPressEventArgs e)
+        //{
+
+        //}
+
+        private void LoginPassword_keyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                tb_login.Focus();
+            }
+        }
     }
 }

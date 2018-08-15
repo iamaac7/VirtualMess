@@ -100,6 +100,7 @@ namespace VirtualMessManager
             this.loginPassword.TabIndex = 13;
             this.toolTip1.SetToolTip(this.loginPassword, "Enter your password.");
             this.loginPassword.TextChanged += new System.EventHandler(this.loginPassword_TextChanged);
+            this.loginPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LoginPassword_keyDown);
             this.loginPassword.Leave += new System.EventHandler(this.loginPassword_Leave);
             // 
             // signUsername
@@ -110,6 +111,7 @@ namespace VirtualMessManager
             this.signUsername.TabIndex = 12;
             this.toolTip1.SetToolTip(this.signUsername, "Enter your username.\r\n*It should be unique.\r\n*Can not start with a letter");
             this.signUsername.TextChanged += new System.EventHandler(this.signUsername_TextChanged_1);
+            this.signUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.UserName_Keydown);
             this.signUsername.Leave += new System.EventHandler(this.signUsername_Leave);
             // 
             // label4
@@ -174,7 +176,7 @@ namespace VirtualMessManager
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(267, 34);
             this.button2.TabIndex = 6;
-            this.button2.Text = "E&xit";
+            this.button2.Text = "&Exit";
             this.toolTip1.SetToolTip(this.button2, "Click here for Exit the system.");
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -208,14 +210,6 @@ namespace VirtualMessManager
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.BackColor = System.Drawing.Color.White;
-            this.toolTip1.ForeColor = System.Drawing.Color.Black;
-            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Hint";
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // toolTip1
             // 

@@ -94,7 +94,7 @@
             this.textBoxNewPass.Name = "textBoxNewPass";
             this.textBoxNewPass.Size = new System.Drawing.Size(255, 29);
             this.textBoxNewPass.TabIndex = 15;
-            this.textBoxNewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown_1);
+            this.textBoxNewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
             // textBoxPhoneNum
             // 
@@ -103,7 +103,7 @@
             this.textBoxPhoneNum.Name = "textBoxPhoneNum";
             this.textBoxPhoneNum.Size = new System.Drawing.Size(255, 29);
             this.textBoxPhoneNum.TabIndex = 16;
-            this.textBoxPhoneNum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.textBoxPhoneNum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown_1);
             // 
             // button3
             // 
@@ -174,6 +174,7 @@
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(255, 29);
             this.textBoxUserName.TabIndex = 20;
+            this.textBoxUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label6
             // 

@@ -35,6 +35,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gv_EditMealSheet = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.breakfastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lunchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dinnerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalMealDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.vmmMealChartBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.vMMDataSet2 = new VirtualMessManager.VMMDataSet2();
             this.vmmMealChartBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -54,15 +63,6 @@
             this.bt_back = new System.Windows.Forms.Button();
             this.vmmMealChartTableAdapter2 = new VirtualMessManager.VMMDataSet2TableAdapters.vmmMealChartTableAdapter();
             this.informationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.totalMealDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dinnerDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lunchDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.breakfastDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gv_EditMealSheet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vmmMealChartBindingSource2)).BeginInit();
@@ -128,6 +128,70 @@
             this.gv_EditMealSheet.Size = new System.Drawing.Size(945, 320);
             this.gv_EditMealSheet.TabIndex = 1;
             this.gv_EditMealSheet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_EditMealSheet_CellClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // breakfastDataGridViewTextBoxColumn
+            // 
+            this.breakfastDataGridViewTextBoxColumn.DataPropertyName = "Breakfast";
+            this.breakfastDataGridViewTextBoxColumn.HeaderText = "Breakfast";
+            this.breakfastDataGridViewTextBoxColumn.Name = "breakfastDataGridViewTextBoxColumn";
+            // 
+            // lunchDataGridViewTextBoxColumn
+            // 
+            this.lunchDataGridViewTextBoxColumn.DataPropertyName = "Lunch";
+            this.lunchDataGridViewTextBoxColumn.HeaderText = "Lunch";
+            this.lunchDataGridViewTextBoxColumn.Name = "lunchDataGridViewTextBoxColumn";
+            // 
+            // dinnerDataGridViewTextBoxColumn
+            // 
+            this.dinnerDataGridViewTextBoxColumn.DataPropertyName = "Dinner";
+            this.dinnerDataGridViewTextBoxColumn.HeaderText = "Dinner";
+            this.dinnerDataGridViewTextBoxColumn.Name = "dinnerDataGridViewTextBoxColumn";
+            // 
+            // totalMealDataGridViewTextBoxColumn
+            // 
+            this.totalMealDataGridViewTextBoxColumn.DataPropertyName = "TotalMeal";
+            this.totalMealDataGridViewTextBoxColumn.HeaderText = "TotalMeal";
+            this.totalMealDataGridViewTextBoxColumn.Name = "totalMealDataGridViewTextBoxColumn";
+            // 
+            // Update
+            // 
+            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Update.HeaderText = "Update";
+            this.Update.Name = "Update";
+            this.Update.ReadOnly = true;
+            this.Update.Text = "Update";
+            this.Update.ToolTipText = "Update";
+            this.Update.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.ToolTipText = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // vmmMealChartBindingSource2
             // 
@@ -303,75 +367,12 @@
             // 
             this.informationsBindingSource.DataSource = typeof(vmmBLL.Informations);
             // 
-            // Delete
-            // 
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "Delete";
-            this.Delete.ToolTipText = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            // 
-            // Update
-            // 
-            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Update.HeaderText = "Update";
-            this.Update.Name = "Update";
-            this.Update.ReadOnly = true;
-            this.Update.Text = "Update";
-            this.Update.ToolTipText = "Update";
-            this.Update.UseColumnTextForButtonValue = true;
-            // 
-            // totalMealDataGridViewTextBoxColumn
-            // 
-            this.totalMealDataGridViewTextBoxColumn.DataPropertyName = "TotalMeal";
-            this.totalMealDataGridViewTextBoxColumn.HeaderText = "TotalMeal";
-            this.totalMealDataGridViewTextBoxColumn.Name = "totalMealDataGridViewTextBoxColumn";
-            // 
-            // dinnerDataGridViewTextBoxColumn
-            // 
-            this.dinnerDataGridViewTextBoxColumn.DataPropertyName = "Dinner";
-            this.dinnerDataGridViewTextBoxColumn.HeaderText = "Dinner";
-            this.dinnerDataGridViewTextBoxColumn.Name = "dinnerDataGridViewTextBoxColumn";
-            // 
-            // lunchDataGridViewTextBoxColumn
-            // 
-            this.lunchDataGridViewTextBoxColumn.DataPropertyName = "Lunch";
-            this.lunchDataGridViewTextBoxColumn.HeaderText = "Lunch";
-            this.lunchDataGridViewTextBoxColumn.Name = "lunchDataGridViewTextBoxColumn";
-            // 
-            // breakfastDataGridViewTextBoxColumn
-            // 
-            this.breakfastDataGridViewTextBoxColumn.DataPropertyName = "Breakfast";
-            this.breakfastDataGridViewTextBoxColumn.HeaderText = "Breakfast";
-            this.breakfastDataGridViewTextBoxColumn.Name = "breakfastDataGridViewTextBoxColumn";
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // EditMealChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1094, 478);
+            this.ControlBox = false;
             this.Controls.Add(this.bt_back);
             this.Controls.Add(this.bt_exit);
             this.Controls.Add(this.label4);

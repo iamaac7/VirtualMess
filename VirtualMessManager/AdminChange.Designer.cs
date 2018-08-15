@@ -214,6 +214,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(607, 499);
+            this.ControlBox = false;
             this.Controls.Add(this.bt_Exit);
             this.Controls.Add(this.bt_confirm);
             this.Controls.Add(this.bt_Back);
