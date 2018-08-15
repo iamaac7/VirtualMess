@@ -111,6 +111,18 @@
     <Compile Include="EditMealChart.Designer.cs">
       <DependentUpon>EditMealChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditMealChartnew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMealChartnew.Designer.cs">
+      <DependentUpon>EditMealChartnew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +210,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditMealChart.resx">
       <DependentUpon>EditMealChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMealChartnew.resx">
+      <DependentUpon>EditMealChartnew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -373,6 +391,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user_male.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

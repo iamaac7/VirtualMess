@@ -11,7 +11,8 @@ namespace vmmDAL
 {
     public class DBConnection
     {
-        public SqlConnection connection = new SqlConnection(@"Data Source=WINDOWS-090SA4I\FAHADSQL;Initial Catalog=VMM;Integrated Security=True");
+        public SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-GHDL7O6\SQLEXPRESS;Initial Catalog=VMM;User ID=sa;Password=12345");
+
 
         public SqlConnection GetConnection() 
         {
@@ -53,6 +54,13 @@ namespace vmmDAL
             dt.Load(sdr);
             connection.Close();
             return dt;
+        }
+
+        public void DeleteExeReader(SqlCommand cmd) {
+            cmd.Connection = GetConnection();
+            cmd.ExecuteNonQuery();
+            connection.Close();
+
         }
 
         public DataTable ExeReader1(SqlCommand cmd)

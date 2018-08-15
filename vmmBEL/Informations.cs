@@ -21,6 +21,7 @@ namespace vmmBLL
         public string password { get; set; }
         public int phone { get; set; }
         public byte[] pic = null;
+        public int ID { get; set; }
         //public  image { get; set; }
 
         public DateTime dateFromMeal { get; set; }

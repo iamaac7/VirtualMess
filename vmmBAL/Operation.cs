@@ -36,6 +36,29 @@ namespace vmmBAL
             return db.ExeReader(cmd);
         }
 
+        public DataTable GetId(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select Id from vmmUser1 where UserName='" + info.userName +"'";
+            return db.ExeReader(cmd);
+        }
+        public void DeleteInfo(Informations info) {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Delete from vmmMealChart where MemberId='" + info.ID + "'and Date='" + info.dateFromMeal + "'";
+             db.DeleteExeReader(cmd);
+
+        }
+        public DataTable GetBreakLunDin(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select Breakfast,Lunch,Dinner from vmmMealChart where MemberId='" + info.ID + "'and Date='"+info.dateFromMeal+"'";
+            return db.ExeReader(cmd);
+        }
+
+
         public int insertBazar(Bazar bazar)
         {
             SqlCommand cmd = new SqlCommand();

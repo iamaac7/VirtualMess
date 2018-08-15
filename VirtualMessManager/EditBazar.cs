@@ -67,6 +67,27 @@ namespace VirtualMessManager
                     {
                         var row = gv_EditBazat.CurrentRow;
                         gv_EditBazat.Rows.Remove(row);
+                        //Console.WriteLine(row.Index);
+
+                        //public SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-GHDL7O6\SQLEXPRESS;Initial Catalog=VMM;User ID=sa;Password=12345");
+                        //SqlConnection con = new SqlConnection("Data Source=DESKTOP-GHDL7O6\\SQLEXPRESS;Initial Catalog=VMM;User ID='sa';Password='12345'");
+                        //SqlCommand cmd = new SqlCommand();
+                        //cmd.CommandType = CommandType.Text;
+                        //cmd.CommandText = "select * from vmmBazarChart ";
+                        //con.Open();
+                        //SqlDataAdapter sda1 = new SqlDataAdapter("Select * from vmmBazarChart", con);
+                        //DataTable dt = new DataTable();
+                        //SqlCommandBuilder scb = new SqlCommandBuilder(sda1);
+                        //sda1.Update(this.vMMDataSet3.vmmBazarChart);
+                        //con.Close();
+                        //MessageBox.Show("Your Data Updated !");
+                        //string query = "DELETE From vmmBazarChart WHERE Items='" + gv_EditBazat.Rows + "'";
+                        //DatabaseConnectionClass dcc = new DatabaseConnectionClass();
+                        //dcc.ConnectWithDB();
+                        //int x = dcc.ExecuteSQL(query);
+                        //return true;
+
+                        //Console.WriteLine(row.Cells[0]);
                     }
 
                 }

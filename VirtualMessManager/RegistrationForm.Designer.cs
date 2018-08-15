@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.labelPhoneNmbr = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelUserName = new System.Windows.Forms.Label();
@@ -73,6 +74,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.labelPhoneNmbr);
             this.panel1.Controls.Add(this.labelPassword);
             this.panel1.Controls.Add(this.labelUserName);
@@ -112,6 +114,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(468, 483);
             this.panel1.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label11.Location = new System.Drawing.Point(85, 397);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 20);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "(+880)";
             // 
             // labelPhoneNmbr
             // 
@@ -196,6 +209,7 @@
             this.button1.Size = new System.Drawing.Size(117, 32);
             this.button1.TabIndex = 15;
             this.button1.Text = "Back";
+            this.toolTip1.SetToolTip(this.button1, "Takes you back to the Login Page");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -210,6 +224,7 @@
             this.rb_Admin.TabIndex = 14;
             this.rb_Admin.TabStop = true;
             this.rb_Admin.Text = "Admin";
+            this.toolTip1.SetToolTip(this.rb_Admin, "This a User Role.\r\n*You can only be Admin if you have the permission.\r\n");
             this.rb_Admin.UseVisualStyleBackColor = true;
             // 
             // tb_imagePath
@@ -227,10 +242,12 @@
             this.rb_Manager.ForeColor = System.Drawing.Color.Black;
             this.rb_Manager.Location = new System.Drawing.Point(150, 117);
             this.rb_Manager.Name = "rb_Manager";
-            this.rb_Manager.Size = new System.Drawing.Size(80, 21);
+            this.rb_Manager.Size = new System.Drawing.Size(79, 23);
             this.rb_Manager.TabIndex = 12;
             this.rb_Manager.TabStop = true;
             this.rb_Manager.Text = "Manager";
+            this.toolTip1.SetToolTip(this.rb_Manager, "This a User Role.\r\n*You can only be Manger if you have the permission.");
+            this.rb_Manager.UseCompatibleTextRendering = true;
             this.rb_Manager.UseVisualStyleBackColor = true;
             this.rb_Manager.CheckedChanged += new System.EventHandler(this.rb_Manager_CheckedChanged_1);
             // 
@@ -245,6 +262,8 @@
             this.rb_Member.TabIndex = 12;
             this.rb_Member.TabStop = true;
             this.rb_Member.Text = "Member";
+            this.toolTip1.SetToolTip(this.rb_Member, "This a User Role.\r\n*You can only be Member if you don\'t have the permission to be" +
+        "come Admin/Manager.");
             this.rb_Member.UseVisualStyleBackColor = true;
             this.rb_Member.CheckedChanged += new System.EventHandler(this.rb_Member_CheckedChanged);
             // 
@@ -266,7 +285,7 @@
             this.cb_bloodGroup.Name = "cb_bloodGroup";
             this.cb_bloodGroup.Size = new System.Drawing.Size(148, 21);
             this.cb_bloodGroup.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.cb_bloodGroup, "Hint!\r\nSelect your Blood Group.");
+            this.toolTip1.SetToolTip(this.cb_bloodGroup, "Select your Blood Group.");
             this.cb_bloodGroup.TextChanged += new System.EventHandler(this.cb_bloodGroup_TextChanged);
             this.cb_bloodGroup.Leave += new System.EventHandler(this.cb_bloodGroup_Leave);
             // 
@@ -277,7 +296,7 @@
             this.cb_ManagerName.Name = "cb_ManagerName";
             this.cb_ManagerName.Size = new System.Drawing.Size(191, 21);
             this.cb_ManagerName.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.cb_ManagerName, "Hint!\r\nEnter/Select manager name.\r\n");
+            this.toolTip1.SetToolTip(this.cb_ManagerName, "Enter/Select manager name.\r\n");
             this.cb_ManagerName.TextChanged += new System.EventHandler(this.cb_ManagerName_TextChanged);
             this.cb_ManagerName.Leave += new System.EventHandler(this.cb_ManagerName_Leave);
             // 
@@ -288,7 +307,7 @@
             this.cb_MessName.Name = "cb_MessName";
             this.cb_MessName.Size = new System.Drawing.Size(191, 21);
             this.cb_MessName.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.cb_MessName, "Hint!\r\nEnter/Select name.");
+            this.toolTip1.SetToolTip(this.cb_MessName, "Enter/Select name.");
             this.cb_MessName.TextChanged += new System.EventHandler(this.cb_MessName_TextChanged);
             this.cb_MessName.Leave += new System.EventHandler(this.cb_MessName_Leave);
             // 
@@ -303,6 +322,7 @@
             this.btn_Cancel.Size = new System.Drawing.Size(117, 32);
             this.btn_Cancel.TabIndex = 10;
             this.btn_Cancel.Text = "Exit";
+            this.toolTip1.SetToolTip(this.btn_Cancel, "Exit the Application");
             this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
@@ -317,6 +337,9 @@
             this.btn_Confirm.Size = new System.Drawing.Size(117, 32);
             this.btn_Confirm.TabIndex = 10;
             this.btn_Confirm.Text = "Confirm";
+            this.toolTip1.SetToolTip(this.btn_Confirm, "Confirm & submit all your Data to the Database\r\n*Only press this if every field i" +
+        "s completed.\r\n*If any of the field is incompleted it will generate an error mess" +
+        "age.\r\n");
             this.btn_Confirm.UseVisualStyleBackColor = false;
             this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
@@ -333,6 +356,8 @@
             this.date_dob.Name = "date_dob";
             this.date_dob.Size = new System.Drawing.Size(148, 23);
             this.date_dob.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.date_dob, "Select your Date Of Birth from the Calendar View");
+            this.date_dob.UseWaitCursor = true;
             this.date_dob.ValueChanged += new System.EventHandler(this.date_dob_ValueChanged);
             this.date_dob.Leave += new System.EventHandler(this.date_dob_Leave);
             // 
@@ -347,7 +372,8 @@
             this.tb_Phone.Name = "tb_Phone";
             this.tb_Phone.Size = new System.Drawing.Size(148, 28);
             this.tb_Phone.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.tb_Phone, "Hint!\r\nEnter your phone number.");
+            this.toolTip1.SetToolTip(this.tb_Phone, "Enter your phone number.\r\n*You don\'t need to Add +880 (Country Code).\r\n*Enter you" +
+        "r last 10 digits only.");
             this.tb_Phone.TextChanged += new System.EventHandler(this.tb_Phone_TextChanged);
             this.tb_Phone.Leave += new System.EventHandler(this.tb_Phone_Leave);
             // 
@@ -363,7 +389,7 @@
             this.tb_Password.PasswordChar = 'x';
             this.tb_Password.Size = new System.Drawing.Size(148, 28);
             this.tb_Password.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.tb_Password, "Hint!\r\nEnter your password.");
+            this.toolTip1.SetToolTip(this.tb_Password, "Enter your password.");
             this.tb_Password.TextChanged += new System.EventHandler(this.tb_Password_TextChanged);
             this.tb_Password.Leave += new System.EventHandler(this.tb_Password_Leave);
             // 
@@ -378,7 +404,7 @@
             this.tb_userName.Name = "tb_userName";
             this.tb_userName.Size = new System.Drawing.Size(148, 28);
             this.tb_userName.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.tb_userName, "Hint!\r\nEnter your user name.");
+            this.toolTip1.SetToolTip(this.tb_userName, "Enter your unique user name.\r\n* This needs to be unique.");
             this.tb_userName.TextChanged += new System.EventHandler(this.tb_userName_TextChanged);
             this.tb_userName.Leave += new System.EventHandler(this.tb_userName_Leave);
             // 
@@ -393,7 +419,7 @@
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(194, 27);
             this.tb_Name.TabIndex = 4;
-            this.toolTip1.SetToolTip(this.tb_Name, "Hint!\r\nEnter your name.");
+            this.toolTip1.SetToolTip(this.tb_Name, "Enter your name.");
             this.tb_Name.TextChanged += new System.EventHandler(this.tb_Name_TextChanged);
             this.tb_Name.Leave += new System.EventHandler(this.tb_Name_Leave);
             // 
@@ -413,7 +439,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(22, 394);
+            this.label6.Location = new System.Drawing.Point(22, 398);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 18);
             this.label6.TabIndex = 3;
@@ -497,6 +523,7 @@
             this.btn_Browse.Size = new System.Drawing.Size(102, 27);
             this.btn_Browse.TabIndex = 2;
             this.btn_Browse.Text = "Browse";
+            this.toolTip1.SetToolTip(this.btn_Browse, "This is to browse your photo from file manager.");
             this.btn_Browse.UseVisualStyleBackColor = false;
             this.btn_Browse.Click += new System.EventHandler(this.btn_Browse_Click);
             // 
@@ -521,6 +548,11 @@
             this.label1.Size = new System.Drawing.Size(206, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registration Form";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Hint !";
             // 
             // RegistrationForm
             // 
@@ -579,6 +611,7 @@
         private System.Windows.Forms.Label labelManagerName;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label11;
     }
 }
 

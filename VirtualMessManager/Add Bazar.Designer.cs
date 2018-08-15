@@ -91,30 +91,53 @@
             this.cb_Items.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Items.FormattingEnabled = true;
             this.cb_Items.Items.AddRange(new object[] {
-            "Cal(Rice)",
-            "Mosur_dal(Lentil)\t",
-            "Mug_dal(Green_Gram)",
-            "Booter_dal(Skinned)",
-            "Lanka(Chili)",
-            "Laban(Salt)",
-            "Jeera(Cumin)",
-            "Rasun(Garlic)",
-            "Aada(Ginger)",
-            "Halud(Turmeric)",
-            "Garam_masala(Spice_Mixture)",
-            "Jej_pata(Bay_leaf)",
-            "Shorsher_tel(Mustard_oil)",
-            "Peaj_koli(Shallot)",
-            "Lebu(Citron)",
-            "Kacha_morich(Green chili)",
-            "Chal_Kumro(Ash Gourd)",
-            "Karola(Bitter_melon)",
-            "Sheem(Broad_Beans)",
-            "Murgi(Chicken)",
-            "Goru_Gosto(Beef)",
-            "Khashi_Gosto(Mutton)",
-            "Macch(Fish)",
-            "Dim(Egg)"});
+            "Chal - Rice",
+            "Mosur_dal - Lentil \t",
+            "Mug_dal  - Green_Gram",
+            "Booter_dal  - Skinned ",
+            "Lanka - Chili",
+            "Laban - Salt",
+            "Jeera  - Cumin",
+            "Rasun - Garlic",
+            "Aada - Ginger",
+            "Halud  - Turmeric",
+            "Garam_masala -  Spice_Mixture",
+            "Jej_pata  - Bay_leaf",
+            "Shorsher_tel - Mustard_oil",
+            "Peaj_koli - Shallot",
+            "Lebu - Lemon ",
+            "Kacha_morich - Green chili",
+            "Chal_Kumro  - Ash Gourd",
+            "Karola  - Bitter_melon",
+            "Sheem - Broad_Beans",
+            "Murgi  - Chicken",
+            "Goru_Gosto - Beef",
+            "Khashi_Gosto - Mutton",
+            "Macch  - Fish",
+            "Dim  - Egg (Pcs)",
+            "Rice",
+            "Lentil",
+            "Green_Gram",
+            " Skinned",
+            "Salt ",
+            "Cumin",
+            "Garlic",
+            "Ginger",
+            "Turmeric",
+            "Spice_Mixture",
+            "Bay_leaf",
+            "Mustard_oil",
+            "Shallot",
+            "Lemon ",
+            "Green chili",
+            "Ash Gourd",
+            "Bitter_melon",
+            "Broad_Beans",
+            "Chicken",
+            "Beef",
+            "Mutton",
+            "Fish",
+            "Egg (Pcs)"});
             this.cb_Items.Location = new System.Drawing.Point(12, 117);
             this.cb_Items.Name = "cb_Items";
             this.cb_Items.Size = new System.Drawing.Size(160, 28);
@@ -158,12 +181,13 @@
             this.tb_Amount.Location = new System.Drawing.Point(314, 117);
             this.tb_Amount.Multiline = true;
             this.tb_Amount.Name = "tb_Amount";
-            this.tb_Amount.Size = new System.Drawing.Size(108, 28);
+            this.tb_Amount.Size = new System.Drawing.Size(128, 28);
             this.tb_Amount.TabIndex = 1;
             // 
             // bt_addItems
             // 
             this.bt_addItems.BackColor = System.Drawing.Color.Green;
+            this.bt_addItems.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bt_addItems.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_addItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_addItems.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -178,6 +202,7 @@
             // addBazarCancel
             // 
             this.addBazarCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.addBazarCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.addBazarCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addBazarCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBazarCancel.ForeColor = System.Drawing.Color.White;
@@ -201,6 +226,7 @@
             // bt_back
             // 
             this.bt_back.BackColor = System.Drawing.Color.Red;
+            this.bt_back.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bt_back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_back.ForeColor = System.Drawing.Color.White;
@@ -218,6 +244,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(478, 287);
+            this.ControlBox = false;
             this.Controls.Add(this.bt_back);
             this.Controls.Add(this.dt_Bazar);
             this.Controls.Add(this.addBazarCancel);

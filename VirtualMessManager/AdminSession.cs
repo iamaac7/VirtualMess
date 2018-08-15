@@ -56,7 +56,7 @@ namespace VirtualMessManager
 
         private void admMealSheetUpd_Click(object sender, EventArgs e)
         {
-            EditMealChart editMeal = new EditMealChart(this);
+            EditMealChartnew editMeal = new EditMealChartnew(this);
             editMeal.Show(this);
             this.Hide();
         }
@@ -100,8 +100,12 @@ namespace VirtualMessManager
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MemberInformation MI = new MemberInformation();
-            MI.Show();
+            //MemberInformation MI = new MemberInformation();
+            //MI.Show();
+            //this.Hide();
+
+            DeleteMember DM = new DeleteMember();
+            DM.Show();
             this.Hide();
         }
     }
