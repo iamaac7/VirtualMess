@@ -33,6 +33,7 @@ namespace VirtualMessManager
             InitializeComponent();
             this.ActiveControl = tb_Name;
             tb_Name.Focus();
+            tb_Password.PasswordChar = '*';
         }
 
 

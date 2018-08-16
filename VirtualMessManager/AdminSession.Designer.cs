@@ -42,9 +42,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tb_loginStatusMan = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -71,9 +74,9 @@
             this.admMonthCal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.admMonthCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admMonthCal.ForeColor = System.Drawing.Color.White;
-            this.admMonthCal.Location = new System.Drawing.Point(228, 88);
+            this.admMonthCal.Location = new System.Drawing.Point(227, 119);
             this.admMonthCal.Name = "admMonthCal";
-            this.admMonthCal.Size = new System.Drawing.Size(196, 78);
+            this.admMonthCal.Size = new System.Drawing.Size(196, 67);
             this.admMonthCal.TabIndex = 0;
             this.admMonthCal.Text = "Monthly Calculation";
             this.admMonthCal.UseVisualStyleBackColor = false;
@@ -85,9 +88,9 @@
             this.admAddMember.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.admAddMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admAddMember.ForeColor = System.Drawing.Color.White;
-            this.admAddMember.Location = new System.Drawing.Point(47, 88);
+            this.admAddMember.Location = new System.Drawing.Point(46, 119);
             this.admAddMember.Name = "admAddMember";
-            this.admAddMember.Size = new System.Drawing.Size(183, 78);
+            this.admAddMember.Size = new System.Drawing.Size(183, 67);
             this.admAddMember.TabIndex = 0;
             this.admAddMember.Text = "Add Member";
             this.admAddMember.UseVisualStyleBackColor = false;
@@ -99,7 +102,7 @@
             this.admChange.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.admChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admChange.ForeColor = System.Drawing.Color.White;
-            this.admChange.Location = new System.Drawing.Point(296, 164);
+            this.admChange.Location = new System.Drawing.Point(295, 184);
             this.admChange.Name = "admChange";
             this.admChange.Size = new System.Drawing.Size(128, 76);
             this.admChange.TabIndex = 0;
@@ -113,7 +116,7 @@
             this.admMealSheetUpd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.admMealSheetUpd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.admMealSheetUpd.ForeColor = System.Drawing.Color.White;
-            this.admMealSheetUpd.Location = new System.Drawing.Point(171, 164);
+            this.admMealSheetUpd.Location = new System.Drawing.Point(170, 184);
             this.admMealSheetUpd.Name = "admMealSheetUpd";
             this.admMealSheetUpd.Size = new System.Drawing.Size(125, 76);
             this.admMealSheetUpd.TabIndex = 0;
@@ -155,7 +158,7 @@
             this.bt_BazarEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_BazarEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_BazarEdit.ForeColor = System.Drawing.Color.White;
-            this.bt_BazarEdit.Location = new System.Drawing.Point(47, 164);
+            this.bt_BazarEdit.Location = new System.Drawing.Point(46, 184);
             this.bt_BazarEdit.Name = "bt_BazarEdit";
             this.bt_BazarEdit.Size = new System.Drawing.Size(124, 76);
             this.bt_BazarEdit.TabIndex = 8;
@@ -166,6 +169,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.bt_BazarEdit);
@@ -188,7 +193,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(47, 237);
+            this.button3.Location = new System.Drawing.Point(46, 257);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(377, 38);
             this.button3.TabIndex = 11;
@@ -200,22 +205,42 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(193, 49);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(227, 72);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 19);
+            this.textBox1.Size = new System.Drawing.Size(116, 17);
             this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tb_loginStatusMan
             // 
             this.tb_loginStatusMan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_loginStatusMan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_loginStatusMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.tb_loginStatusMan.Location = new System.Drawing.Point(192, 15);
+            this.tb_loginStatusMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_loginStatusMan.Location = new System.Drawing.Point(225, 50);
             this.tb_loginStatusMan.Name = "tb_loginStatusMan";
-            this.tb_loginStatusMan.Size = new System.Drawing.Size(167, 22);
+            this.tb_loginStatusMan.Size = new System.Drawing.Size(167, 17);
             this.tb_loginStatusMan.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(141, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 20);
+            this.label1.TabIndex = 45;
+            this.label1.Text = "Manager of the System";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(127, 35);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(78, 69);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 44;
+            this.pictureBox2.TabStop = false;
             // 
             // AdminSession
             // 
@@ -236,6 +261,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,5 +281,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox tb_loginStatusMan;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

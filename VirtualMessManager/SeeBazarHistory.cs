@@ -48,7 +48,6 @@ namespace VirtualMessManager
         private void SeeBazarHistory_Load(object sender, EventArgs e)
         {
             info.refManagrtName = Login.refManagerName;
-            MessageBox.Show("Your Manager is :" + info.refManagrtName);
             dt = opr.LoadBazarHistory(info);
             gv_LoadBazar.DataSource = dt;
 

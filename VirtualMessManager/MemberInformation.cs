@@ -43,7 +43,6 @@ namespace VirtualMessManager
         private void MemberInformation_Load(object sender, EventArgs e)
         {
             info.refManagrtName = Login.refManagerName;
-            MessageBox.Show("Your Manager is : "+info.refManagrtName);
             dt = opr.LoadMemberInformation(info);
             MemdataGridView.DataSource = dt;
            

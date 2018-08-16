@@ -19,6 +19,7 @@ namespace vmmBLL
         public string bloodGroup { get; set; }
         public string userName { get; set; }
         public string password { get; set; }
+        public string oldPass { get; set; }
         public int phone { get; set; }
         public byte[] pic = null;
         public int ID { get; set; }

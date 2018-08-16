@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -84,12 +85,20 @@ namespace VirtualMessManager
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            tb_loginStatusMan.Text = Login.loginName;
-            textBox1.Text = Login.uType;
+            
         }
 
         private void AdminSession_Load(object sender, EventArgs e)
         {
+            tb_loginStatusMan.Text = Login.loginName;
+            textBox1.Text = Login.uType;
+            if (Login.picture == null) { pictureBox2.Image = null; }
+            else
+            {
+
+                MemoryStream ms = new MemoryStream(Login.picture);
+                pictureBox2.Image = Image.FromStream(ms);
+            }
 
         }
 
@@ -100,10 +109,6 @@ namespace VirtualMessManager
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //MemberInformation MI = new MemberInformation();
-            //MI.Show();
-            //this.Hide();
-
             DeleteMember DM = new DeleteMember();
             DM.Show();
             this.Hide();

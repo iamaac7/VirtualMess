@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxConfirmPass = new System.Windows.Forms.TextBox();
             this.textBoxNewPass = new System.Windows.Forms.TextBox();
-            this.textBoxPhoneNum = new System.Windows.Forms.TextBox();
+            this.textBoxOldPass = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -41,7 +41,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -73,9 +72,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 130);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 17);
+            this.label1.Size = new System.Drawing.Size(100, 17);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Phone Number: ";
+            this.label1.Text = "Old Password: ";
             // 
             // textBoxConfirmPass
             // 
@@ -96,14 +95,14 @@
             this.textBoxNewPass.TabIndex = 15;
             this.textBoxNewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox3_KeyDown);
             // 
-            // textBoxPhoneNum
+            // textBoxOldPass
             // 
-            this.textBoxPhoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.textBoxPhoneNum.Location = new System.Drawing.Point(189, 121);
-            this.textBoxPhoneNum.Name = "textBoxPhoneNum";
-            this.textBoxPhoneNum.Size = new System.Drawing.Size(255, 29);
-            this.textBoxPhoneNum.TabIndex = 16;
-            this.textBoxPhoneNum.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown_1);
+            this.textBoxOldPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxOldPass.Location = new System.Drawing.Point(189, 121);
+            this.textBoxOldPass.Name = "textBoxOldPass";
+            this.textBoxOldPass.Size = new System.Drawing.Size(255, 29);
+            this.textBoxOldPass.TabIndex = 16;
+            this.textBoxOldPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown_1);
             // 
             // button3
             // 
@@ -172,6 +171,7 @@
             this.textBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.textBoxUserName.Location = new System.Drawing.Point(189, 76);
             this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.ReadOnly = true;
             this.textBoxUserName.Size = new System.Drawing.Size(255, 29);
             this.textBoxUserName.TabIndex = 20;
             this.textBoxUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
@@ -186,17 +186,6 @@
             this.label6.Size = new System.Drawing.Size(0, 24);
             this.label6.TabIndex = 22;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label10.Location = new System.Drawing.Point(124, 127);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 20);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "(+880)";
-            // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,7 +193,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(496, 465);
             this.ControlBox = false;
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxUserName);
@@ -213,7 +201,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxConfirmPass);
             this.Controls.Add(this.textBoxNewPass);
-            this.Controls.Add(this.textBoxPhoneNum);
+            this.Controls.Add(this.textBoxOldPass);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -234,7 +222,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxConfirmPass;
         private System.Windows.Forms.TextBox textBoxNewPass;
-        private System.Windows.Forms.TextBox textBoxPhoneNum;
+        private System.Windows.Forms.TextBox textBoxOldPass;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -242,6 +230,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
     }
 }

@@ -40,6 +40,7 @@
             this.memBookMeal = new System.Windows.Forms.Button();
             this.memMemberInfo = new System.Windows.Forms.Button();
             this.memAddBazar = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMem)).BeginInit();
@@ -58,6 +59,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.tb_loginStatusMem);
             this.panel1.Controls.Add(this.pictureBoxMem);
@@ -78,7 +80,7 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(165, 43);
+            this.textBox1.Location = new System.Drawing.Point(171, 39);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(138, 19);
             this.textBox1.TabIndex = 11;
@@ -89,7 +91,7 @@
             this.tb_loginStatusMem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_loginStatusMem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_loginStatusMem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_loginStatusMem.Location = new System.Drawing.Point(165, 5);
+            this.tb_loginStatusMem.Location = new System.Drawing.Point(153, 11);
             this.tb_loginStatusMem.Name = "tb_loginStatusMem";
             this.tb_loginStatusMem.Size = new System.Drawing.Size(178, 22);
             this.tb_loginStatusMem.TabIndex = 10;
@@ -185,6 +187,18 @@
             this.memAddBazar.UseVisualStyleBackColor = false;
             this.memAddBazar.Click += new System.EventHandler(this.memAddBazar_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.linkLabel1.Location = new System.Drawing.Point(134, 295);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(145, 18);
+            this.linkLabel1.TabIndex = 12;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Change Password";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Member
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -223,5 +237,6 @@
         private System.Windows.Forms.PictureBox pictureBoxMem;
         private System.Windows.Forms.TextBox tb_loginStatusMem;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

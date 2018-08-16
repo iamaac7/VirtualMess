@@ -124,8 +124,9 @@ namespace VirtualMessManager
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            ChangePassword cp = new ChangePassword();
-            cp.Show();
+            //ChangePassword cp = new ChangePassword();
+            //cp.Show();
+            new ForgotPassword().Show();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

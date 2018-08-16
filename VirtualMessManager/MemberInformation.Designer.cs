@@ -40,6 +40,8 @@
             // 
             // MemdataGridView
             // 
+            this.MemdataGridView.AllowUserToAddRows = false;
+            this.MemdataGridView.AllowUserToDeleteRows = false;
             this.MemdataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -60,6 +62,7 @@
             this.MemdataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.MemdataGridView.Location = new System.Drawing.Point(7, 13);
             this.MemdataGridView.Name = "MemdataGridView";
+            this.MemdataGridView.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -103,10 +106,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(772, 462);
+            this.ControlBox = false;
             this.Controls.Add(this.bt_Exit);
             this.Controls.Add(this.bt_Back);
             this.Controls.Add(this.MemdataGridView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MemberInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MemberInformation";

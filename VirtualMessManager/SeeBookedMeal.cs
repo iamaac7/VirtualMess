@@ -41,7 +41,6 @@ namespace VirtualMessManager
         private void SeeBookedMeal_Load(object sender, EventArgs e)
         {
             info.refManagrtName = Login.refManagerName;
-            MessageBox.Show("Your Manager is :" + info.refManagrtName);
             dt = opr.LoadMealHistory(info);
             gv_MealHistory.DataSource = dt;
         }
@@ -65,11 +64,6 @@ namespace VirtualMessManager
             {
                 Application.Exit();
             }
-
-            //Application.Exit();
-            //this.Hide();
-            //Login log = new Login();
-            //log.Show();
         }
 
         public void ChangeGridColor(DataGridView grid)

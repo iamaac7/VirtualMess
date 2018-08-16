@@ -50,6 +50,36 @@ namespace vmmBAL
              db.DeleteExeReader(cmd);
 
         }
+        //15/8
+
+        public int UpdateMealChart(BookMeal bm) {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE vmmMealChart set Breakfast=" + bm.breakfast + ",Lunch="+bm.lunch+",Dinner="+bm.dinner+" where MemberId='" + bm.id + "' and Date='" +bm.date + "'";
+            return db.ExeNonQuery(cmd);
+
+        }
+
+        public void DeleteMember(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Delete from vmmUser1 where Id='" + info.ID + "'";
+            db.DeleteExeReader(cmd);
+
+        }
+
+        public DataTable MemberInfoDelete(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select Id,userType,Phone,Photo from vmmUser1 where UserName='"+info.userName+"'";
+            return db.ExeReader(cmd);
+        }
+
+        //15/8
+
+
         public DataTable GetBreakLunDin(Informations info)
         {
             SqlCommand cmd = new SqlCommand();
@@ -134,7 +164,15 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update vmmUser1 set Password='"+info.password+"' where UserName='" + info.userName + "' and Phone=" + info.phone + "";
+            cmd.CommandText = "update vmmUser1 set Password='"+info.password+"' where UserName='" + info.userName + "' and Password=" + info.oldPass + "";
+            return db.ExeNonQuery(cmd);
+        }
+
+        public int ForgotPassword(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "update vmmUser1 set Password='" + info.password + "' where UserName='" + info.userName + "' and Phone=" + info.phone + "";
             return db.ExeNonQuery(cmd);
         }
 

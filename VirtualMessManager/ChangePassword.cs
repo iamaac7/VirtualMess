@@ -16,9 +16,12 @@ namespace VirtualMessManager
     {
         public Informations info = new Informations();
         public Operation opr = new Operation();
-        public ChangePassword()
+        string userType;
+        public ChangePassword(string u_Type)
         {
+            this.userType = u_Type;
             InitializeComponent();
+            textBoxOldPass.PasswordChar = '*';
             textBoxNewPass.PasswordChar = '*';
             textBoxConfirmPass.PasswordChar = '*';
         }
@@ -27,7 +30,7 @@ namespace VirtualMessManager
         {
             if (e.KeyCode == Keys.Enter)
             {
-                textBoxPhoneNum.Focus();
+                textBoxOldPass.Focus();
             }
         }
         private void textBox2_KeyDown_1(object sender, KeyEventArgs e)
@@ -40,32 +43,25 @@ namespace VirtualMessManager
 
         private void ChangePassword_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = textBoxUserName;
-            textBoxUserName.Focus();
+            textBoxUserName.Text = Login.logInUserName1;
+            this.ActiveControl = textBoxOldPass;
+            textBoxOldPass.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //    Member m = new Member();
-            //    Manager mn = new Manager();
-            //    Member me = (Member)sender;
-            //    Manager mng = (Manager)sender;
-            //    if (m == me)
-            //    {
-            //        this.Hide();
-            //        new Member().Show();
-            //    }
-            //    else if (mn == mng)
-            //    {
-            //        this.Hide();
-            //        new Manager().Show();
+            if (userType == "Member") {
+                this.Hide();
+                new Member().Show();
+            }
+            else if (userType=="Manager")
+            {
+                this.Hide();
+                new Manager().Show();
 
-            //    }
-            //    else
-            //    {
-            this.Hide();
-            new Login().Show();
-            //}
+
+            }
+      
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -87,7 +83,7 @@ namespace VirtualMessManager
             {
                 flag = false;
             }
-            else if (textBoxPhoneNum.Text.Trim() == "")
+            else if (textBoxOldPass.Text.Trim() == "")
             {
                 flag = false;
             }
@@ -105,11 +101,11 @@ namespace VirtualMessManager
                 if (np.Equals(cp))
                 {
                     string UserName = textBoxUserName.Text;
-                    string phoneNum = textBoxPhoneNum.Text;
+                    string oldPass = textBoxOldPass.Text;
 
                     info.password = cp;
                     info.userName = UserName;
-                    info.phone = int.Parse(phoneNum);
+                    info.oldPass = oldPass;
                     int rowaffected = opr.changePassword(info);
 
                     if (rowaffected > 0)
@@ -119,7 +115,7 @@ namespace VirtualMessManager
                     }
                     else
                     {
-                        MessageBox.Show("Wrong username or phone.\nEnter Correctly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Wrong Old Password.\nEnter Correctly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
 

@@ -88,5 +88,11 @@ namespace VirtualMessManager
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            new ChangePassword(Login.uType).Show();
+        }
     }
 }
