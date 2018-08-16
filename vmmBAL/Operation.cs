@@ -102,7 +102,7 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select Id,Name,DOB,Phone,RefManagerName,MessName,Photo from vmmUser1 where RefManagerName='"+info.refManagrtName+"'";
+            cmd.CommandText = "select Id,Name,DOB,Phone,RefManagerName,MessName from vmmUser1 where RefManagerName='"+info.refManagrtName+"'";
             return db.ExeReader(cmd);
         }
 
@@ -119,7 +119,7 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Id,Date,Name,Breakfast,Lunch,Dinner,TotalMeal FROM vmmMealChart where refManager='" + info.refManagrtName + "'and Date BETWEEN'"+info.dateFromMeal+"'AND '"+info.dateToMeal+"'";
+            cmd.CommandText = "SELECT Date,Name,Breakfast,Lunch,Dinner,TotalMeal FROM vmmMealChart where refManager='" + info.refManagrtName + "'and Date BETWEEN'"+info.dateFromMeal+"'AND '"+info.dateToMeal+"'";
             return db.ExeReader(cmd);
             
         }
@@ -128,7 +128,7 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Id,Date,Name,Breakfast,Lunch,Dinner,TotalMeal FROM vmmMealChart where refManager='"+info.refManagrtName+"' and Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0) AND Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())+1, 0)";
+            cmd.CommandText = "SELECT Date,Name,Breakfast,Lunch,Dinner,TotalMeal FROM vmmMealChart where refManager='"+info.refManagrtName+"' and Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0) AND Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())+1, 0)";
             return db.ExeReader1(cmd);
             
         }
@@ -146,7 +146,7 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Date,Name,sum(Price) as Total_Price FROM vmmBazarChart where RefManager='" + info.refManagrtName + "'and Date BETWEEN'" + info.dateFromMeal + "'AND '" + info.dateToMeal + "' group by Name,Date";
+            cmd.CommandText = "SELECT Date,Name,Items,Quantity,sum(Price) as Total_Price FROM vmmBazarChart where RefManager='" + info.refManagrtName + "'and Date BETWEEN'" + info.dateFromMeal + "'AND '" + info.dateToMeal + "' group by Name,Date,Items,Quantity";
             return db.ExeReader1(cmd);
         }
 
@@ -154,8 +154,6 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            //cmd.CommandText = "update vmmUser1 set userType='Manager',UserName='" + info.newAdminName + "' where Id=" + info.newAdminId + "";
-          // cmd.CommandText = "update vmmUser1 set userType='Manager' where Id=" + info.newAdminId + "";
             cmd.CommandText = "update vmmUser1 set userType='Manager' where UserName='" + info.newAdminUsername + "' and Id=" + info.newAdminId + "";
             return db.ExeNonQuery(cmd);
         }

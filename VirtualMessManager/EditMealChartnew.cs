@@ -26,6 +26,14 @@ namespace VirtualMessManager
         {
             InitializeComponent();
         }
+        public EditMealChartnew(SeeBookedMeal seeBookedMeal)
+        {
+            InitializeComponent();
+        }
+
+        public EditMealChartnew()
+        {
+        }
 
         private void EditMealChartnew_Load(object sender, EventArgs e)
         {

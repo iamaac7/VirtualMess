@@ -107,13 +107,15 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Green;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(204, 287);
+            this.button3.Location = new System.Drawing.Point(333, 285);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(111, 42);
             this.button3.TabIndex = 11;
             this.button3.Text = "Confirm";
+            this.button3.UseMnemonic = false;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.TextChanged += new System.EventHandler(this.textBoxConfirmPass_Leave);
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -121,6 +123,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(259, 347);
@@ -134,9 +137,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(333, 287);
+            this.button1.Location = new System.Drawing.Point(216, 285);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 42);
             this.button1.TabIndex = 13;

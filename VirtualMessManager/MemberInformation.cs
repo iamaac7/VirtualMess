@@ -81,10 +81,8 @@ namespace VirtualMessManager
             }
             else
             {
-               // memberBack.Show();
-                AdminSession AS = new AdminSession();
-                AS.Show();
-                this.Hide();
+               memberBack.Show();
+                
             }
         }
     }

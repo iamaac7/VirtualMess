@@ -20,10 +20,16 @@ namespace VirtualMessManager
 
         private Manager managerBack = null;
         private Member memberBack = null;
+        private EditMealChartnew editMealChartnewBack = null;
         public SeeBookedMeal()
         {
             InitializeComponent();
             ChangeGridColor(gv_MealHistory);
+        }
+
+        public SeeBookedMeal(EditMealChartnew editMealChartnew) : this()
+        {
+            this.editMealChartnewBack = editMealChartnew;
         }
 
 
@@ -74,16 +80,41 @@ namespace VirtualMessManager
 
         private void bt_Back_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
             if (managerBack != null)
             {
+                this.Hide();
                 managerBack.Show();
             }
             else
             {
-                memberBack.Show();
+                this.Hide();
+                Member m = new Member();
+                m.Show();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+
+            if (managerBack != null)
+            {
+                this.Hide();
+                EditMealChartnew editMeal = new EditMealChartnew(this);
+                editMeal.Show(this);
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("You are not a Manager.\nYou can't Access this section. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Hide();
+                SeeBookedMeal s = new SeeBookedMeal();
+                s.Show();
+                
+    }
+
         }
     }
 }

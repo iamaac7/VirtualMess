@@ -119,7 +119,7 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(648, 275);
+            this.textBox1.Location = new System.Drawing.Point(619, 290);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(137, 19);
@@ -130,7 +130,7 @@
             this.tb_loginStatusMan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tb_loginStatusMan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_loginStatusMan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold);
-            this.tb_loginStatusMan.Location = new System.Drawing.Point(619, 247);
+            this.tb_loginStatusMan.Location = new System.Drawing.Point(619, 262);
             this.tb_loginStatusMan.Name = "tb_loginStatusMan";
             this.tb_loginStatusMan.ReadOnly = true;
             this.tb_loginStatusMan.Size = new System.Drawing.Size(174, 22);
@@ -258,7 +258,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label8.Location = new System.Drawing.Point(257, 261);
+            this.label8.Location = new System.Drawing.Point(256, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 20);
             this.label8.TabIndex = 52;

@@ -35,6 +35,7 @@
             this.MemdataGridView = new System.Windows.Forms.DataGridView();
             this.bt_Back = new System.Windows.Forms.Button();
             this.bt_Exit = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MemdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.MemdataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MemdataGridView.Location = new System.Drawing.Point(7, 13);
+            this.MemdataGridView.Location = new System.Drawing.Point(3, 78);
             this.MemdataGridView.Name = "MemdataGridView";
             this.MemdataGridView.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -71,7 +72,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.MemdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.MemdataGridView.Size = new System.Drawing.Size(761, 379);
+            this.MemdataGridView.Size = new System.Drawing.Size(773, 323);
             this.MemdataGridView.TabIndex = 0;
             // 
             // bt_Back
@@ -100,6 +101,17 @@
             this.bt_Exit.UseVisualStyleBackColor = false;
             this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(187, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(358, 46);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Member Information";
+            // 
             // MemberInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +119,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(772, 462);
             this.ControlBox = false;
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.bt_Exit);
             this.Controls.Add(this.bt_Back);
             this.Controls.Add(this.MemdataGridView);
@@ -119,6 +132,7 @@
             this.Load += new System.EventHandler(this.MemberInformation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MemdataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -127,5 +141,6 @@
         private System.Windows.Forms.DataGridView MemdataGridView;
         private System.Windows.Forms.Button bt_Back;
         private System.Windows.Forms.Button bt_Exit;
+        private System.Windows.Forms.Label label4;
     }
 }

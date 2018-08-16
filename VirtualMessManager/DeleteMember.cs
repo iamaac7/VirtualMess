@@ -87,7 +87,7 @@ namespace VirtualMessManager
                     }
 
                 }
-                else MessageBox.Show("Manager can't be deleted.\nIf you want to delete manager,Switch his account to menber");
+                else MessageBox.Show("Manager can't be deleted.\n\nHint!\nIf you want to delete manager,Switch his account to menber","Can't Perform Action",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else { MessageBox.Show("No row selected."); }
 
