@@ -78,7 +78,7 @@ namespace VirtualMessManager
 
         private void bt_BazarEdit_Click(object sender, EventArgs e)
         {
-            EditBazar bazarEdit = new EditBazar(this);
+            EditBzaarNew bazarEdit = new EditBzaarNew (this);
             bazarEdit.Show(this);
             this.Hide();
         }

@@ -105,6 +105,12 @@
     <Compile Include="EditBazar.Designer.cs">
       <DependentUpon>EditBazar.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditBzaarNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditBzaarNew.Designer.cs">
+      <DependentUpon>EditBzaarNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditMealChart.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditBazar.resx">
       <DependentUpon>EditBazar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditBzaarNew.resx">
+      <DependentUpon>EditBzaarNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditMealChart.resx">
       <DependentUpon>EditMealChart.cs</DependentUpon>

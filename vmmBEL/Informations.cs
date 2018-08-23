@@ -26,6 +26,7 @@ namespace vmmBLL
         //public  image { get; set; }
 
         public DateTime dateFromMeal { get; set; }
+        public DateTime dateFromBazar { get; set; }
         public DateTime dateToMeal{ get; set; }
 
         public string newAdminName { get; set; }
@@ -39,6 +40,8 @@ namespace vmmBLL
     }
 
     public class Bazar {
+        public int id;
+
         public string items { get; set; }
         public string quantity { get; set; }
         public float amount { get; set; }

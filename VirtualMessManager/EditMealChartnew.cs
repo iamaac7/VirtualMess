@@ -75,10 +75,7 @@ namespace VirtualMessManager
             }
         }
 
-        private void cb_Date_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -108,6 +105,9 @@ namespace VirtualMessManager
                         bm.breakfast = Convert.ToSingle(textBoxBreak.Text);
                         bm.lunch = Convert.ToInt32(textBoxLunch.Text);
                         bm.dinner = Convert.ToInt32(textBoxDinner.Text);
+                        //MessageBox.Show(bm.breakfast + " " + "Items");
+                        //MessageBox.Show(bm.id + " " + "ID");
+                        //MessageBox.Show(bm.date + " " + "Date");
 
                         int rowAffected = opr.UpdateMealChart(bm);
                         
@@ -227,6 +227,11 @@ namespace VirtualMessManager
                 catch (Exception ex) { MessageBox.Show(ex.Message); }
 
             }
+        }
+
+        private void cb_Date_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

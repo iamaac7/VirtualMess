@@ -161,6 +161,7 @@
             this.label4.Size = new System.Drawing.Size(245, 46);
             this.label4.TabIndex = 11;
             this.label4.Text = "Booked Meals";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button1
             // 

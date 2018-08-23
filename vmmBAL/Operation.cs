@@ -50,12 +50,52 @@ namespace vmmBAL
              db.DeleteExeReader(cmd);
 
         }
+        //23/8
+
+        //public void DeleteInfoEB(Informations info)
+        //{
+        //    SqlCommand cmd = new SqlCommand();
+        //    cmd.CommandType = CommandType.Text;
+        //    cmd.CommandText = "Delete from vmmBazarChart where UserId='" + info.ID + "'and Date='" + info.dateFromMeal + "'";
+        //    db.DeleteExeReader(cmd);
+
+        //}
+
+        public void DeleteInfoEB(Bazar ba)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Delete from vmmBazarChart where UserId='" + ba.id+ "'and Date='" + ba.date + "'";
+            db.DeleteExeReader(cmd);
+
+        }
+
+        public DataTable GetItemQuantityPrice(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select Items,Quantity,Price from vmmBazarChart where UserId='" + info.ID + "'and Date='" + info.dateFromMeal + "'";
+            return db.ExeReader(cmd);
+        }
+
+        public int UpdateBazar(Bazar ba)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE vmmBazarChart set Items= '"+ ba.items+"' ,Quantity= '"+ba.quantity+"',Price=" +ba.amount+ " where UserId='" +ba.id+ "' and Date='" +ba.date+ "'";
+            return db.ExeNonQuery(cmd);
+
+        }
+
+        //23/8
+
+
         //15/8
 
         public int UpdateMealChart(BookMeal bm) {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE vmmMealChart set Breakfast=" + bm.breakfast + ",Lunch="+bm.lunch+",Dinner="+bm.dinner+" where MemberId='" + bm.id + "' and Date='" +bm.date + "'";
+            cmd.CommandText = "UPDATE vmmMealChart set Breakfast=" + bm.breakfast + ",Lunch="+bm.lunch+",Dinner="+bm.dinner+" where MemberId='" +bm.id+ "' and Date='" +bm.date + "'";
             return db.ExeNonQuery(cmd);
 
         }

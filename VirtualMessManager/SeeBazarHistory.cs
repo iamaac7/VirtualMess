@@ -26,11 +26,12 @@ namespace VirtualMessManager
             ChangeGridColor(gv_LoadBazar);
         }
 
-                public SeeBazarHistory(Manager manager) : this() {
+        public SeeBazarHistory(Manager manager) : this()
+        {
             this.managerBack = manager;
         }
 
-              public SeeBazarHistory(Member member): this()
+        public SeeBazarHistory(Member member) : this()
         {
             this.memberBack = member;
         }
@@ -95,6 +96,26 @@ namespace VirtualMessManager
             else
             {
                 memberBack.Show();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            if (managerBack != null)
+            {
+                this.Hide();
+                EditBzaarNew editbazar = new EditBzaarNew(this);
+                editbazar.Show(this);
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("You are not a Manager.\nYou can't Access this section. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Hide();
+                SeeBookedMeal s = new SeeBookedMeal();
+                s.Show();
+
             }
         }
     }

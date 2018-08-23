@@ -77,7 +77,7 @@ namespace VirtualMessManager
             {
                 if (textBoxType.Text == "Member"|| textBoxType.Text=="member")
                 {
-                    if (MessageBox.Show("Do you want to delete?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Do you really want to delete?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         info.userName = cb_UserName.Text;
                         //info.dateFromMeal = Convert.ToDateTime(cb_Date.Text);

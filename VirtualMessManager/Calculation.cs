@@ -67,11 +67,11 @@ namespace VirtualMessManager
 
             info.refManagrtName = Login.refManagerName;            dt = opr.LoadBazarHistory(info);
 
-            MessageBox.Show("Your Manager is :" + info.refManagrtName);
+           // MessageBox.Show("Your Manager is :" + info.refManagrtName);
             dataGridView1.DataSource = dt;
 
             info.refManagrtName = Login.refManagerName;
-            MessageBox.Show("Your Manager is :" + info.refManagrtName);
+           // MessageBox.Show("Your Manager is :" + info.refManagrtName);
             dt = opr.LoadMealHistoryCalculation(info);
             dataGridView2.DataSource = dt;
 
@@ -80,7 +80,7 @@ namespace VirtualMessManager
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                float  temp =Convert.ToSingle( dataGridView1.Rows[i].Cells[2].Value);
+                float temp = Convert.ToSingle( dataGridView1.Rows[i].Cells[2].Value);
                 //double temp= double.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString());
                 sumation += temp;
                // MessageBox.Show(sumation.ToString());

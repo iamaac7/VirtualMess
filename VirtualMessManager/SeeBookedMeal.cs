@@ -37,8 +37,7 @@ namespace VirtualMessManager
             this.managerBack = manager;
         }
 
-        public SeeBookedMeal(Member member)
-            : this()
+        public SeeBookedMeal(Member member): this()
         {
             this.memberBack = member;
         }
