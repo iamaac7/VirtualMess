@@ -33,14 +33,14 @@ namespace VirtualMessManager
             InitializeComponent();
             ChangeGridColor(dataGridView1);
             ChangeGridColor(dataGridView2);
-            
+
         }
 
 
-        public Calculation(AdminSession adminBack) :this()
+        public Calculation(AdminSession adminBack) : this()
         {
             this.managerBack = adminBack;
-            
+
         }
 
 
@@ -65,27 +65,27 @@ namespace VirtualMessManager
             tb_totalMeal.ReadOnly = true;
             tb_Remarks.ReadOnly = true;
 
-            info.refManagrtName = Login.refManagerName;            dt = opr.LoadBazarHistory(info);
+            info.refManagrtName = Login.refManagerName; dt = opr.LoadBazarHistory(info);
 
-           // MessageBox.Show("Your Manager is :" + info.refManagrtName);
+            //MessageBox.Show("Your Manager is :" + info.refManagrtName);
             dataGridView1.DataSource = dt;
 
             info.refManagrtName = Login.refManagerName;
-           // MessageBox.Show("Your Manager is :" + info.refManagrtName);
+            //MessageBox.Show("Your Manager is :" + info.refManagrtName);
             dt = opr.LoadMealHistoryCalculation(info);
             dataGridView2.DataSource = dt;
 
 
-            MessageBox.Show(dataGridView1.Rows.Count.ToString());
+            //MessageBox.Show(dataGridView1.Rows.Count.ToString());
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                float temp = Convert.ToSingle( dataGridView1.Rows[i].Cells[2].Value);
+                float temp = Convert.ToSingle(dataGridView1.Rows[i].Cells[2].Value);
                 //double temp= double.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString());
                 sumation += temp;
-               // MessageBox.Show(sumation.ToString());
+                // MessageBox.Show(sumation.ToString());
             }
-            
+
 
             tb_totalBazar.Text = sumation.ToString();
 
@@ -129,7 +129,7 @@ namespace VirtualMessManager
 
         private void tb_Deposit_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)) &&  e.KeyChar != '.')
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)) && e.KeyChar != '.')
                 e.Handled = true;
 
         }
@@ -165,7 +165,7 @@ namespace VirtualMessManager
         {
             this.Hide();
             managerBack.Show();
-           
+
         }
 
         private void bt_Calculate_Click(object sender, EventArgs e)
@@ -177,7 +177,7 @@ namespace VirtualMessManager
             float mealNumber = float.Parse(tb_MealAmount.Text);
             float others = float.Parse(tb_Others.Text);
 
-            float result = deposit-(mealrate * mealNumber + others);
+            float result = deposit - (mealrate * mealNumber + others);
 
 
 

@@ -46,32 +46,36 @@ namespace VirtualMessManager
 
         private void bt_addItems_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show("Iam Working Proprely..");
-            bazar.items = cb_Items.Text;
-            bazar.quantity = tb_Quantity.Text;
-            bazar.amount = float.Parse(tb_Amount.Text);
-            bazar.date = Convert.ToDateTime(dt_Bazar.Value.ToShortDateString());
-            bazar.userID = Login.userId;
-            bazar.userName = Login.loginName;
-            bazar.refManager = Login.refManagerName;
-            MessageBox.Show(bazar.date+"");
-
-            int rowAffected = opr.insertBazar(bazar);
-           MessageBox.Show("I am back from operarion.");
-
-            if (rowAffected > 0)
+            try
             {
-                MessageBox.Show("Data Saved SuccessFull.");
+                // MessageBox.Show("Iam Working Proprely..");
+                bazar.items = cb_Items.Text;
+                bazar.quantity = tb_Quantity.Text;
+                bazar.amount = float.Parse(tb_Amount.Text);
+                bazar.date = Convert.ToDateTime(dt_Bazar.Value.ToShortDateString());
+                bazar.userID = Login.userId;
+                bazar.userName = Login.loginName;
+                bazar.refManager = Login.refManagerName;
+                //MessageBox.Show(bazar.date+"");
 
-                cb_Items.Text = "";
-                tb_Amount.Text = "";
-                tb_Quantity.Text = "";
+                int rowAffected = opr.insertBazar(bazar);
+                //MessageBox.Show("I am back from operarion.");
+
+                if (rowAffected > 0)
+                {
+                    MessageBox.Show("Data Saved SuccessFull.");
+
+                    cb_Items.Text = "";
+                    tb_Amount.Text = "";
+                    tb_Quantity.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Something Wrong Try Again.");
+                }
+
             }
-            else {
-                MessageBox.Show("Something Wrong Try Again.");
-            }
-
-
+            catch (Exception ex) { MessageBox.Show("Empty entry is not possible."); }
         }
 
         private void Add_Bazar_Load(object sender, EventArgs e)

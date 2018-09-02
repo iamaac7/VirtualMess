@@ -65,9 +65,9 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gv_MealHistory.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gv_MealHistory.Location = new System.Drawing.Point(140, 109);
+            this.gv_MealHistory.Location = new System.Drawing.Point(48, 109);
             this.gv_MealHistory.Name = "gv_MealHistory";
-            this.gv_MealHistory.Size = new System.Drawing.Size(651, 281);
+            this.gv_MealHistory.Size = new System.Drawing.Size(743, 281);
             this.gv_MealHistory.TabIndex = 1;
             this.toolTip1.SetToolTip(this.gv_MealHistory, "This will show all the current booked meals in the chart.");
             // 

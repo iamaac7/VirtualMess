@@ -220,6 +220,7 @@
             this.Controls.Add(this.cb_Date);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "EditBzaarNew";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditBzaarNew";
             this.Load += new System.EventHandler(this.EditBzaarNew_Load);
             this.ResumeLayout(false);

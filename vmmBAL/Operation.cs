@@ -168,18 +168,18 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Date,Name,Breakfast,Lunch,Dinner,TotalMeal FROM vmmMealChart where refManager='"+info.refManagrtName+"' and Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0) AND Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())+1, 0)";
+            cmd.CommandText = "SELECT Id,Date,Name,Breakfast,Lunch,Dinner,TotalMeal FROM vmmMealChart where refManager='" + info.refManagrtName + "' and Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0) AND Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())+1, 0)";
             return db.ExeReader1(cmd);
-            
+
         }
 
         public DataTable LoadBazarHistory(Informations info)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Date,Name,Items,Quantity,sum(Price) as Total_Price FROM vmmBazarChart where RefManager='" + info.refManagrtName + "' and Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0) AND Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())+1, 0) group by Name,Date,Items,Quantity";
+            cmd.CommandText = "SELECT Date,Name,sum(Price) as Total_Price FROM vmmBazarChart where RefManager='" + info.refManagrtName + "' and Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0) AND Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())+1, 0) group by Name,Date";
             return db.ExeReader1(cmd);
-          
+
         }
 
         public DataTable LoadBazarHistorySpecificDate(Informations info)
