@@ -61,7 +61,7 @@ namespace VirtualMessManager
                     info.phone = int.Parse(phoneNum);
                     info.password = x.ToString();
 
-                int rowaffected = opr.changePassword(info);
+                int rowaffected = opr.ForgotPassword(info);
 
                 if (rowaffected > 0)
                 {
