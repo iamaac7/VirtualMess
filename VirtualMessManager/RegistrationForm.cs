@@ -309,10 +309,33 @@ namespace VirtualMessManager
 
         private void tb_userName_Leave(object sender, EventArgs e)
         {
-            if (tb_userName.Text == "") {
+            if (tb_userName.Text == "")
+            {
 
                 tb_userName.Focus();
                 labelUserName.Text = "*Empty Username field";
+            }
+            if (tb_userName.Text != "")
+            {
+                db.connection.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = db.connection;
+                string query = "select UserName from vmmUser1";
+                cmd.CommandText = query;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (tb_userName.Text == reader["UserName"].ToString())
+                    {
+                        MessageBox.Show("UserName is already taken.Please change your username.", "Error");
+                        tb_userName.Focus();
+                    }
+
+                }
+                db.connection.Close();
+
             }
         }
 
