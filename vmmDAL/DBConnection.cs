@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace vmmDAL
 {
@@ -30,7 +31,7 @@ namespace vmmDAL
             {
                 rowAffected = cmd.ExecuteNonQuery();
                 connection.Close();
-            }catch(Exception ex){}
+            }catch(Exception ex){ MessageBox.Show(ex.Message); }
             return rowAffected;
 
         }

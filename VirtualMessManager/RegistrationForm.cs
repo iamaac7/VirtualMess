@@ -117,40 +117,6 @@ namespace VirtualMessManager
             catch (Exception p) { MessageBox.Show(p.Message); }
         }
 
-        //private void UserNameCheck()
-        //{
-        //    List<string> uName = new List<string>();
-        //    string[] uName = new string[10];
-        //    db.connection.Open();
-        //    SqlCommand cmd = new SqlCommand();
-        //    cmd.Connection = db.connection;
-        //    string query = "select UserName from vmmUser1 where MessName='" + info.messName + "'";
-        //    cmd.CommandText = query;
-        //    SqlDataReader reader = cmd.ExecuteReader();
-        //    while (reader.Read())
-        //    {
-        //        List<string> uName = new List<string>();
-        //        uName.Add(reader["UserName"]);
-        //    }
-        //    while (reader.Read())
-        //    {
-        //        //cb_ManagerName.Items.Add(reader["UserName"]);
-        //        uName = Add(reader.GetString(reader.GetOrdinal("UserName"));
-
-        //    }
-        //    dr.Close();
-        //    var st = from s in db.vmmUser1 select s.UserName;
-        //    string[] uName = st.ToArray();
-
-        //    db.connection.Close();
-
-        //    if (tb_userName.Text == uName[])
-        //    {
-        //        MessageBox.Show("UserName is already Taken.\nTry Another one.");
-        //    }
-
-        //}
-
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
             if (tb_Name.Text != "" && tb_Password.Text != "" && tb_Phone.Text != "" && tb_userName.Text != "" && cb_bloodGroup.Text != "" && cb_ManagerName.Text != "" && cb_MessName.Text != "" && tb_imagePath.Text != "")
@@ -225,10 +191,6 @@ namespace VirtualMessManager
                 MessageBox.Show("Please Fill Every Field Properly");
             }
 
-
-
-
-
         }
 
 
@@ -264,7 +226,7 @@ namespace VirtualMessManager
             if (cb_ManagerName.Text == "")
             {
                 cb_ManagerName.Focus();
-                labelManagerName.Text = "*Please select/enter manager name.";
+                labelManagerName.Text = "*Please select/Enter manager name.";
             }
         }
 
@@ -282,7 +244,7 @@ namespace VirtualMessManager
             if (cb_MessName.Text == "")
             {
                 cb_MessName.Focus();
-                labelMessName.Text = "*Please select/enter mess name.";
+                labelMessName.Text = "*Please select/Enter Mess name.";
 
             }
         }
@@ -310,10 +272,26 @@ namespace VirtualMessManager
         {
             if (date_dob.Text == "")
             {
-
-                labelDOB.Text = "*Select your birthdate.";
-                date_dob.Focus();
+                labelDOB.Text = "*Select your Date Of Birth.";
+                  date_dob.Focus();
             }
+            if (date_dob.Text != "")
+            {
+                int Age;
+                DateTime from = date_dob.Value;
+                DateTime to = DateTime.Now;
+                TimeSpan TSpan = to - from;
+                double days = TSpan.TotalDays;
+                Age = Convert.ToInt32(days / 365);
+                if(Age <  17)
+                {
+                    MessageBox.Show("Your Age is "+ Age.ToString()+ "." + " \nYour Age is below 18.\nYou can't Register in this Mess System.\nContact to the Manager for Asistance.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    date_dob.Focus();
+                }
+                
+
+            }
+
         }
 
         private void cb_bloodGroup_Leave(object sender, EventArgs e)
@@ -343,10 +321,33 @@ namespace VirtualMessManager
 
         private void tb_userName_Leave(object sender, EventArgs e)
         {
-            if (tb_userName.Text == "") {
+            if (tb_userName.Text == "")
+            {
 
                 tb_userName.Focus();
                 labelUserName.Text = "*Empty Username field";
+            }
+            if (tb_userName.Text != "")
+            {
+                db.connection.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = db.connection;
+                string query = "select UserName from vmmUser1";
+                cmd.CommandText = query;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (tb_userName.Text == reader["UserName"].ToString())
+                    {
+                        MessageBox.Show("UserName is already taken.\nPlease change your User Name.\nUser Name must be unique.", "Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        tb_userName.Focus();
+                    }
+
+                }
+                db.connection.Close();
+
             }
         }
 

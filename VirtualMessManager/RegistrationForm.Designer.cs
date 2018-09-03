@@ -446,11 +446,11 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(22, 336);
+            this.label8.Location = new System.Drawing.Point(22, 331);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 18);
+            this.label8.Size = new System.Drawing.Size(93, 18);
             this.label8.TabIndex = 3;
-            this.label8.Text = "Username";
+            this.label8.Text = "User Name";
             // 
             // label7
             // 
