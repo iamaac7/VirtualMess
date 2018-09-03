@@ -41,7 +41,6 @@
             this.labelManagerName = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.rb_Admin = new System.Windows.Forms.RadioButton();
             this.tb_imagePath = new System.Windows.Forms.TextBox();
             this.rb_Manager = new System.Windows.Forms.RadioButton();
             this.rb_Member = new System.Windows.Forms.RadioButton();
@@ -84,7 +83,6 @@
             this.panel1.Controls.Add(this.labelManagerName);
             this.panel1.Controls.Add(this.labelName);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.rb_Admin);
             this.panel1.Controls.Add(this.tb_imagePath);
             this.panel1.Controls.Add(this.rb_Manager);
             this.panel1.Controls.Add(this.rb_Member);
@@ -212,20 +210,6 @@
             this.toolTip1.SetToolTip(this.button1, "Takes you back to the Login Page");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // rb_Admin
-            // 
-            this.rb_Admin.AutoSize = true;
-            this.rb_Admin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb_Admin.ForeColor = System.Drawing.Color.Black;
-            this.rb_Admin.Location = new System.Drawing.Point(251, 117);
-            this.rb_Admin.Name = "rb_Admin";
-            this.rb_Admin.Size = new System.Drawing.Size(67, 21);
-            this.rb_Admin.TabIndex = 14;
-            this.rb_Admin.TabStop = true;
-            this.rb_Admin.Text = "Admin";
-            this.toolTip1.SetToolTip(this.rb_Admin, "This a User Role.\r\n*You can only be Admin if you have the permission.\r\n");
-            this.rb_Admin.UseVisualStyleBackColor = true;
             // 
             // tb_imagePath
             // 
@@ -599,7 +583,6 @@
         private System.Windows.Forms.ComboBox cb_bloodGroup;
         private System.Windows.Forms.TextBox tb_imagePath;
         private System.Windows.Forms.ComboBox cb_ManagerName;
-        private System.Windows.Forms.RadioButton rb_Admin;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton rb_Manager;
         private System.Windows.Forms.Label labelPhoneNmbr;

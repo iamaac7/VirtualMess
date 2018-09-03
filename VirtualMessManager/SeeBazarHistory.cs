@@ -105,7 +105,7 @@ namespace VirtualMessManager
             if (managerBack != null)
             {
                 this.Hide();
-                EditBzaarNew editbazar = new EditBzaarNew(this);
+                EditBzaar editbazar = new EditBzaar(this);
                 editbazar.Show(this);
                 this.Hide();
             }

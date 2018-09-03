@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculation));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@
             this.bt_Calculate = new System.Windows.Forms.Button();
             this.bt_Next = new System.Windows.Forms.Button();
             this.bt_Exit = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -140,6 +142,7 @@
             this.cb_Member.Name = "cb_Member";
             this.cb_Member.Size = new System.Drawing.Size(166, 28);
             this.cb_Member.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.cb_Member, "Pick the person for calculations.");
             this.cb_Member.SelectedIndexChanged += new System.EventHandler(this.cb_Member_SelectedIndexChanged);
             // 
             // label4
@@ -190,6 +193,7 @@
             this.tb_Deposit.Name = "tb_Deposit";
             this.tb_Deposit.Size = new System.Drawing.Size(116, 30);
             this.tb_Deposit.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.tb_Deposit, "Have to put his Dedicated Deposited Amount from Bazar chart above.\r\n");
             this.tb_Deposit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Deposit_KeyPress);
             // 
             // tb_MealAmount
@@ -200,6 +204,7 @@
             this.tb_MealAmount.Name = "tb_MealAmount";
             this.tb_MealAmount.Size = new System.Drawing.Size(116, 30);
             this.tb_MealAmount.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.tb_MealAmount, "Have to put his Dedicated Meal Amount from Meal chart above.");
             this.tb_MealAmount.TextChanged += new System.EventHandler(this.tb_MealAmount_TextChanged);
             this.tb_MealAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_MealAmount_KeyPress);
             // 
@@ -211,16 +216,20 @@
             this.tb_Others.Name = "tb_Others";
             this.tb_Others.Size = new System.Drawing.Size(116, 30);
             this.tb_Others.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.tb_Others, "All Other Expenses\r\n+ Room Rent / Seat Rent\r\n+ Average Maid Payment\r\n+ Average Ut" +
+        "ility Bills\r\n+ Etc");
             this.tb_Others.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Others_KeyPress);
             // 
             // tb_Remarks
             // 
             this.tb_Remarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Remarks.Location = new System.Drawing.Point(827, 376);
+            this.tb_Remarks.Location = new System.Drawing.Point(836, 378);
             this.tb_Remarks.Multiline = true;
             this.tb_Remarks.Name = "tb_Remarks";
-            this.tb_Remarks.Size = new System.Drawing.Size(116, 30);
+            this.tb_Remarks.Size = new System.Drawing.Size(200, 30);
             this.tb_Remarks.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.tb_Remarks, "Total Payable / Total Recieveable\r\n* \"-\" Indicates You Have to pay to the house M" +
+        "anager.\r\n* Positive amount Indicates You will colect from the house Manager.\r\n");
             // 
             // label6
             // 
@@ -232,6 +241,7 @@
             this.label6.Size = new System.Drawing.Size(65, 24);
             this.label6.TabIndex = 11;
             this.label6.Text = "Name";
+            this.toolTip1.SetToolTip(this.label6, "Pick the person for calculations.");
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
@@ -243,6 +253,7 @@
             this.label7.Size = new System.Drawing.Size(80, 24);
             this.label7.TabIndex = 12;
             this.label7.Text = "Deposit";
+            this.toolTip1.SetToolTip(this.label7, "Have to put his Dedicated Deposited Amount from Bazar chart above.");
             // 
             // label8
             // 
@@ -253,6 +264,7 @@
             this.label8.Size = new System.Drawing.Size(133, 24);
             this.label8.TabIndex = 13;
             this.label8.Text = "Meal Amount";
+            this.toolTip1.SetToolTip(this.label8, "Have to put his Dedicated Meal Amount from Meal chart above.");
             // 
             // label9
             // 
@@ -263,16 +275,19 @@
             this.label9.Size = new System.Drawing.Size(72, 24);
             this.label9.TabIndex = 14;
             this.label9.Text = "Others";
+            this.toolTip1.SetToolTip(this.label9, "All Other Expenses\r\n+ Room Rent / Seat Rent\r\n+ Average Maid Payment\r\n+ Average Ut" +
+        "ility Bills\r\n+ Etc\r\n");
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(829, 345);
+            this.label10.Location = new System.Drawing.Point(811, 345);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 24);
+            this.label10.Size = new System.Drawing.Size(256, 24);
             this.label10.TabIndex = 15;
-            this.label10.Text = "Remarks";
+            this.label10.Text = "Net Payable / Recieveable";
+            this.toolTip1.SetToolTip(this.label10, "Total Payable / Total Recieveable");
             // 
             // bt_Calculate
             // 
@@ -285,6 +300,7 @@
             this.bt_Calculate.Size = new System.Drawing.Size(123, 36);
             this.bt_Calculate.TabIndex = 16;
             this.bt_Calculate.Text = "Calculate";
+            this.toolTip1.SetToolTip(this.bt_Calculate, "Calculate Total Payable / Recieveable.");
             this.bt_Calculate.UseVisualStyleBackColor = false;
             this.bt_Calculate.Click += new System.EventHandler(this.bt_Calculate_Click);
             // 
@@ -299,6 +315,7 @@
             this.bt_Next.Size = new System.Drawing.Size(123, 36);
             this.bt_Next.TabIndex = 17;
             this.bt_Next.Text = "B&ack";
+            this.toolTip1.SetToolTip(this.bt_Next, "Takes Back to Admin Session");
             this.bt_Next.UseVisualStyleBackColor = false;
             this.bt_Next.Click += new System.EventHandler(this.bt_Next_Click);
             // 
@@ -313,8 +330,14 @@
             this.bt_Exit.Size = new System.Drawing.Size(123, 36);
             this.bt_Exit.TabIndex = 18;
             this.bt_Exit.Text = "E&xit";
+            this.toolTip1.SetToolTip(this.bt_Exit, "Exit from the Application.");
             this.bt_Exit.UseVisualStyleBackColor = false;
             this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Hint";
             // 
             // Calculation
             // 
@@ -386,5 +409,6 @@
         private System.Windows.Forms.Button bt_Calculate;
         private System.Windows.Forms.Button bt_Next;
         private System.Windows.Forms.Button bt_Exit;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

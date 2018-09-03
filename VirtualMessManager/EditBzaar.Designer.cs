@@ -1,6 +1,6 @@
 ﻿namespace VirtualMessManager
 {
-    partial class EditBzaarNew
+    partial class EditBzaar
     {
         /// <summary>
         /// Required designer variable.
@@ -197,7 +197,7 @@
             this.cb_Date.SelectedIndexChanged += new System.EventHandler(this.cb_Date_SelectedIndexChanged);
             this.cb_Date.TextChanged += new System.EventHandler(this.cb_Date_TextChanged);
             // 
-            // EditBzaarNew
+            // EditBzaar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,9 +219,9 @@
             this.Controls.Add(this.cb_UserName);
             this.Controls.Add(this.cb_Date);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "EditBzaarNew";
+            this.Name = "EditBzaar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditBzaarNew";
+            this.Text = "EditBzaarList";
             this.Load += new System.EventHandler(this.EditBzaarNew_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

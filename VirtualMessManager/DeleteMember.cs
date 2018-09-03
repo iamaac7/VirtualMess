@@ -38,7 +38,7 @@ namespace VirtualMessManager
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void EventLoader()
         {
             tb_loginStatusMan.Text = Login.loginName;
             textBox1.Text = Login.uType;
@@ -67,8 +67,12 @@ namespace VirtualMessManager
             }
 
             db.connection.Close();
+        }
 
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            EventLoader();
+         
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -84,12 +88,25 @@ namespace VirtualMessManager
 
                         opr.DeleteMember(info);
                         MessageBox.Show("Member Deleted");
+                        cb_UserName.Text = null;
+                        pictureBox2.Image = VirtualMessManager.Properties.Resources.person_icon_8;
+                        textBoxId.Text = null;
+                        textBoxType.Text = null;
+                        textBoxPhone.Text = null;
+                        //comboBox1.SelectedIndex = -1;
+                        cb_UserName.DataSource = null;
+                        cb_UserName.Items.Clear();
+                        EventLoader();
+
+
+
+
                     }
 
                 }
                 else MessageBox.Show("Manager can't be deleted.\n\nHint!\nIf you want to delete manager,Switch his account to menber","Can't Perform Action",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else { MessageBox.Show("No row selected."); }
+            else { MessageBox.Show("UserName Is Empty !!"); }
 
             }
 
@@ -125,7 +142,11 @@ namespace VirtualMessManager
                 pic = (byte[])(dt.Rows[0][3]);
 
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) {
+                //MessageBox.Show(ex.Message);
+                MessageBox.Show("UserName is Not Selected !");
+
+            }
           
 
                 MemoryStream ms = new MemoryStream(pic);
@@ -144,8 +165,13 @@ namespace VirtualMessManager
                     DataTable dt = opr.GetId(info);
                     info.ID = Convert.ToInt32(dt.Rows[0][0]);
                 }
-                catch (Exception ex) { MessageBox.Show(ex.Message); }
+                catch (Exception ex) {
+                    //MessageBox.Show(ex.Message);
+                    MessageBox.Show("UserName is Not Selected !");
+                }
             }
         }
+
+       
     }
 }

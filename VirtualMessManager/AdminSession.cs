@@ -57,7 +57,7 @@ namespace VirtualMessManager
 
         private void admMealSheetUpd_Click(object sender, EventArgs e)
         {
-            EditMealChartnew editMeal = new EditMealChartnew(this);
+            EditMealChart editMeal = new EditMealChart(this);
             editMeal.Show(this);
             this.Hide();
         }
@@ -78,7 +78,7 @@ namespace VirtualMessManager
 
         private void bt_BazarEdit_Click(object sender, EventArgs e)
         {
-            EditBzaarNew bazarEdit = new EditBzaarNew (this);
+            EditBzaar bazarEdit = new EditBzaar (this);
             bazarEdit.Show(this);
             this.Hide();
         }

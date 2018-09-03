@@ -99,17 +99,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="EditBzaarNew.cs">
+    <Compile Include="EditBzaar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditBzaarNew.Designer.cs">
-      <DependentUpon>EditBzaarNew.cs</DependentUpon>
+    <Compile Include="EditBzaar.Designer.cs">
+      <DependentUpon>EditBzaar.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditMealChartnew.cs">
+    <Compile Include="EditMealChart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditMealChartnew.Designer.cs">
-      <DependentUpon>EditMealChartnew.cs</DependentUpon>
+    <Compile Include="EditMealChart.Designer.cs">
+      <DependentUpon>EditMealChart.cs</DependentUpon>
     </Compile>
     <Compile Include="DeleteMember.cs">
       <SubType>Form</SubType>
@@ -205,11 +205,11 @@
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditBzaarNew.resx">
-      <DependentUpon>EditBzaarNew.cs</DependentUpon>
+    <EmbeddedResource Include="EditBzaar.resx">
+      <DependentUpon>EditBzaar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditMealChartnew.resx">
-      <DependentUpon>EditMealChartnew.cs</DependentUpon>
+    <EmbeddedResource Include="EditMealChart.resx">
+      <DependentUpon>EditMealChart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeleteMember.resx">
       <DependentUpon>DeleteMember.cs</DependentUpon>
@@ -397,6 +397,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-icon-8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

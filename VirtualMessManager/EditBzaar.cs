@@ -14,7 +14,7 @@ using vmmDAL;
 
 namespace VirtualMessManager
 {
-    public partial class EditBzaarNew : Form
+    public partial class EditBzaar : Form
     {
         public Informations info = new Informations();
         public Operation opr = new Operation();
@@ -25,16 +25,16 @@ namespace VirtualMessManager
         static int x;
         private SeeBazarHistory seeBazarHistory;
 
-        public EditBzaarNew(AdminSession adminSession)
+        public EditBzaar(AdminSession adminSession)
         {
             InitializeComponent();
         }
 
-        public EditBzaarNew()
+        public EditBzaar()
         {
         }
 
-        public EditBzaarNew(SeeBazarHistory seeBazarHistory)
+        public EditBzaar(SeeBazarHistory seeBazarHistory)
         {
             this.seeBazarHistory = seeBazarHistory;
             InitializeComponent();

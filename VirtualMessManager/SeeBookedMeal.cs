@@ -20,14 +20,14 @@ namespace VirtualMessManager
 
         private Manager managerBack = null;
         private Member memberBack = null;
-        private EditMealChartnew editMealChartnewBack = null;
+        private EditMealChart editMealChartnewBack = null;
         public SeeBookedMeal()
         {
             InitializeComponent();
             ChangeGridColor(gv_MealHistory);
         }
 
-        public SeeBookedMeal(EditMealChartnew editMealChartnew) : this()
+        public SeeBookedMeal(EditMealChart editMealChartnew) : this()
         {
             this.editMealChartnewBack = editMealChartnew;
         }
@@ -101,7 +101,7 @@ namespace VirtualMessManager
             if (managerBack != null)
             {
                 this.Hide();
-                EditMealChartnew editMeal = new EditMealChartnew(this);
+                EditMealChart editMeal = new EditMealChart(this);
                 editMeal.Show(this);
                 this.Hide();
             }

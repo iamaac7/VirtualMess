@@ -117,6 +117,40 @@ namespace VirtualMessManager
             catch (Exception p) { MessageBox.Show(p.Message); }
         }
 
+        //private void UserNameCheck()
+        //{
+        //    List<string> uName = new List<string>();
+        //    string[] uName = new string[10];
+        //    db.connection.Open();
+        //    SqlCommand cmd = new SqlCommand();
+        //    cmd.Connection = db.connection;
+        //    string query = "select UserName from vmmUser1 where MessName='" + info.messName + "'";
+        //    cmd.CommandText = query;
+        //    SqlDataReader reader = cmd.ExecuteReader();
+        //    while (reader.Read())
+        //    {
+        //        List<string> uName = new List<string>();
+        //        uName.Add(reader["UserName"]);
+        //    }
+        //    while (reader.Read())
+        //    {
+        //        //cb_ManagerName.Items.Add(reader["UserName"]);
+        //        uName = Add(reader.GetString(reader.GetOrdinal("UserName"));
+
+        //    }
+        //    dr.Close();
+        //    var st = from s in db.vmmUser1 select s.UserName;
+        //    string[] uName = st.ToArray();
+
+        //    db.connection.Close();
+
+        //    if (tb_userName.Text == uName[])
+        //    {
+        //        MessageBox.Show("UserName is already Taken.\nTry Another one.");
+        //    }
+
+        //}
+
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
             if (tb_Name.Text != "" && tb_Password.Text != "" && tb_Phone.Text != "" && tb_userName.Text != "" && cb_bloodGroup.Text != "" && cb_ManagerName.Text != "" && cb_MessName.Text != "" && tb_imagePath.Text != "")

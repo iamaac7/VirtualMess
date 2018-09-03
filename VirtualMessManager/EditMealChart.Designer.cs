@@ -1,6 +1,6 @@
 ﻿namespace VirtualMessManager
 {
-    partial class EditMealChartnew
+    partial class EditMealChart
     {
         /// <summary>
         /// Required designer variable.
@@ -197,7 +197,7 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // EditMealChartnew
+            // EditMealChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,9 +219,9 @@
             this.Controls.Add(this.cb_Date);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "EditMealChartnew";
+            this.Name = "EditMealChart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditMealChartnew";
+            this.Text = "EditMealChart";
             this.Load += new System.EventHandler(this.EditMealChartnew_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

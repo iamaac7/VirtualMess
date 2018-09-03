@@ -14,7 +14,7 @@ using vmmDAL;
 
 namespace VirtualMessManager
 {
-    public partial class EditMealChartnew : Form
+    public partial class EditMealChart : Form
     {
         public Informations info = new Informations();
         public Operation opr = new Operation();
@@ -22,16 +22,16 @@ namespace VirtualMessManager
         public BookMeal bm = new BookMeal();
         static int x;
 
-        public EditMealChartnew(AdminSession adminSession)
+        public EditMealChart(AdminSession adminSession)
         {
             InitializeComponent();
         }
-        public EditMealChartnew(SeeBookedMeal seeBookedMeal)
+        public EditMealChart(SeeBookedMeal seeBookedMeal)
         {
             InitializeComponent();
         }
 
-        public EditMealChartnew()
+        public EditMealChart()
         {
         }
 
