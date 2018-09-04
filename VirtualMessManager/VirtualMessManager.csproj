@@ -147,6 +147,12 @@
     <Compile Include="MemberInformation.Designer.cs">
       <DependentUpon>MemberInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestForChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestForChange.Designer.cs">
+      <DependentUpon>RequestForChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="SeeBazarHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +241,9 @@
     <EmbeddedResource Include="MemberInformation.resx">
       <DependentUpon>MemberInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -241,6 +256,9 @@
     </Compile>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestForChange.resx">
+      <DependentUpon>RequestForChange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeeBazarHistory.resx">
       <DependentUpon>SeeBazarHistory.cs</DependentUpon>

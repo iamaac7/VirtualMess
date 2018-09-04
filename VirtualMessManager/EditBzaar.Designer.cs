@@ -39,9 +39,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.textBoxItems = new System.Windows.Forms.TextBox();
             this.cb_UserName = new System.Windows.Forms.ComboBox();
             this.cb_Date = new System.Windows.Forms.ComboBox();
+            this.cb_Items = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button4
@@ -167,21 +167,13 @@
             this.textBoxPrice.Size = new System.Drawing.Size(58, 26);
             this.textBoxPrice.TabIndex = 17;
             // 
-            // textBoxItems
-            // 
-            this.textBoxItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxItems.Location = new System.Drawing.Point(290, 90);
-            this.textBoxItems.Name = "textBoxItems";
-            this.textBoxItems.Size = new System.Drawing.Size(86, 26);
-            this.textBoxItems.TabIndex = 16;
-            // 
             // cb_UserName
             // 
             this.cb_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_UserName.FormattingEnabled = true;
-            this.cb_UserName.Location = new System.Drawing.Point(148, 90);
+            this.cb_UserName.Location = new System.Drawing.Point(140, 90);
             this.cb_UserName.Name = "cb_UserName";
-            this.cb_UserName.Size = new System.Drawing.Size(121, 28);
+            this.cb_UserName.Size = new System.Drawing.Size(111, 28);
             this.cb_UserName.TabIndex = 15;
             this.cb_UserName.SelectedValueChanged += new System.EventHandler(this.cb_UserName_SelectedValueChanged);
             this.cb_UserName.TextChanged += new System.EventHandler(this.cb_UserName_TextChanged);
@@ -197,6 +189,38 @@
             this.cb_Date.SelectedIndexChanged += new System.EventHandler(this.cb_Date_SelectedIndexChanged);
             this.cb_Date.TextChanged += new System.EventHandler(this.cb_Date_TextChanged);
             // 
+            // cb_Items
+            // 
+            this.cb_Items.AutoCompleteCustomSource.AddRange(new string[] {
+            "Cal(Rice)",
+            "Mosur_dal(Lentil)\t",
+            "Mug_dal(Green_Gram)",
+            "Booter_dal(Skinned)",
+            "Lanka(Chili)",
+            "Laban(Salt)",
+            "Jeera(Cumin)",
+            "Rasun(Garlic)",
+            "Aada(Ginger)",
+            "Halud(Turmeric)",
+            "Garam_masala(Spice_Mixture)",
+            "Jej_pata(Bay_leaf)",
+            "Shorsher_tel(Mustard_oil)",
+            "Peaj_koli(Shallot)",
+            "Lebu(Citron)",
+            "Kacha_morich(Green chili)",
+            "Chal_Kumro(Ash Gourd)",
+            "Karola(Bitter_melon)",
+            "Sheem(Broad_Beans)"});
+            this.cb_Items.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_Items.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_Items.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Items.FormattingEnabled = true;
+            this.cb_Items.Location = new System.Drawing.Point(267, 90);
+            this.cb_Items.Name = "cb_Items";
+            this.cb_Items.Size = new System.Drawing.Size(125, 28);
+            this.cb_Items.TabIndex = 28;
+            this.cb_Items.SelectedValueChanged += new System.EventHandler(this.cb_Items_SelectedValueChanged);
+            // 
             // EditBzaar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +228,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(549, 475);
             this.ControlBox = false;
+            this.Controls.Add(this.cb_Items);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -215,7 +240,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxQuantity);
             this.Controls.Add(this.textBoxPrice);
-            this.Controls.Add(this.textBoxItems);
             this.Controls.Add(this.cb_UserName);
             this.Controls.Add(this.cb_Date);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -241,8 +265,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxQuantity;
         private System.Windows.Forms.TextBox textBoxPrice;
-        private System.Windows.Forms.TextBox textBoxItems;
         private System.Windows.Forms.ComboBox cb_UserName;
         private System.Windows.Forms.ComboBox cb_Date;
+        private System.Windows.Forms.ComboBox cb_Items;
     }
 }

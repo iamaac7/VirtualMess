@@ -20,19 +20,23 @@ namespace VirtualMessManager
         public Operation opr = new Operation();
         public DBConnection db = new DBConnection();
         public BookMeal bm = new BookMeal();
+        bool backToAdmin, backToSeaBM = false;
         static int x;
 
         public EditMealChart(AdminSession adminSession)
         {
             InitializeComponent();
+            backToAdmin = true;
         }
         public EditMealChart(SeeBookedMeal seeBookedMeal)
         {
             InitializeComponent();
+            backToSeaBM = true;
         }
 
         public EditMealChart()
         {
+            InitializeComponent();
         }
 
         private void EditMealChartnew_Load(object sender, EventArgs e)
@@ -88,9 +92,24 @@ namespace VirtualMessManager
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AdminSession AS = new AdminSession();
-            AS.Show();
+            if (backToAdmin == true)
+            {
+                this.Hide();
+                AdminSession AS = new AdminSession();
+                AS.Show();
+            }
+            else if (backToSeaBM == true)
+            {
+              
+                this.Hide();
+                SeeBookedMeal sbm = new SeeBookedMeal(new Manager());
+                sbm.Show();
+            }
+            else {
+                this.Hide();
+                Notification nf = new Notification();
+                nf.Show();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -105,13 +124,13 @@ namespace VirtualMessManager
                         bm.breakfast = Convert.ToSingle(textBoxBreak.Text);
                         bm.lunch = Convert.ToInt32(textBoxLunch.Text);
                         bm.dinner = Convert.ToInt32(textBoxDinner.Text);
-                        //MessageBox.Show(bm.breakfast + " " + "Items");
-                        //MessageBox.Show(bm.id + " " + "ID");
-                        //MessageBox.Show(bm.date + " " + "Date");
+                        info.dateFromMeal = Convert.ToDateTime(cb_Date.Text);
+                        info.userName = cb_UserName.Text;
 
                         int rowAffected = opr.UpdateMealChart(bm);
                         
                         if (rowAffected >0) {
+                            opr.DeleteRequestMeal(info);
                             MessageBox.Show(cb_Date.Text+" "+"\nUserName: "+cb_UserName.Text+"\n"+"Breakfast: "+textBoxBreak.Text+" "+"Lunch: "+textBoxLunch.Text+" "+"Dinner: "+textBoxDinner.Text+"\nData Update successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }

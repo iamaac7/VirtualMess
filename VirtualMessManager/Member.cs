@@ -89,5 +89,12 @@ namespace VirtualMessManager
             this.Hide();
             new ChangePassword(Login.uType).Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RequestForChange rfc = new RequestForChange();
+            rfc.Show();
+            this.Hide();
+        }
     }
 }

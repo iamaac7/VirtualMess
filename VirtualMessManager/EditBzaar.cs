@@ -21,7 +21,9 @@ namespace VirtualMessManager
         public DBConnection db = new DBConnection();
        // public BookMeal bm = new BookMeal();
         public Bazar ba = new Bazar();
-       
+        bool back = false;
+        bool backNot = false;
+
         static int x;
         private SeeBazarHistory seeBazarHistory;
 
@@ -30,13 +32,16 @@ namespace VirtualMessManager
             InitializeComponent();
         }
 
-        public EditBzaar()
+        public EditBzaar(Notification nf)
         {
+            InitializeComponent();
+            backNot = true;
         }
 
         public EditBzaar(SeeBazarHistory seeBazarHistory)
         {
             this.seeBazarHistory = seeBazarHistory;
+            back = true;
             InitializeComponent();
         }
 
@@ -51,10 +56,24 @@ namespace VirtualMessManager
 
         private void button3_Click(object sender, EventArgs e)
         {
+            if (back == true)
+            {
+                this.Hide();
+                SeeBazarHistory sbh = new SeeBazarHistory(new Manager());
+                sbh.Show();
+            }
+            else if (backNot == true) {
+                this.Hide();
+                Notification nf=new Notification();
+                nf.Show();
 
-            this.Hide();
-            AdminSession AS = new AdminSession();
-            AS.Show();
+            }
+            else
+            {
+                this.Hide();
+                AdminSession AS = new AdminSession();
+                AS.Show();
+            }
         }
 
         private void EditBzaarNew_Load(object sender, EventArgs e)
@@ -121,13 +140,27 @@ namespace VirtualMessManager
                 ba.date = info.dateFromMeal;
                 DataTable dt = new DataTable();
                 dt = opr.GetItemQuantityPrice(info);
-                textBoxItems.Text = dt.Rows[0][0].ToString();
-                textBoxQuantity.Text = dt.Rows[0][1].ToString();
-                textBoxPrice.Text = dt.Rows[0][2].ToString();
+                cb_Items.Text = dt.Rows[0][0].ToString();
+                //textBoxQuantity.Text = dt.Rows[0][1].ToString();
+                //textBoxPrice.Text = dt.Rows[0][2].ToString();
+
+            db.connection.Open();
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.Connection = db.connection;
+            string query = "select Items from vmmBazarChart where Date='"+ Convert.ToDateTime(cb_Date.Text) + "' and UserId="+ba.id+" ";
+            cmd.CommandText = query;
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+
+                cb_Items.Items.Add(reader["Items"]);
 
             }
+            db.connection.Close();
+            }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-
 
         }
 
@@ -140,7 +173,7 @@ namespace VirtualMessManager
                     info.dateFromMeal = Convert.ToDateTime(cb_Date.Text);
                     DataTable dt = new DataTable();
                     dt = opr.GetItemQuantityPrice(info);
-                    textBoxItems.Text = dt.Rows[0][0].ToString();
+                    cb_Items.Text = dt.Rows[0][0].ToString();
                     textBoxQuantity.Text = dt.Rows[0][1].ToString();
                     textBoxPrice.Text = dt.Rows[0][2].ToString();
 
@@ -218,25 +251,29 @@ namespace VirtualMessManager
             if (cb_Date.Text != "" && cb_UserName.Text != "")
             {
 
-                if (textBoxItems.Text != "" && textBoxQuantity.Text != "" && textBoxPrice.Text != "")
+                if (cb_Items.Text != "" && textBoxQuantity.Text != "" && textBoxPrice.Text != "")
                 {
 
                     try
                     {
-                      
 
-                        ba.items = Convert.ToString(textBoxItems.Text);
+                        info.dateFromBazar = Convert.ToDateTime(cb_Date.Text);
+                        info.userName = cb_UserName.Text;
+                        info.items = cb_Items.Text;
+                        ba.items = Convert.ToString(cb_Items.Text);
                         ba.quantity = Convert.ToString(textBoxQuantity.Text);
                         ba.amount = Convert.ToInt32(textBoxPrice.Text);
 
-                     
+
                         int rowAffected = opr.UpdateBazar(ba);
+                        
                       
 
                         if (rowAffected > 0)
                         {
-                            MessageBox.Show(cb_Date.Text + " " + "\nUserName: " + cb_UserName.Text + "\n" + "Items: " + textBoxItems.Text + " " + "Quantity: " + textBoxQuantity.Text + " " + "Price: " + textBoxPrice.Text + "\nData Update successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                            opr.DeleteRequestBazar(info);
+                            MessageBox.Show(cb_Date.Text + " " + "\nUserName: " + cb_UserName.Text + "\n" + "Items: " + cb_Items.Text + " " + "Quantity: " + textBoxQuantity.Text + " " + "Price: " + textBoxPrice.Text + "\nData Update successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                           
                         }
                     }
                     catch (Exception ex) { MessageBox.Show("Items/Quantity/Price field must be Numbers(0-9) ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -245,6 +282,22 @@ namespace VirtualMessManager
 
             }
             else MessageBox.Show("Empty User Name or Date field.\nPlease select these Field correctly. ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void cb_Items_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+            try
+            {
+                info.dateFromMeal = Convert.ToDateTime(cb_Date.Text);
+                info.items = cb_Items.Text;
+                DataTable dt = new DataTable();
+                dt = opr.GetQuantityPrice(info);
+                textBoxQuantity.Text = dt.Rows[0][0].ToString();
+                textBoxPrice.Text = dt.Rows[0][1].ToString();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+
         }
     }
 }

@@ -98,5 +98,12 @@ namespace VirtualMessManager
             this.Hide();
             new ChangePassword(Login.uType).Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Notification n = new Notification();
+            n.Show();
+        }
     }
 }

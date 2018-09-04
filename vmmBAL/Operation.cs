@@ -61,6 +61,22 @@ namespace vmmBAL
 
         //}
 
+        public int insertRequest(BookMeal bm)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO vmmRequestChart VALUES ('" + bm.userName+ "','" + bm.date+ "'," + bm.breakfast + "," +bm.lunch+ "," + bm.dinner + ",'"+bazar.items+ "','" + bazar.quantity+ "'," + bazar.amount+")";
+            return db.ExeNonQuery(cmd);
+        }
+
+        public int insertRequest1(Bazar bazar)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO vmmRequestChart VALUES ('" + bazar.userName + "','" + bazar.date + "'," + book.breakfast + "," + book.lunch + "," + book.dinner + ",'" + bazar.items + "','" + bazar.quantity + "'," + bazar.amount + ")";
+            return db.ExeNonQuery(cmd);
+        }
+
         public void DeleteInfoEB(Bazar ba)
         {
             SqlCommand cmd = new SqlCommand();
@@ -74,7 +90,15 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select Items,Quantity,Price from vmmBazarChart where UserId='" + info.ID + "'and Date='" + info.dateFromMeal + "'";
+            cmd.CommandText = "select items from vmmBazarChart where UserId='" + info.ID + "'and Date='" + info.dateFromMeal + "'";
+            return db.ExeReader(cmd);
+        }
+
+        public DataTable GetQuantityPrice(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select Quantity,Price from vmmBazarChart where UserId='" + info.ID + "'and Date='" + info.dateFromMeal + "'and Items='"+info.items+"'";
             return db.ExeReader(cmd);
         }
 
@@ -82,15 +106,11 @@ namespace vmmBAL
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE vmmBazarChart set Items= '"+ ba.items+"' ,Quantity= '"+ba.quantity+"',Price=" +ba.amount+ " where UserId='" +ba.id+ "' and Date='" +ba.date+ "'";
+            cmd.CommandText = "UPDATE vmmBazarChart set Quantity= '"+ba.quantity+"',Price=" +ba.amount+ " where UserId='" +ba.id+ "' and Date='" +ba.date+ "' and Items='"+ba.items+"'";
             return db.ExeNonQuery(cmd);
 
         }
 
-        //23/8
-
-
-        //15/8
 
         public int UpdateMealChart(BookMeal bm) {
             SqlCommand cmd = new SqlCommand();
@@ -105,6 +125,24 @@ namespace vmmBAL
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "Delete from vmmUser1 where Id='" + info.ID + "'";
+            db.DeleteExeReader(cmd);
+
+        }
+
+        public void DeleteRequestBazar(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Delete from vmmRequestChart where UserName='" + info.userName + "' and date='"+info.dateFromBazar+"'and Items='"+info.items+"'";
+            db.DeleteExeReader(cmd);
+
+        }
+
+        public void DeleteRequestMeal(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "Delete from vmmRequestChart where UserName='" + info.userName + "' and date='" + info.dateFromMeal + "'";
             db.DeleteExeReader(cmd);
 
         }
@@ -178,6 +216,16 @@ namespace vmmBAL
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "SELECT Date,Name,sum(Price) as Total_Price FROM vmmBazarChart where RefManager='" + info.refManagrtName + "' and Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()), 0) AND Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE())+1, 0) group by Name,Date";
+            return db.ExeReader1(cmd);
+
+        }
+
+
+        public DataTable LoadNotification(Informations info)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * from vmmRequestChart";
             return db.ExeReader1(cmd);
 
         }

@@ -26,7 +26,7 @@ namespace VirtualMessManager
 
         private void admAddMember_Click(object sender, EventArgs e)
         {
-            RegistrationForm form = new RegistrationForm();
+            RegistrationForm form = new RegistrationForm(this);
             form.Show();
             this.Hide();
         }

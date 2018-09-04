@@ -103,7 +103,6 @@ namespace VirtualMessManager
                 this.Hide();
                 EditMealChart editMeal = new EditMealChart(this);
                 editMeal.Show(this);
-                this.Hide();
             }
             else
             {

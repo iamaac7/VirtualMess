@@ -24,8 +24,9 @@ namespace VirtualMessManager
         public Operation opr = new Operation();
         public DBConnection db = new DBConnection();
         string _userType;
-
+        bool mStatus;
         bool confirmFlag = true;
+        bool backOpt = false;
 
         //string phone = tb_Phone.Text;
         public RegistrationForm()
@@ -35,7 +36,14 @@ namespace VirtualMessManager
             tb_Name.Focus();
             tb_Password.PasswordChar = '*';
         }
-
+        public RegistrationForm(AdminSession a)
+        {
+            InitializeComponent();
+            this.ActiveControl = tb_Name;
+            tb_Name.Focus();
+            tb_Password.PasswordChar = '*';
+            backOpt = true;
+        }
 
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -86,8 +94,37 @@ namespace VirtualMessManager
 
         private void rb_Manager_CheckedChanged_1(object sender, EventArgs e)
         {
-            cb_ManagerName.Enabled = true;
-            cb_MessName.Focus();
+            
+                db.connection.Open();
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.Connection = db.connection;
+                string query = "select userType from vmmUser1";
+                cmd.CommandText = query;
+                SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                if ( reader["userType"].ToString()!= "Member")
+                {
+                    mStatus = true;
+                    break;
+                    
+                }
+
+            }
+            if (mStatus)
+            {
+                MessageBox.Show("Already a Manager Exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                db.connection.Close();
+                rb_Member.Focus();
+
+            }
+            else
+            {
+                cb_ManagerName.Enabled = true;
+                cb_MessName.Focus();
+            }
 
         }
 
@@ -171,18 +208,18 @@ namespace VirtualMessManager
                     if (rowAffected > 0)
                     {
                         MessageBox.Show("Data Saved SuccessFull.");
-
-                        Login log = new Login();
-                        log.Show();
-                        this.Hide();
-
-                        //tb_Name.Text = "";
-                        //rb_Member.Checked = false;
-                        //rb_Manager.Checked = false;
-                        //tb_userName.Text = "";
-                        //tb_Password.Text = "";
-                        //tb_Phone.Text = "";
-
+                        if (backOpt == true)
+                        {
+                            this.Hide();
+                            AdminSession ads = new AdminSession(new Manager());
+                            ads.Show();
+                        }
+                        else
+                        {
+                            this.Hide();
+                            Login log = new Login();
+                            log.Show();
+                        }
                     }
                 }
             }
@@ -197,9 +234,18 @@ namespace VirtualMessManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login log = new Login();
-            log.Show();
+            if (backOpt == true)
+            {
+                this.Hide();
+                AdminSession ads = new AdminSession(new Manager());
+                ads.Show();
+            }
+            else
+            {
+                this.Hide();
+                Login log = new Login();
+                log.Show();
+            }
         }
 
         private void tb_Name_Leave(object sender, EventArgs e)
@@ -385,6 +431,11 @@ namespace VirtualMessManager
         {
             if(tb_Phone.Text.Trim()!="")
             labelPhoneNmbr.Text = "";
+        }
+
+        private void rb_Manager_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,7 +10,7 @@ namespace vmmBLL
     {
 
 
-
+        public string items { get; set; }
         public string name { get; set; }
         public string userType { get; set; }
         public string refManagrtName { get; set; }
@@ -52,7 +52,7 @@ namespace vmmBLL
     }
 
     public class BookMeal {
-
+        public string userName { get; set; }
         public  int id { get; set; }
         public DateTime  date { get; set; }
         public int  memberId { get; set; }//foreign key

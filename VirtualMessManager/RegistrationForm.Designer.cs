@@ -234,6 +234,7 @@
             this.rb_Manager.UseCompatibleTextRendering = true;
             this.rb_Manager.UseVisualStyleBackColor = true;
             this.rb_Manager.CheckedChanged += new System.EventHandler(this.rb_Manager_CheckedChanged_1);
+            this.rb_Manager.Click += new System.EventHandler(this.rb_Manager_Click);
             // 
             // rb_Member
             // 

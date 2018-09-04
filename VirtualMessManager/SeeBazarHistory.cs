@@ -107,7 +107,6 @@ namespace VirtualMessManager
                 this.Hide();
                 EditBzaar editbazar = new EditBzaar(this);
                 editbazar.Show(this);
-                this.Hide();
             }
             else
             {

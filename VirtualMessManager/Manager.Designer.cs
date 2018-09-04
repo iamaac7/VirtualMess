@@ -42,6 +42,7 @@
             this.manBookMeal = new System.Windows.Forms.Button();
             this.manMemberInfo = new System.Windows.Forms.Button();
             this.manAddBazar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManager)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +74,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.bt_signOut);
@@ -93,7 +95,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
-            this.linkLabel1.Location = new System.Drawing.Point(156, 296);
+            this.linkLabel1.Location = new System.Drawing.Point(151, 318);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(145, 18);
             this.linkLabel1.TabIndex = 9;
@@ -216,6 +218,20 @@
             this.manAddBazar.UseVisualStyleBackColor = false;
             this.manAddBazar.Click += new System.EventHandler(this.manAddBazar_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Cyan;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(26, 268);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(395, 30);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "&Notification";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Manager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -256,5 +272,6 @@
         private System.Windows.Forms.Button bt_signOut;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button button2;
     }
 }
