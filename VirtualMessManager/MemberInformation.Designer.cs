@@ -72,7 +72,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.MemdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.MemdataGridView.Size = new System.Drawing.Size(773, 323);
+            this.MemdataGridView.Size = new System.Drawing.Size(795, 323);
             this.MemdataGridView.TabIndex = 0;
             // 
             // bt_Back
@@ -105,8 +105,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(187, 9);
+            this.label4.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label4.Location = new System.Drawing.Point(208, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(358, 46);
             this.label4.TabIndex = 11;
@@ -117,7 +117,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(772, 462);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.label4);
             this.Controls.Add(this.bt_Exit);

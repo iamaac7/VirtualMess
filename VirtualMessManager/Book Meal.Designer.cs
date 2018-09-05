@@ -72,12 +72,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 30);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(173, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(409, 20);
+            this.label1.Size = new System.Drawing.Size(219, 31);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Book Your Meal Before 12AM of any Current Date";
+            this.label1.Text = "Book Your Meal";
             // 
             // label2
             // 

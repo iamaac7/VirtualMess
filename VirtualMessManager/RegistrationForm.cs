@@ -316,7 +316,8 @@ namespace VirtualMessManager
 
         private void date_dob_Leave(object sender, EventArgs e)
         {
-            if (date_dob.Text == "")
+            DateTime to = DateTime.Now;
+            if (Convert.ToDateTime(date_dob.Text) == to)
             {
                 labelDOB.Text = "*Select your Date Of Birth.";
                   date_dob.Focus();
@@ -325,7 +326,7 @@ namespace VirtualMessManager
             {
                 int Age;
                 DateTime from = date_dob.Value;
-                DateTime to = DateTime.Now;
+                //DateTime to = DateTime.Now;
                 TimeSpan TSpan = to - from;
                 double days = TSpan.TotalDays;
                 Age = Convert.ToInt32(days / 365);

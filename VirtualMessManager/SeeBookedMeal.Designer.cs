@@ -65,7 +65,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gv_MealHistory.DefaultCellStyle = dataGridViewCellStyle2;
-            this.gv_MealHistory.Location = new System.Drawing.Point(48, 109);
+            this.gv_MealHistory.Location = new System.Drawing.Point(23, 109);
             this.gv_MealHistory.Name = "gv_MealHistory";
             this.gv_MealHistory.Size = new System.Drawing.Size(743, 281);
             this.gv_MealHistory.TabIndex = 1;
@@ -75,7 +75,7 @@
             // 
             this.dt_FromMealHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_FromMealHistory.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_FromMealHistory.Location = new System.Drawing.Point(214, 66);
+            this.dt_FromMealHistory.Location = new System.Drawing.Point(189, 66);
             this.dt_FromMealHistory.Name = "dt_FromMealHistory";
             this.dt_FromMealHistory.Size = new System.Drawing.Size(122, 24);
             this.dt_FromMealHistory.TabIndex = 2;
@@ -86,7 +86,7 @@
             // 
             this.dt_ToMealHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt_ToMealHistory.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dt_ToMealHistory.Location = new System.Drawing.Point(396, 66);
+            this.dt_ToMealHistory.Location = new System.Drawing.Point(371, 66);
             this.dt_ToMealHistory.Name = "dt_ToMealHistory";
             this.dt_ToMealHistory.Size = new System.Drawing.Size(120, 24);
             this.dt_ToMealHistory.TabIndex = 2;
@@ -98,7 +98,7 @@
             this.bt_LoadMeal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_LoadMeal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_LoadMeal.ForeColor = System.Drawing.Color.White;
-            this.bt_LoadMeal.Location = new System.Drawing.Point(533, 62);
+            this.bt_LoadMeal.Location = new System.Drawing.Point(508, 62);
             this.bt_LoadMeal.Name = "bt_LoadMeal";
             this.bt_LoadMeal.Size = new System.Drawing.Size(126, 35);
             this.bt_LoadMeal.TabIndex = 3;
@@ -114,7 +114,7 @@
             this.label1.BackColor = System.Drawing.Color.Silver;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(355, 70);
+            this.label1.Location = new System.Drawing.Point(330, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 18);
             this.label1.TabIndex = 4;
@@ -126,7 +126,7 @@
             this.bt_Back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Back.ForeColor = System.Drawing.Color.White;
-            this.bt_Back.Location = new System.Drawing.Point(569, 396);
+            this.bt_Back.Location = new System.Drawing.Point(544, 410);
             this.bt_Back.Name = "bt_Back";
             this.bt_Back.Size = new System.Drawing.Size(108, 39);
             this.bt_Back.TabIndex = 3;
@@ -141,7 +141,7 @@
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bt_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Exit.ForeColor = System.Drawing.Color.White;
-            this.bt_Exit.Location = new System.Drawing.Point(683, 396);
+            this.bt_Exit.Location = new System.Drawing.Point(658, 410);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(108, 39);
             this.bt_Exit.TabIndex = 3;
@@ -156,7 +156,7 @@
             this.label4.BackColor = System.Drawing.Color.Silver;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label4.Location = new System.Drawing.Point(350, 9);
+            this.label4.Location = new System.Drawing.Point(295, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(245, 46);
             this.label4.TabIndex = 11;
@@ -169,7 +169,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(665, 62);
+            this.button1.Location = new System.Drawing.Point(640, 62);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 35);
             this.button1.TabIndex = 12;
@@ -189,7 +189,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(843, 462);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);

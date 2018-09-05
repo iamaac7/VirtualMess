@@ -32,6 +32,7 @@
             this.pictureBoxManager = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.bt_signOut = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@
             this.manBookMeal = new System.Windows.Forms.Button();
             this.manMemberInfo = new System.Windows.Forms.Button();
             this.manAddBazar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManager)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -90,6 +90,20 @@
             this.panel1.Size = new System.Drawing.Size(453, 351);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Snow;
+            this.button2.Location = new System.Drawing.Point(26, 268);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(395, 30);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "&Notification";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // linkLabel1
             // 
@@ -217,20 +231,6 @@
             this.manAddBazar.Text = "Add Bazar";
             this.manAddBazar.UseVisualStyleBackColor = false;
             this.manAddBazar.Click += new System.EventHandler(this.manAddBazar_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Cyan;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(26, 268);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(395, 30);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "&Notification";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Manager
             // 
